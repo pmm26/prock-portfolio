@@ -1,8 +1,14 @@
 
 import styled from 'styled-components'
 
+interface ContainerType {
+  headingLeft?: any;
+  headingRight?: any;
+  customFr?: [number, number]
+}
+
 // @ts-ignore
-const Container = styled.div`
+const Container = styled.div<ContainerType>`
   display: grid;
   max-width: 1100px;
   min-height: 100%;
@@ -29,25 +35,30 @@ const Container = styled.div`
   grid-template-areas: 
     "heading image" 
     "info image" 
-    "buttons buttons"
+    "buttons buttons";
 
-  ${({ headingLeft }: { headingLeft: any }) => headingLeft && `
+  ${({ headingLeft }) => headingLeft && `
     margin-top: -2px;
     grid-template-columns: 1fr 0.7fr;
     grid-template-areas: 
       "heading image" 
       "info image" 
-      "buttons buttons"
+      "buttons buttons";
   `}
 
-${({ headingRight }: { headingRight: any }) => headingRight && `
+${({ headingRight }) => headingRight && `
     margin-top: -53px;
     grid-template-columns: 0.7fr 1fr;
     grid-template-areas: 
       "image heading" 
       "image info" 
-      "buttons buttons"
+      "buttons buttons";
+  `}
+
+${({ customFr }) => customFr && `
+    grid-template-columns: ${customFr[0]}fr ${customFr[1]}fr;
   `}
 `
+
 
 export default Container

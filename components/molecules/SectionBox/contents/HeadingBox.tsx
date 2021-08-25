@@ -6,6 +6,7 @@ const HeadingBox = styled.div`
   justify-content: center;
   align-items: center;
   grid-area: heading;
+  flex-direction: column;
 `
 
 export default HeadingBox

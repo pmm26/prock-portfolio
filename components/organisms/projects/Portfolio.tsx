@@ -7,8 +7,7 @@ import Img from "next/image";
 import Button from "../../atoms/Button";
 import TechIcons from "../../molecules/TechIcons";
 
-
-const Portfolio = (props) => {
+const Portfolio = (_props: any) => {
   return (
     <SectionBox.WhiteSection>
       <SectionBox.Container headingRight>
@@ -16,6 +15,7 @@ const Portfolio = (props) => {
           <h1 className="heading-9">Portfolio Website</h1>
         </SectionBox.HeadingBox>
         <SectionBox.ImageBox>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             className={styles.images}
             src="images/sard-erostering-mock.png"
@@ -41,17 +41,17 @@ const Portfolio = (props) => {
             libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum
             lorem imperdiet. Nunc ut sem vitae risus tristique posuere.
           </p>
-          <TechIcons.Container>
+          <TechIcons.IconContainer>
             <TechIcons.Icon srcFile="gitlab.png" alt="Gitlab" />
             <TechIcons.Icon srcFile="docker.png" alt="Docker" />
             <TechIcons.Icon srcFile="nextjs.png" alt="Next.JS" />
             <TechIcons.Icon srcFile="react.png" alt="React" />
             <TechIcons.Icon srcFile="styled-components.png" alt="Styled Components" />
-          </TechIcons.Container>
+          </TechIcons.IconContainer>
         </SectionBox.InfoBox>
         <SectionBox.ButtonsBox>
-          <Button>Visit Website</Button>
-          <Button>Source Code</Button>
+          <Button black>Visit Website</Button>
+          <Button black>Source Code</Button>
         </SectionBox.ButtonsBox>
       </SectionBox.Container>
     </SectionBox.WhiteSection>

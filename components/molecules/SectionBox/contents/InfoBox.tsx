@@ -1,7 +1,7 @@
 
 import styled from 'styled-components'
 
-const Info = styled.div`
+const InfoBox = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11,4 +11,4 @@ const Info = styled.div`
 
 `
 
-export default Info
+export default InfoBox

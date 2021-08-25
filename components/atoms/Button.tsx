@@ -1,7 +1,11 @@
 
 import styled from 'styled-components'
 
-const Button = styled.button`
+interface ButtonType {
+  black?: any
+}
+
+const Button = styled.button<ButtonType>`
   display: flex;
   width: 200px;
   height: 50px;
@@ -10,12 +14,18 @@ const Button = styled.button`
   justify-content: center;
   align-items: center;
   border-radius: 12px;
-  background-color: #fafdff;
   font-family: 'Futura book font', sans-serif;
-  color: #f5905b;
   font-size: 25px;
   text-align: center;
   text-decoration: none;
+
+  background-color: #fafdff;
+  color: #f5905b;
+
+  ${({ black }) => black && `
+    background-color: #000;
+    color: #fff;
+  `}
 `
 
 export default Button

@@ -9,54 +9,55 @@ import Button from "../../atoms/Button";
 import TechIcons from "../../molecules/TechIcons";
 
 
-const ERostering = (props) => {
+const ERostering = (props: any) => {
   return (
     < SectionBox.WhiteSection >
-    <SectionBox.Container headingRight>
-      <SectionBox.HeadingBox>
-        <h1 className="heading-9">SARD eRostering</h1>
-      </SectionBox.HeadingBox>
-      <SectionBox.ImageBox>
-        <img
-          className={styles.images}
-          src="images/sard-erostering-mock.png"
-          loading="lazy"
-          sizes="(max-width: 479px) 100vw, (max-width: 767px) 56vw, 57vw"
-          srcSet="images/sard-erostering-mock-p-500.png 500w, images/sard-erostering-mock-p-800.png 800w, images/sard-erostering-mock-p-1080.png 1080w, images/sard-erostering-mock-p-2600.png 2600w, images/sard-erostering-mock-p-3200.png 3200w, images/sard-erostering-mock.png 3411w"
-          alt="Sard eRostering"
-        />
-      </SectionBox.ImageBox>
-      <SectionBox.InfoBox>
-        <p className="white-paragraph">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Suspendisse varius enim in eros elementum tristique. Duis cursus,
-          mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
-          libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum
-          lorem imperdiet.{" "}
-        </p>
-        <h2>Technology</h2>
-        <p className="white-paragraph">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Suspendisse varius enim in eros elementum tristique. Duis cursus,
-          mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
-          libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum
-          lorem imperdiet. Nunc ut sem vitae risus tristique posuere.
-        </p>
-        <TechIcons.Container>
-          <TechIcons.Icon srcFile="ruby-on-rails.png" alt="Ruby On Rails" />
-          <TechIcons.Icon srcFile="haml.svg" alt="Haml" />
-          <TechIcons.Icon srcFile="react.png" alt="React" />
-          <TechIcons.Icon srcFile="mysql.png" alt="MySQL" />
-          <TechIcons.Icon srcFile="rspec.png" alt="Rspec" />
-          <TechIcons.Icon srcFile="cypress.png" alt="Cypress.io" />
-        </TechIcons.Container>
-      </SectionBox.InfoBox>
-      <SectionBox.ButtonsBox>
-        <Button>Visit Website</Button>
-      </SectionBox.ButtonsBox>
-    </SectionBox.Container>
+      <SectionBox.Container headingRight>
+        <SectionBox.HeadingBox>
+          <h1 className="heading-9">SARD eRostering</h1>
+        </SectionBox.HeadingBox>
+        <SectionBox.ImageBox>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            className={styles.images}
+            src="images/sard-erostering-mock.png"
+            loading="lazy"
+            sizes="(max-width: 479px) 100vw, (max-width: 767px) 56vw, 57vw"
+            srcSet="images/sard-erostering-mock-p-500.png 500w, images/sard-erostering-mock-p-800.png 800w, images/sard-erostering-mock-p-1080.png 1080w, images/sard-erostering-mock-p-2600.png 2600w, images/sard-erostering-mock-p-3200.png 3200w, images/sard-erostering-mock.png 3411w"
+            alt="Sard eRostering"
+          />
+        </SectionBox.ImageBox>
+        <SectionBox.InfoBox>
+          <p className="white-paragraph">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Suspendisse varius enim in eros elementum tristique. Duis cursus,
+            mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
+            libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum
+            lorem imperdiet.{" "}
+          </p>
+          <h2>Technology</h2>
+          <p className="white-paragraph">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Suspendisse varius enim in eros elementum tristique. Duis cursus,
+            mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
+            libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum
+            lorem imperdiet. Nunc ut sem vitae risus tristique posuere.
+          </p>
+          <TechIcons.IconContainer>
+            <TechIcons.Icon srcFile="ruby-on-rails.png" alt="Ruby On Rails" />
+            <TechIcons.Icon srcFile="haml.svg" alt="Haml" />
+            <TechIcons.Icon srcFile="react.png" alt="React" />
+            <TechIcons.Icon srcFile="mysql.png" alt="MySQL" />
+            <TechIcons.Icon srcFile="rspec.png" alt="Rspec" />
+            <TechIcons.Icon srcFile="cypress.png" alt="Cypress.io" />
+          </TechIcons.IconContainer>
+        </SectionBox.InfoBox>
+        <SectionBox.ButtonsBox>
+          <Button black>Visit Website</Button>
+        </SectionBox.ButtonsBox>
+      </SectionBox.Container>
     </SectionBox.WhiteSection >
-    )
+  )
 }
 
 export default ERostering

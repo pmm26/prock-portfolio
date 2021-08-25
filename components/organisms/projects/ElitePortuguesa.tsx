@@ -9,7 +9,7 @@ import Button from "../../atoms/Button";
 import TechIcons from "../../molecules/TechIcons";
 
 
-const ElitePortuguesa = (props) => {
+const ElitePortuguesa = (_props: any) => {
   return (
     <SectionBox.ColoredSection>
         <SectionBox.Container headingLeft>
@@ -17,6 +17,7 @@ const ElitePortuguesa = (props) => {
             <h1 className="heading-9">Elite Portuguesa</h1>
           </SectionBox.HeadingBox>
           <SectionBox.ImageBox>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               className={styles.images}
               src="images/sard-erostering-mock.png"
@@ -42,14 +43,14 @@ const ElitePortuguesa = (props) => {
               libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum
               lorem imperdiet. Nunc ut sem vitae risus tristique posuere.
             </p>
-            <TechIcons.Container>
+            <TechIcons.IconContainer>
               <TechIcons.Icon srcFile="figma.png" alt="Figma Logo" />
               <TechIcons.Icon srcFile="javascript.png" alt="JavaScript" />
               <TechIcons.Icon srcFile="expo.png" alt="Expo Logo" />
               <TechIcons.Icon srcFile="react-native.png" alt="React  Native" />
               <TechIcons.Icon srcFile="redux.png" alt="Redux" />
               <TechIcons.Icon srcFile="jest.png" alt="Jest" />
-            </TechIcons.Container>
+            </TechIcons.IconContainer>
           </SectionBox.InfoBox>
           <SectionBox.ButtonsBox>
             <Button>Visit Website</Button>

@@ -10,7 +10,7 @@ import TechIcons from "../../molecules/TechIcons";
 const Portfolio = (_props: any) => {
   return (
     <SectionBox.WhiteSection>
-      <SectionBox.Container headingRight>
+      <SectionBox.Container headingRight project>
         <SectionBox.HeadingBox>
           <h1 className="heading-9">Portfolio Website</h1>
         </SectionBox.HeadingBox>

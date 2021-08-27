@@ -13,9 +13,6 @@ const Proficiency = (_props: any) => {
   return (
     <SectionBox.ColoredSection>
       <SectionBox.Container headingRight customFr={[0.8, 1]}>
-        <SectionBox.HeadingBox>
-          <h1 className="heading-9">Proficiency</h1>
-        </SectionBox.HeadingBox>
         <SectionBox.ImageBox>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
@@ -28,6 +25,7 @@ const Proficiency = (_props: any) => {
           />
         </SectionBox.ImageBox>
         <SectionBox.InfoBox>
+          <h1 className="heading-9">Proficiency</h1>
 
           <SkillBars.Container>
             <SkillBars.Title>Frontend</SkillBars.Title>

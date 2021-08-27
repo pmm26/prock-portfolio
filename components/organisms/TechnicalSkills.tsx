@@ -11,9 +11,6 @@ const TechnicalSkills = (_props: any) => {
   return (
     <SectionBox.WhiteSection>
       <SectionBox.Container headingLeft>
-        <SectionBox.HeadingBox>
-          <h1 className="heading-9">Technical Skills</h1>
-        </SectionBox.HeadingBox>
         <SectionBox.ImageBox>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
@@ -24,7 +21,7 @@ const TechnicalSkills = (_props: any) => {
           />
         </SectionBox.ImageBox>
         <SectionBox.InfoBox>
-
+          <h1 className="heading-9">Technical Skills</h1>
           <TechIcons.Container>
             <TechIcons.Title>Programming Languages</TechIcons.Title>
             <TechIcons.IconContainer>

@@ -1,9 +1,36 @@
 import '../styles/globals.css'
 import '../styles/normalize.css'
 
-import type { AppProps } from 'next/app'
+// import type { AppProps } from 'next/app'
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+// function MyApp({ Component, pageProps }: AppProps) {
+//   return <Component {...pageProps} />
+// }
+// export default MyApp
+
+import { createGlobalStyle, ThemeProvider } from 'styled-components'
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+`
+
+const theme = {
+  colors: {
+    primary: '#0070f3',
+  },
 }
-export default MyApp
+
+export default function App({ Component, pageProps }: any) {
+  return (
+    <>
+      <GlobalStyle />
+      <ThemeProvider theme={theme}>
+        <Component {...pageProps} />
+      </ThemeProvider>
+    </>
+  )
+}

@@ -11,7 +11,7 @@ import TechIcons from "../../molecules/TechIcons";
 const MobileApp = (_props: any) => {
   return (
     <SectionBox.ColoredSection>
-      <SectionBox.Container headingLeft>
+      <SectionBox.Container headingLeft project>
         <SectionBox.HeadingBox>
           <h1 className="heading-9">SARD Mobile App</h1>
         </SectionBox.HeadingBox>

@@ -4,6 +4,7 @@ import ImageBox from "./contents/ImageBox";
 import ButtonsBox from "./contents/ButtonsBox";
 import InfoBox from "./contents/InfoBox";
 import HeadingBox from "./contents/HeadingBox";
+import Divider from "./contents/Divider";
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
   Container,
@@ -12,5 +13,6 @@ export default {
   HeadingBox,
   ImageBox,
   ButtonsBox,
-  InfoBox
+  InfoBox,
+  Divider
 }

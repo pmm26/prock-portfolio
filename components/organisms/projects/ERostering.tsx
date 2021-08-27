@@ -12,7 +12,7 @@ import TechIcons from "../../molecules/TechIcons";
 const ERostering = (props: any) => {
   return (
     < SectionBox.WhiteSection >
-      <SectionBox.Container headingRight>
+      <SectionBox.Container headingRight project>
         <SectionBox.HeadingBox>
           <h1 className="heading-9">SARD eRostering</h1>
         </SectionBox.HeadingBox>

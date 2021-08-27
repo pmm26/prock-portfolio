@@ -1,12 +1,25 @@
 
 import styled from 'styled-components'
 
-const HeadingBox = styled.div`
+interface HeadingType {
+  span?: number;
+  noArea?: any
+}
+
+const HeadingBox = styled.div<HeadingType>`
   display: flex;
   justify-content: center;
   align-items: center;
-  grid-area: heading;
   flex-direction: column;
+
+  ${({ noArea }) => !noArea &&`
+    grid-area: heading;
+  `}
+
+  /* 1 Collum Grid*/
+  ${({ span }) => span &&`
+    grid-column: 1 / span ${span};
+  `}
 `
 
 export default HeadingBox

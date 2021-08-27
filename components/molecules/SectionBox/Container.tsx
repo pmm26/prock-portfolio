@@ -1,10 +1,11 @@
-
-import styled from 'styled-components'
+import styled from "styled-components";
 
 interface ContainerType {
   headingLeft?: any;
   headingRight?: any;
-  customFr?: [number, number]
+  education?: any;
+  project?: any;
+  customFr?: [number, number];
 }
 
 // @ts-ignore
@@ -23,42 +24,67 @@ const Container = styled.div<ContainerType>`
   grid-auto-columns: 1fr;
   grid-column-gap: 16px;
   grid-row-gap: 16px;
-  grid-template-rows: auto auto;
   background-color: transparent;
   text-align: left;
   object-fit: fill;
-
-
+  
+  grid-auto-flow: row;
   /* Default Heading Left */
   margin-top: -2px;
   grid-template-columns: 1fr 0.7fr;
-  grid-template-areas: 
-    "heading image" 
-    "info image" 
-    "buttons buttons";
 
-  ${({ headingLeft }) => headingLeft && `
+  /* text left, image right */
+  ${({ headingLeft }) =>
+    headingLeft && `
     margin-top: -2px;
     grid-template-columns: 1fr 0.7fr;
+  `}
+
+  /* text right, image left */
+  ${({ headingRight }) =>
+    headingRight && `
+    margin-top: -2px;
+    grid-template-columns: 0.7fr 1fr;
+  `}
+
+  /* 1 Collum Grid*/
+  ${({ headingLeft, project, education}) =>
+    headingLeft && !project && !education &&`
+    grid-template-areas: 
+      "info image" 
+  `}
+
+  /* 1 Collum Grid*/
+  ${({ headingRight, project, education }) =>
+    headingRight && !project && !education &&`
+    grid-template-areas: 
+      "image info";
+  `}
+
+  /* Project Sections */
+  ${({ headingLeft, project }) =>
+    headingLeft && project && `
     grid-template-areas: 
       "heading image" 
       "info image" 
       "buttons buttons";
   `}
 
-${({ headingRight }) => headingRight && `
-    margin-top: -53px;
-    grid-template-columns: 0.7fr 1fr;
+  /* Project Sections */
+  ${({ headingRight, project }) =>
+    headingRight && project && `
     grid-template-areas: 
       "image heading" 
       "image info" 
       "buttons buttons";
   `}
 
-${({ customFr }) => customFr && `
+
+
+${({ customFr }) =>
+    customFr && `
     grid-template-columns: ${customFr[0]}fr ${customFr[1]}fr;
   `}
-`
+`;
 
-
-export default Container
+export default Container;

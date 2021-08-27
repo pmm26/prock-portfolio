@@ -1,14 +1,19 @@
 
 import styled from 'styled-components'
 
-const InfoBox = styled.div`
+interface InfoType {
+  noArea?: any
+}
+
+const InfoBox = styled.div<InfoType>`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   
-  grid-area: info;
-
+  ${({ noArea }) => !noArea &&`
+    grid-area: info;
+  `}
 `
 
 export default InfoBox

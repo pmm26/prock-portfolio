@@ -6,6 +6,8 @@ import SectionBox from "../molecules/SectionBox";
 import Img from "next/image";
 import Button from "../atoms/Button";
 import TechIcons from "../molecules/TechIcons";
+import { H1, H2, H3, H4 } from "../atoms/Heading";
+import { P } from "../atoms/P";
 
 const Intro = (_props: any) => {
   return (
@@ -20,15 +22,15 @@ const Intro = (_props: any) => {
           />
         </SectionBox.ImageBox>
         <SectionBox.InfoBox>
-          <h1 className="heading-9">Pedro Roque</h1>
-          <h2 className="heading-9">Full-Stack Software Developer</h2>
-          <p>
+          <H1>Pedro Roque</H1>
+          <H2>Full-Stack Software Developer</H2>
+          <P white>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
             varius enim in eros elementum tristique. Duis cursus, mi quis
             viverra ornare, eros dolor interdum nulla, ut commodo diam libero
             vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem
             imperdiet. Nunc ut sem vitae risus tristique posuere.
-          </p>
+          </P>
         </SectionBox.InfoBox>
       </SectionBox.Container>
     </SectionBox.ColoredSection>

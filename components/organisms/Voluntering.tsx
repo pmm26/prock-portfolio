@@ -8,29 +8,31 @@ import Img from "next/image";
 import Button from "../atoms/Button";
 import TechIcons from "../molecules/TechIcons";
 import SkillBars from "../molecules/SkillBars";
+import { H1, H2, H3, H4 } from "../atoms/Heading";
+import { P } from "../atoms/P";
 
 const Voluntering = (_props: any) => {
   return (
     <SectionBox.ColoredSection>
       <SectionBox.Container headingLeft education customFr={[1, 0.5]}>
         <SectionBox.HeadingBox span={2} noArea>
-          <h1 className="heading-9">Community Projects &amp; Voluntering</h1>
-          <p className="paragraph-2">
+          <H2>Community Projects &amp; Voluntering</H2>
+          <P>
             “The best way to find yourself is to lose yourself in the service of
             others.” – Gandhi
-          </p>
+          </P>
         </SectionBox.HeadingBox>
 
         <SectionBox.InfoBox noArea>
           {/* Elite PT */}
-          <h2 className="voluntering-title">
+          <H2>
             Elite Portuguesa Community - Non Profit
-          </h2>
-          <h4 className="voluntering-date">August 2012 – Present</h4>
-          <p className="voluntering-description">
+          </H2>
+          <H3 fontSize="s">August 2012 – Present</H3>
+          <P>
             In 2012 me and my friend and I started a gaming community and It has
             been running since. I’m responsible for all the servers.
-          </p>
+          </P>
         </SectionBox.InfoBox>
 
         <SectionBox.ImageBox noArea>
@@ -41,14 +43,14 @@ const Voluntering = (_props: any) => {
 
         {/* Other Charity */}
         <SectionBox.InfoBox noArea>
-          <h2 className="voluntering-title">
+          <H2>
             Elite Portuguesa Community - Non Profit
-          </h2>
-          <h4 className="voluntering-date">August 2012 – Present</h4>
-          <p className="voluntering-description">
+          </H2>
+          <H4 fontSize="s">August 2012 – Present</H4>
+          <P>
             In 2012 me and my friend and I started a gaming community and It has
             been running since. I’m responsible for all the servers.
-          </p>
+          </P>
         </SectionBox.InfoBox>
 
         <SectionBox.ImageBox noArea>
@@ -65,14 +67,14 @@ const Voluntering = (_props: any) => {
         <SectionBox.Divider />
         {/* Cancer Research PT */}
         <SectionBox.InfoBox noArea>
-          <h2 className="voluntering-title">
+          <H2>
             Elite Portuguesa Community - Non Profit
-          </h2>
-          <h4 className="voluntering-date">August 2012 – Present</h4>
-          <p className="voluntering-description">
+          </H2>
+          <H3 fontSize="s">August 2012 – Present</H3>
+          <P>
             In 2012 me and my friend and I started a gaming community and It has
             been running since. I’m responsible for all the servers.
-          </p>
+          </P>
         </SectionBox.InfoBox>
 
         <SectionBox.ImageBox noArea>

@@ -8,6 +8,8 @@ import Img from "next/image";
 import Button from "../atoms/Button";
 import TechIcons from "../molecules/TechIcons";
 import SkillBars from "../molecules/SkillBars";
+import { H1, H2, H3, H4 } from "../atoms/Heading";
+import { P } from "../atoms/P";
 
 const Education = (_props: any) => {
   return (
@@ -16,7 +18,7 @@ const Education = (_props: any) => {
         <SectionBox.InfoBox noArea></SectionBox.InfoBox>
 
         <SectionBox.HeadingBox noArea>
-          <h1 className="heading-9">Education</h1>
+          <H1>Education</H1>
         </SectionBox.HeadingBox>
 
         {/* Other Charity */}
@@ -26,12 +28,12 @@ const Education = (_props: any) => {
         </SectionBox.ImageBox>
 
         <SectionBox.InfoBox noArea>
-          <h3 className="voluntering-title">University of Kent</h3>
-          <p className="education-description">
+          <H2 fontSize="m">University of Kent</H2>
+          <P>
             Computer Science (Artificial Intelligence) with Year in Industry{" "}
             <br />
             Upper Second-Class Honours 2:1
-          </p>
+          </P>
         </SectionBox.InfoBox>
 
         <SectionBox.Divider />
@@ -47,14 +49,14 @@ const Education = (_props: any) => {
         </SectionBox.ImageBox>
 
         <SectionBox.InfoBox noArea>
-          <h3 className="voluntering-title">
+          <H2 fontSize="m">
             City and Islington College <br />
             Centre for Business, Arts and Technology
-          </h3>
-          <p className="education-description">
+          </H2>
+          <P>
             Pearson BTEC Level 3 Extended Diploma in IT (Software Development) –
             D* D* D* (Triple Distinction Star)
-          </p>
+          </P>
         </SectionBox.InfoBox>
       </SectionBox.Container>
     </SectionBox.WhiteSection>

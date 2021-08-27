@@ -18,12 +18,13 @@ const Button = styled.button<ButtonType>`
   font-size: 25px;
   text-align: center;
   text-decoration: none;
-
+  font-family: inherit;
+  
   background-color: #fafdff;
-  color: #f5905b;
+  color: ${props => props.theme.colors.orange};
 
-  ${({ black }) => black && `
-    background-color: #000;
+  ${({ black, theme }) => black && `
+    background-color:  ${theme.colors.black};
     color: #fff;
   `}
 `

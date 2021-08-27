@@ -8,6 +8,9 @@ import Img from "next/image";
 import Button from "../atoms/Button";
 import TechIcons from "../molecules/TechIcons";
 import SkillBars from "../molecules/SkillBars";
+import { H1, H2, H3, H4 } from "../atoms/Heading";
+import { P } from "../atoms/P";
+
 
 const WorkExperience = (_props: any) => {
   return (
@@ -22,20 +25,20 @@ const WorkExperience = (_props: any) => {
           />
         </SectionBox.ImageBox>
         <SectionBox.InfoBox>
-          <h1 className="heading-9">Work Experience</h1>
+          <H1>Work Experience</H1>
 
           <div>
-            <h2 className="heading-15">Software Developer</h2>
-            <h4 className="heading-14">June 2019 – September 2020</h4>
-            <ul role="list" className="work-list">
-              <li className="work-list-item">
+            <H2>Software Developer</H2>
+            <H3 fontSize="s">June 2019 – September 2020</H3>
+            <ul role="list">
+              <li>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Suspendisse varius enim in eros elementum tristique. Duis
                 cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
                 commodo diam libero vitae erat. Aenean faucibus nibh et justo
                 cursus id rutrum lorem imperdiet.{" "}
               </li>
-              <li className="work-list-item">
+              <li>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Suspendisse varius enim in eros elementum tristique. Duis
                 cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
@@ -43,16 +46,16 @@ const WorkExperience = (_props: any) => {
                 cursus id rutrum lorem imperdiet.{" "}
               </li>
             </ul>
-            <h4 className="heading-14">September 2020 – Present</h4>
-            <ul role="list" className="work-list">
-              <li className="work-list-item">
+            <H3 fontSize="s">September 2020 – Present</H3>
+            <ul role="list">
+              <li>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Suspendisse varius enim in eros elementum tristique. Duis
                 cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
                 commodo diam libero vitae erat. Aenean faucibus nibh et justo
                 cursus id rutrum lorem imperdiet.{" "}
               </li>
-              <li className="work-list-item">
+              <li>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Suspendisse varius enim in eros elementum tristique. Duis
                 cursus, mi quis viverra ornare, eros dolor interdum nulla, ut

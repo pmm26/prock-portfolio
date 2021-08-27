@@ -6,13 +6,16 @@ import SectionBox from "../../molecules/SectionBox";
 import Img from "next/image";
 import Button from "../../atoms/Button";
 import TechIcons from "../../molecules/TechIcons";
+import { H1, H2, H3, H4 } from "../../atoms/Heading";
+import { P } from "../../atoms/P";
+
 
 const Portfolio = (_props: any) => {
   return (
     <SectionBox.WhiteSection>
       <SectionBox.Container headingRight project>
         <SectionBox.HeadingBox>
-          <h1 className="heading-9">Portfolio Website</h1>
+          <H1>Portfolio Website</H1>
         </SectionBox.HeadingBox>
         <SectionBox.ImageBox>
           {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -26,21 +29,21 @@ const Portfolio = (_props: any) => {
           />
         </SectionBox.ImageBox>
         <SectionBox.InfoBox>
-          <p className="white-paragraph">
+          <P>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Suspendisse varius enim in eros elementum tristique. Duis cursus,
             mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
             libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum
             lorem imperdiet.{" "}
-          </p>
-          <h2>Technology</h2>
-          <p className="white-paragraph">
+          </P>
+          <H2>Technology</H2>
+          <P>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Suspendisse varius enim in eros elementum tristique. Duis cursus,
             mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
             libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum
             lorem imperdiet. Nunc ut sem vitae risus tristique posuere.
-          </p>
+          </P>
           <TechIcons.IconContainer>
             <TechIcons.Icon srcFile="gitlab.png" alt="Gitlab" />
             <TechIcons.Icon srcFile="docker.png" alt="Docker" />

@@ -6,6 +6,8 @@ import SectionBox from "../../molecules/SectionBox";
 import Img from "next/image";
 import Button from "../../atoms/Button";
 import TechIcons from "../../molecules/TechIcons";
+import { H1, H2, H3, H4 } from "../../atoms/Heading";
+import { P } from "../../atoms/P";
 
 
 const MobileApp = (_props: any) => {
@@ -13,7 +15,7 @@ const MobileApp = (_props: any) => {
     <SectionBox.ColoredSection>
       <SectionBox.Container headingLeft project>
         <SectionBox.HeadingBox>
-          <h1 className="heading-9">SARD Mobile App</h1>
+          <H1>SARD Mobile App</H1>
         </SectionBox.HeadingBox>
         <SectionBox.ImageBox>
           {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -26,21 +28,21 @@ const MobileApp = (_props: any) => {
           />
         </SectionBox.ImageBox>
         <SectionBox.InfoBox>
-          <p className="white-paragraph">
+          <P white>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Suspendisse varius enim in eros elementum tristique. Duis cursus,
             mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
             libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum
             lorem imperdiet.{" "}
-          </p>
-          <h2>Technology</h2>
-          <p className="white-paragraph">
+          </P>
+          <H2>Technology</H2>
+          <P white>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Suspendisse varius enim in eros elementum tristique. Duis cursus,
             mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
             libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum
             lorem imperdiet. Nunc ut sem vitae risus tristique posuere.
-          </p>
+          </P>
           <TechIcons.IconContainer>
             <TechIcons.Icon srcFile="figma.png" alt="Figma Logo" />
             <TechIcons.Icon srcFile="javascript.png" alt="JavaScript" />

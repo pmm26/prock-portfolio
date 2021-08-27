@@ -6,6 +6,7 @@ import SectionBox from "../molecules/SectionBox";
 import Img from "next/image";
 import Button from "../atoms/Button";
 import TechIcons from "../molecules/TechIcons";
+import { H1, H2, H3, H4 } from "../atoms/Heading";
 
 const TechnicalSkills = (_props: any) => {
   return (
@@ -21,7 +22,7 @@ const TechnicalSkills = (_props: any) => {
           />
         </SectionBox.ImageBox>
         <SectionBox.InfoBox>
-          <h1 className="heading-9">Technical Skills</h1>
+          <H1>Technical Skills</H1>
           <TechIcons.Container>
             <TechIcons.Title>Programming Languages</TechIcons.Title>
             <TechIcons.IconContainer>

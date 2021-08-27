@@ -8,6 +8,7 @@ import Img from "next/image";
 import Button from "../atoms/Button";
 import TechIcons from "../molecules/TechIcons";
 import SkillBars from "../molecules/SkillBars";
+import { H1, H2, H3, H4 } from "../atoms/Heading";
 
 const Proficiency = (_props: any) => {
   return (
@@ -25,7 +26,7 @@ const Proficiency = (_props: any) => {
           />
         </SectionBox.ImageBox>
         <SectionBox.InfoBox>
-          <h1 className="heading-9">Proficiency</h1>
+          <H1>Proficiency</H1>
 
           <SkillBars.Container>
             <SkillBars.Title>Frontend</SkillBars.Title>

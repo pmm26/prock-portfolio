@@ -4,7 +4,7 @@ import styled from 'styled-components'
 export const ColoredSection = styled.div`
   border: 1px none #000;
   border-radius: 0px;
-  background-color: #f5905b;
+  background-color: ${props => props.theme.colors.orange};
   transition: opacity 50ms cubic-bezier(.23, 1, .32, 1);
 `
 

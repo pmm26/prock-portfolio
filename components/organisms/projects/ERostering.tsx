@@ -46,12 +46,12 @@ const ERostering = (props: any) => {
             lorem imperdiet. Nunc ut sem vitae risus tristique posuere.
           </P>
           <TechIcons.IconContainer>
-            <TechIcons.Icon srcFile="ruby-on-rails.png" alt="Ruby On Rails" />
-            <TechIcons.Icon srcFile="haml.svg" alt="Haml" />
-            <TechIcons.Icon srcFile="react.png" alt="React" />
-            <TechIcons.Icon srcFile="mysql.png" alt="MySQL" />
-            <TechIcons.Icon srcFile="rspec.png" alt="Rspec" />
-            <TechIcons.Icon srcFile="cypress.png" alt="Cypress.io" />
+            <TechIcons.Icon icon="Ruby On Rails" />
+            <TechIcons.Icon icon="Haml" />
+            <TechIcons.Icon icon="React" />
+            <TechIcons.Icon icon="MySQL" />
+            <TechIcons.Icon icon="RSpec" />
+            <TechIcons.Icon icon="Cypress.io" />
           </TechIcons.IconContainer>
         </SectionBox.InfoBox>
         <SectionBox.ButtonsBox>

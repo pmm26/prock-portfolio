@@ -44,12 +44,12 @@ const MobileApp = (_props: any) => {
             lorem imperdiet. Nunc ut sem vitae risus tristique posuere.
           </P>
           <TechIcons.IconContainer>
-            <TechIcons.Icon srcFile="figma.png" alt="Figma Logo" />
-            <TechIcons.Icon srcFile="javascript.png" alt="JavaScript" />
-            <TechIcons.Icon srcFile="expo.png" alt="Expo Logo" />
-            <TechIcons.Icon srcFile="react-native.png" alt="React  Native" />
-            <TechIcons.Icon srcFile="redux.png" alt="Redux" />
-            <TechIcons.Icon srcFile="jest.png" alt="Jest" />
+            <TechIcons.Icon icon="Figma" />
+            <TechIcons.Icon icon="JavaScript" />
+            <TechIcons.Icon icon="Expo" />
+            <TechIcons.Icon icon="React Native" />
+            <TechIcons.Icon icon="Redux" />
+            <TechIcons.Icon icon="Jest" />
           </TechIcons.IconContainer>
         </SectionBox.InfoBox>
         <SectionBox.ButtonsBox>

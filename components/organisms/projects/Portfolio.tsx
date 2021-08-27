@@ -45,11 +45,11 @@ const Portfolio = (_props: any) => {
             lorem imperdiet. Nunc ut sem vitae risus tristique posuere.
           </P>
           <TechIcons.IconContainer>
-            <TechIcons.Icon srcFile="gitlab.png" alt="Gitlab" />
-            <TechIcons.Icon srcFile="docker.png" alt="Docker" />
-            <TechIcons.Icon srcFile="nextjs.png" alt="Next.JS" />
-            <TechIcons.Icon srcFile="react.png" alt="React" />
-            <TechIcons.Icon srcFile="styled-components.png" alt="Styled Components" />
+            <TechIcons.Icon icon="Gitlab" />
+            <TechIcons.Icon icon="Docker" />
+            <TechIcons.Icon icon="NextJS" />
+            <TechIcons.Icon icon="React" />
+            <TechIcons.Icon icon="Styled Components" />
           </TechIcons.IconContainer>
         </SectionBox.InfoBox>
         <SectionBox.ButtonsBox>

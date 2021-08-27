@@ -26,70 +26,59 @@ const TechnicalSkills = (_props: any) => {
           <TechIcons.Container>
             <TechIcons.Title>Programming Languages</TechIcons.Title>
             <TechIcons.IconContainer>
-              <TechIcons.Icon srcFile="gitlab.png" alt="Gitlab" />
-              <TechIcons.Icon srcFile="docker.png" alt="Docker" />
-              <TechIcons.Icon srcFile="nextjs.png" alt="Next.JS" />
-              <TechIcons.Icon srcFile="react.png" alt="React" />
-              <TechIcons.Icon
-                srcFile="styled-components.png"
-                alt="Styled Components"
-              />
+              <TechIcons.Icon icon="JavaScript" />
+              <TechIcons.Icon icon="TypeScript" />
+              <TechIcons.Icon icon="Ruby" />
+              <TechIcons.Icon icon="PHP" />
+              <TechIcons.Icon icon="Java"/>
             </TechIcons.IconContainer>
           </TechIcons.Container>
 
           <TechIcons.Container>
             <TechIcons.Title>Frontend</TechIcons.Title>
             <TechIcons.IconContainer>
-              <TechIcons.Icon srcFile="gitlab.png" alt="Gitlab" />
-              <TechIcons.Icon srcFile="docker.png" alt="Docker" />
-              <TechIcons.Icon srcFile="nextjs.png" alt="Next.JS" />
-              <TechIcons.Icon srcFile="react.png" alt="React" />
-              <TechIcons.Icon
-                srcFile="styled-components.png"
-                alt="Styled Components"
-              />
+              <TechIcons.Icon icon="HTML5" />
+              <TechIcons.Icon icon="CSS" />
+              <TechIcons.Icon icon="Haml" />
+              <TechIcons.Icon icon="React" />
+              <TechIcons.Icon icon="React Native" />
+              <TechIcons.Icon icon="jQuery" />
+              <TechIcons.Icon icon="Redux" />
+
             </TechIcons.IconContainer>
           </TechIcons.Container>
 
           <TechIcons.Container>
             <TechIcons.Title>Backend</TechIcons.Title>
             <TechIcons.IconContainer>
-              <TechIcons.Icon srcFile="gitlab.png" alt="Gitlab" />
-              <TechIcons.Icon srcFile="docker.png" alt="Docker" />
-              <TechIcons.Icon srcFile="nextjs.png" alt="Next.JS" />
-              <TechIcons.Icon srcFile="react.png" alt="React" />
-              <TechIcons.Icon
-                srcFile="styled-components.png"
-                alt="Styled Components"
-              />
+            <TechIcons.Icon icon="Ruby On Rails" />
+            <TechIcons.Icon icon="NodeJS" />
+            <TechIcons.Icon icon="NextJS" />
+            <TechIcons.Icon icon="Nginx" />
+
             </TechIcons.IconContainer>
           </TechIcons.Container>
 
           <TechIcons.Container>
             <TechIcons.Title>Testing</TechIcons.Title>
             <TechIcons.IconContainer>
-              <TechIcons.Icon srcFile="gitlab.png" alt="Gitlab" />
-              <TechIcons.Icon srcFile="docker.png" alt="Docker" />
-              <TechIcons.Icon srcFile="nextjs.png" alt="Next.JS" />
-              <TechIcons.Icon srcFile="react.png" alt="React" />
-              <TechIcons.Icon
-                srcFile="styled-components.png"
-                alt="Styled Components"
-              />
+            <TechIcons.Icon icon="RSpec" />
+            <TechIcons.Icon icon="Jest" />
+            <TechIcons.Icon icon="Appium" />
+            <TechIcons.Icon icon="Cypress.io" />
+
             </TechIcons.IconContainer>
           </TechIcons.Container>
 
           <TechIcons.Container>
             <TechIcons.Title>CI/CD & Deployments</TechIcons.Title>
             <TechIcons.IconContainer>
-              <TechIcons.Icon srcFile="gitlab.png" alt="Gitlab" />
-              <TechIcons.Icon srcFile="docker.png" alt="Docker" />
-              <TechIcons.Icon srcFile="nextjs.png" alt="Next.JS" />
-              <TechIcons.Icon srcFile="react.png" alt="React" />
-              <TechIcons.Icon
-                srcFile="styled-components.png"
-                alt="Styled Components"
-              />
+            <TechIcons.Icon icon="Gitlab" />
+            <TechIcons.Icon icon="GitHub" />
+            <TechIcons.Icon icon="Docker" />
+            <TechIcons.Icon icon="VM" />
+            <TechIcons.Icon icon="Kubernetes" />
+
             </TechIcons.IconContainer>
           </TechIcons.Container>
 

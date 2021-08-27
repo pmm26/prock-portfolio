@@ -1,21 +1,60 @@
-
-import styled from 'styled-components'
+import styled from "styled-components";
 
 const StyledIcons = styled.img`
   height: 50px;
   margin-top: 0px;
   margin-right: 12px;
   padding-bottom: 10px;
-`
+`;
 
-const TechIcons = (props: { srcFile: string, alt: string }) => {
-  return (
-    <StyledIcons
-      src={`/images/icons/${props.srcFile}`}
-      loading="lazy"
-      alt={props.alt}
-    />
-  )
-}
+const glyphMap = [
+  { src: "appium.png", alt: "Appium" },
+  { src: "css3.png", alt: "CSS" },
+  { src: "html5.png", alt: "HTML5" },
+  { src: "cypress.png", alt: "Cypress.io" },
+  { src: "docker.png", alt: "Docker" },
+  { src: "expo.png", alt: "Expo" },
+  { src: "figma.png", alt: "Figma" },
+  { src: "github.png", alt: "GitHub" },
+  { src: "gitlab.png", alt: "Gitlab" },
+  { src: "haml.svg", alt: "Haml" },
+  { src: "java.png", alt: "Java" },
+  { src: "javascript.png", alt: "JavaScript" },
+  { src: "jest.png", alt: "Jest" },
+  { src: "jquery.png", alt: "jQuery" },
+  { src: "kubernetes.png", alt: "Kubernetes" },
+  { src: "linux.png", alt: "Linux" },
+  { src: "mariadb.png", alt: "MariaDB" },
+  { src: "mysql.png", alt: "MySQL" },
+  { src: "nextjs.png", alt: "NextJS" },
+  { src: "nginx.png", alt: "Nginx" },
+  { src: "nodejs.png", alt: "NodeJS" },
+  { src: "php.png", alt: "PHP" },
+  { src: "react-native.png", alt: "React Native" },
+  { src: "react.png", alt: "React" },
+  { src: "redux.png", alt: "Redux" },
+  { src: "rspec.png", alt: "RSpec" },
+  { src: "ruby-on-rails.png", alt: "Ruby On Rails" },
+  { src: "ruby.png", alt: "Ruby" },
+  { src: "styled-components.png", alt: "Styled Components" },
+  { src: "typescript.png", alt: "TypeScript" },
+  { src: "vm.png", alt: "VM" },
+  { src: "webclip.png", alt: "Web Clip" },
+];
 
-export default TechIcons
+const TechIcons = (props: { icon: string }) => {
+  const iconEntry = glyphMap.find((entry) => entry.alt == props.icon);
+  if (iconEntry)
+    return (
+      <StyledIcons
+        src={`/images/icons/${iconEntry.src}`}
+        loading="lazy"
+        alt={iconEntry.alt}
+      />
+    );
+  else return (<div>
+    Not Found
+    </div>);
+};
+
+export default TechIcons;

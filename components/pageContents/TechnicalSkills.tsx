@@ -1,12 +1,7 @@
-import type { NextPage } from "next";
-import Head from "next/head";
 import Image from "next/image";
-import styles from "../../styles/Home.module.css";
 import SectionBox from "../molecules/SectionBox";
-import Img from "next/image";
-import Button from "../atoms/Button";
 import TechIcons from "../molecules/TechIcons";
-import { H1, H2, H3, H4 } from "../atoms/Heading";
+import { H1 } from "../atoms/Heading";
 import image from '../../public/images/4354885.svg'
 
 const TechnicalSkills = (_props: any) => {

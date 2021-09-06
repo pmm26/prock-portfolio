@@ -1,25 +1,18 @@
 import type { NextPage } from "next";
-import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/Home.module.css";
 import AppContainer from "../components/atoms/AppContainer";
-import SectionBox from "../components/molecules/SectionBox";
-import Img from "next/image";
-import Button from "../components/atoms/Button";
-import TechIcons from "../components/molecules/TechIcons";
 
-import Intro from "../components/organisms/Intro";
-import TechnicalSkills from "../components/organisms/TechnicalSkills";
-import Proficiency from "../components/organisms/Proficiency";
+import Intro from "../components/pageContents/Intro";
+import TechnicalSkills from "../components/pageContents/TechnicalSkills";
+import Proficiency from "../components/pageContents/Proficiency";
 
-import ElitePortuguesa from "../components/organisms/projects/ElitePortuguesa";
-import ERostering from "../components/organisms/projects/ERostering";
-import MobileApp from "../components/organisms/projects/MobileApp";
-import Portfolio from "../components/organisms/projects/Portfolio";
+import ElitePortuguesa from "../components/pageContents/projects/ElitePortuguesa";
+import ERostering from "../components/pageContents/projects/ERostering";
+import MobileApp from "../components/pageContents/projects/MobileApp";
+import Portfolio from "../components/pageContents/projects/Portfolio";
 
-import WorkExperience from "../components/organisms/WorkExperience";
-import Voluntering from "../components/organisms/Voluntering";
-import Education from "../components/organisms/Education";
+import WorkExperience from "../components/pageContents/WorkExperience";
+import Voluntering from "../components/pageContents/Voluntering";
+import Education from "../components/pageContents/Education";
 
 const Home: NextPage = () => {
   return (

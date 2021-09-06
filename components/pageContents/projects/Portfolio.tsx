@@ -1,34 +1,26 @@
-import type { NextPage } from "next";
-import Head from "next/head";
 import Image from "next/image";
-import styles from "../../../styles/Home.module.css";
 import SectionBox from "../../molecules/SectionBox";
-import Img from "next/image";
 import Button from "../../atoms/Button";
 import TechIcons from "../../molecules/TechIcons";
-import { H1, H2, H3, H4 } from "../../atoms/Heading";
+import { H1, H2} from "../../atoms/Heading";
 import { P } from "../../atoms/P";
+import image from "../../../public/images/sard-mobile-app.png"
 
-
-const MobileApp = (_props: any) => {
+const Portfolio = (_props: any) => {
   return (
-    <SectionBox.ColoredSection>
-      <SectionBox.ProjectContainer>
+    <SectionBox.WhiteSection>
+      <SectionBox.ProjectContainer headingRight>
         <SectionBox.HeadingBox>
-          <H1>SARD Mobile App</H1>
+          <H1>Portfolio Website</H1>
         </SectionBox.HeadingBox>
         <SectionBox.ImageBox>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/images/sard-mobile-app.png"
-            loading="lazy"
-            width="193"
-            sizes="193px"
-            alt="Sard mobile app mock"
+        <Image
+            src={image}
+            alt="Sard mobile app"
           />
         </SectionBox.ImageBox>
         <SectionBox.InfoBox center>
-          <P white>
+          <P>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Suspendisse varius enim in eros elementum tristique. Duis cursus,
             mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
@@ -36,7 +28,7 @@ const MobileApp = (_props: any) => {
             lorem imperdiet.{" "}
           </P>
           <H2>Technology</H2>
-          <P white>
+          <P>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Suspendisse varius enim in eros elementum tristique. Duis cursus,
             mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
@@ -44,20 +36,20 @@ const MobileApp = (_props: any) => {
             lorem imperdiet. Nunc ut sem vitae risus tristique posuere.
           </P>
           <TechIcons.IconContainer>
-            <TechIcons.Icon icon="Figma" />
-            <TechIcons.Icon icon="JavaScript" />
-            <TechIcons.Icon icon="Expo" />
-            <TechIcons.Icon icon="React Native" />
-            <TechIcons.Icon icon="Redux" />
-            <TechIcons.Icon icon="Jest" />
+            <TechIcons.Icon icon="Gitlab" />
+            <TechIcons.Icon icon="Docker" />
+            <TechIcons.Icon icon="NextJS" />
+            <TechIcons.Icon icon="React" />
+            <TechIcons.Icon icon="Styled Components" />
           </TechIcons.IconContainer>
         </SectionBox.InfoBox>
         <SectionBox.ButtonsBox>
-          <Button>Visit Website</Button>
+          <Button black>Visit Website</Button>
+          <Button black>Source Code</Button>
         </SectionBox.ButtonsBox>
       </SectionBox.ProjectContainer>
-    </SectionBox.ColoredSection>
+    </SectionBox.WhiteSection>
   )
 }
 
-export default MobileApp
+export default Portfolio

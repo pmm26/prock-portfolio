@@ -1,32 +1,25 @@
-import type { NextPage } from "next";
-import Head from "next/head";
 import Image from "next/image";
-import styles from "../../../styles/Home.module.css";
 import SectionBox from "../../molecules/SectionBox";
-import Img from "next/image";
 import Button from "../../atoms/Button";
 import TechIcons from "../../molecules/TechIcons";
-import { H1, H2, H3, H4 } from "../../atoms/Heading";
+import { H1, H2} from "../../atoms/Heading";
 import { P } from "../../atoms/P";
+import image from "../../../public/images/sard-erostering-mock.png"
 
 
-const Portfolio = (_props: any) => {
+const ERostering = (props: any) => {
   return (
-    <SectionBox.WhiteSection>
+    < SectionBox.WhiteSection >
       <SectionBox.ProjectContainer headingRight>
         <SectionBox.HeadingBox>
-          <H1>Portfolio Website</H1>
+          <H1>SARD eRostering</H1>
         </SectionBox.HeadingBox>
         <SectionBox.ImageBox>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            className={styles.images}
-            src="images/sard-erostering-mock.png"
-            loading="lazy"
-            sizes="(max-width: 479px) 100vw, (max-width: 767px) 56vw, 57vw"
-            srcSet="images/sard-erostering-mock-p-500.png 500w, images/sard-erostering-mock-p-800.png 800w, images/sard-erostering-mock-p-1080.png 1080w, images/sard-erostering-mock-p-2600.png 2600w, images/sard-erostering-mock-p-3200.png 3200w, images/sard-erostering-mock.png 3411w"
-            alt="Sard eRostering"
-          />  
+
+        <Image 
+            src={image} 
+            alt="Sard eRostering" 
+            />
         </SectionBox.ImageBox>
         <SectionBox.InfoBox center>
           <P>
@@ -45,20 +38,20 @@ const Portfolio = (_props: any) => {
             lorem imperdiet. Nunc ut sem vitae risus tristique posuere.
           </P>
           <TechIcons.IconContainer>
-            <TechIcons.Icon icon="Gitlab" />
-            <TechIcons.Icon icon="Docker" />
-            <TechIcons.Icon icon="NextJS" />
+            <TechIcons.Icon icon="Ruby On Rails" />
+            <TechIcons.Icon icon="Haml" />
             <TechIcons.Icon icon="React" />
-            <TechIcons.Icon icon="Styled Components" />
+            <TechIcons.Icon icon="MySQL" />
+            <TechIcons.Icon icon="RSpec" />
+            <TechIcons.Icon icon="Cypress.io" />
           </TechIcons.IconContainer>
         </SectionBox.InfoBox>
         <SectionBox.ButtonsBox>
           <Button black>Visit Website</Button>
-          <Button black>Source Code</Button>
         </SectionBox.ButtonsBox>
       </SectionBox.ProjectContainer>
-    </SectionBox.WhiteSection>
+    </SectionBox.WhiteSection >
   )
 }
 
-export default Portfolio
+export default ERostering

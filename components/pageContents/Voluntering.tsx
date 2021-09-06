@@ -1,13 +1,6 @@
-import type { NextPage } from "next";
-import Head from "next/head";
 import Image from "next/image";
-import styles from "../../styles/Home.module.css";
 
 import SectionBox from "../molecules/SectionBox";
-import Img from "next/image";
-import Button from "../atoms/Button";
-import TechIcons from "../molecules/TechIcons";
-import SkillBars from "../molecules/SkillBars";
 import { H1, H2, H3, H4 } from "../atoms/Heading";
 import { P } from "../atoms/P";
 import ageUk from '../../public/images/Age-UK-LLL-Logo-CMYK-5-Spot-Colour.png'
@@ -17,7 +10,7 @@ const Voluntering = (_props: any) => {
   return (
     <SectionBox.ColoredSection>
       <SectionBox.EducationContainer headingLeft education customFr={[1, 0.5]}>
-        <SectionBox.HeadingBox span={2} noArea>
+        <SectionBox.HeadingBox mobileOrder={1} span={2} noArea>
           <H1>Community Projects &amp; Voluntering</H1>
           <P>
             “The best way to find yourself is to lose yourself in the service of
@@ -25,7 +18,7 @@ const Voluntering = (_props: any) => {
           </P>
         </SectionBox.HeadingBox>
 
-        <SectionBox.InfoBox noArea center>
+        <SectionBox.InfoBox mobileOrder={3} noArea center>
           {/* Elite PT */}
           <H2>Elite Portuguesa Community - Non Profit</H2>
           <H3 fontSize="s">August 2012 – Present</H3>
@@ -35,14 +28,14 @@ const Voluntering = (_props: any) => {
           </P>
         </SectionBox.InfoBox>
 
-        <SectionBox.ImageBox noArea>
+        <SectionBox.ImageBox mobileOrder={2}  noArea>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           Image
         </SectionBox.ImageBox>
-        <SectionBox.Divider />
+        <SectionBox.Divider mobileOrder={4}  />
 
         {/* Other Charity */}
-        <SectionBox.InfoBox noArea center>
+        <SectionBox.InfoBox mobileOrder={6}  noArea center>
           <H2>Elite Portuguesa Community - Non Profit</H2>
           <H4 fontSize="s">August 2012 – Present</H4>
           <P>
@@ -51,7 +44,7 @@ const Voluntering = (_props: any) => {
           </P>
         </SectionBox.InfoBox>
 
-        <SectionBox.ImageBox noArea>
+        <SectionBox.ImageBox mobileOrder={5} noArea>
           <Image
             src={ageUk}
             alt="AgeUK"
@@ -59,9 +52,9 @@ const Voluntering = (_props: any) => {
           />
         </SectionBox.ImageBox>
 
-        <SectionBox.Divider />
+        <SectionBox.Divider mobileOrder={7} />
         {/* Cancer Research PT */}
-        <SectionBox.InfoBox noArea center>
+        <SectionBox.InfoBox mobileOrder={9} noArea center>
           <H2>Elite Portuguesa Community - Non Profit</H2>
           <H3 fontSize="s">August 2012 – Present</H3>
           <P>
@@ -70,7 +63,7 @@ const Voluntering = (_props: any) => {
           </P>
         </SectionBox.InfoBox>
 
-        <SectionBox.ImageBox noArea>
+        <SectionBox.ImageBox mobileOrder={8} noArea>
           <Image
             src={cancerResearch}
             alt="Cancer Research UK"

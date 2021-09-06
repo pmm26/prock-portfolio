@@ -3,6 +3,8 @@ import styled from 'styled-components'
 
 interface DividerType {
   noArea?: any
+  mobileOrder?: number;
+
 }
 
 const Divider = styled.div<DividerType>`
@@ -12,10 +14,11 @@ const Divider = styled.div<DividerType>`
 
   grid-column: 1 / span 2;
 
-
   @media screen and (max-width: 479px) {
+    ${({ mobileOrder: order }) => order && `
+      order: ${order};
+    `}
      grid-column: 1;
-     grid-area: divider;
   }
 
 

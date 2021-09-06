@@ -52,7 +52,7 @@ const Container = styled.div<ContainerType>`
   @media screen and (max-width: 479px) {
     padding-top: 0px;
     grid-template-columns: 1fr;
-    grid-auto-flow: column;
+    grid-auto-flow: row;
     grid-template-areas: "heading" "image" "info" "buttons";
   }
 `;

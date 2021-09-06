@@ -4,6 +4,8 @@ import styled from 'styled-components'
 interface HeadingType {
   span?: number;
   noArea?: any
+  mobileOrder?: number;
+
 }
 
 const HeadingBox = styled.div<HeadingType>`
@@ -23,8 +25,10 @@ const HeadingBox = styled.div<HeadingType>`
   `}
 
   @media screen and (max-width: 479px) {
+    ${({ mobileOrder: order }) => order && `
+      order: ${order};
+    `}
      grid-column: 1;
-     grid-area: heading;
   }
 
 `

@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 interface ButtonType {
   noArea?: any
+  mobileOrder?: number;
 }
 
 const Buttons = styled.div<ButtonType>`
@@ -18,6 +19,9 @@ const Buttons = styled.div<ButtonType>`
   grid-column: 1 / span 2;
 
   @media screen and (max-width: 479px) {
+    ${({ mobileOrder: order }) => order && `
+      order: ${order};
+    `}
      grid-column: 1;
   }
 

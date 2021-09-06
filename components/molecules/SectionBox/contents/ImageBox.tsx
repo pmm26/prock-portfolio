@@ -3,6 +3,8 @@ import styled from 'styled-components'
 
 interface ImageType {
   noArea?: any
+  mobileOrder?: number;
+
 }
 
 const ImageBox = styled.div<ImageType>`
@@ -15,8 +17,10 @@ const ImageBox = styled.div<ImageType>`
     grid-area: image;
   `}
 
-@media screen and (max-width: 479px) {
-     grid-area: image;
+  @media screen and (max-width: 479px) {
+    ${({ mobileOrder: order }) => order && `
+      order: ${order};
+    `}
   }
 
 `

@@ -1,12 +1,6 @@
-import type { NextPage } from "next";
-import Head from "next/head";
 import Image from "next/image";
-import styles from "../../styles/Home.module.css";
 import SectionBox from "../molecules/SectionBox";
-import Img from "next/image";
-import Button from "../atoms/Button";
-import TechIcons from "../molecules/TechIcons";
-import { H1, H2, H3, H4 } from "../atoms/Heading";
+import { H1, H2 } from "../atoms/Heading";
 import { P } from "../atoms/P";
 import image from '../../public/images/desktopIlustration.svg'
 
@@ -16,6 +10,9 @@ const Intro = (_props: any) => {
       <SectionBox.Container headingRight customFr={[0.8, 1]}>
         <SectionBox.ImageBox>
           <Image 
+            // layout={'responsive'}
+            width={"100%"}
+            height={"100%"}
             src={image} 
             alt="Desktop Ilustration" 
             />

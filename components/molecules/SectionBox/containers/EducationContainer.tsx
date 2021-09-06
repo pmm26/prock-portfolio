@@ -12,11 +12,11 @@ interface ContainerType {
 // @ts-ignore
 const EducationContainer = styled(BaseContainer)`
 
-   @media screen and (max-width: 479px) {
+    @media screen and (max-width: 479px) { 
     grid-template-columns: 1fr;
     grid-auto-flow: row;
-    grid-template-areas: "heading" "image" "info" "divider" "image" "info" "divider" "image" "info" "divider";
-  }
+    /* grid-template-areas: "heading" "image" "info" "divider" "image" "info" "divider" "image" "info" "divider"; */
+  } 
 `;
 
 export default EducationContainer;

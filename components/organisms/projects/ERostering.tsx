@@ -14,7 +14,7 @@ import { P } from "../../atoms/P";
 const ERostering = (props: any) => {
   return (
     < SectionBox.WhiteSection >
-      <SectionBox.Container headingRight project>
+      <SectionBox.ProjectContainer headingRight>
         <SectionBox.HeadingBox>
           <H1>SARD eRostering</H1>
         </SectionBox.HeadingBox>
@@ -29,7 +29,7 @@ const ERostering = (props: any) => {
             alt="Sard eRostering"
           />
         </SectionBox.ImageBox>
-        <SectionBox.InfoBox>
+        <SectionBox.InfoBox center>
           <P>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Suspendisse varius enim in eros elementum tristique. Duis cursus,
@@ -57,7 +57,7 @@ const ERostering = (props: any) => {
         <SectionBox.ButtonsBox>
           <Button black>Visit Website</Button>
         </SectionBox.ButtonsBox>
-      </SectionBox.Container>
+      </SectionBox.ProjectContainer>
     </SectionBox.WhiteSection >
   )
 }

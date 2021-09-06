@@ -8,20 +8,19 @@ import Button from "../atoms/Button";
 import TechIcons from "../molecules/TechIcons";
 import { H1, H2, H3, H4 } from "../atoms/Heading";
 import { P } from "../atoms/P";
+import image from '../../public/images/desktopIlustration.svg'
 
 const Intro = (_props: any) => {
   return (
     <SectionBox.ColoredSection>
       <SectionBox.Container headingRight customFr={[0.8, 1]}>
         <SectionBox.ImageBox>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="images/desktopIlustration.svg"
-            loading="lazy"
-            alt="Desktop Ilustration"
-          />
+          <Image 
+            src={image} 
+            alt="Desktop Ilustration" 
+            />
         </SectionBox.ImageBox>
-        <SectionBox.InfoBox>
+        <SectionBox.InfoBox center>
           <H1>Pedro Roque</H1>
           <H2>Full-Stack Software Developer</H2>
           <P white>

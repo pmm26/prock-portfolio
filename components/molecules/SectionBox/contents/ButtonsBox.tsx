@@ -17,6 +17,10 @@ const Buttons = styled.div<ButtonType>`
 
   grid-column: 1 / span 2;
 
+  @media screen and (max-width: 479px) {
+     grid-column: 1;
+  }
+
 `
 
 export default Buttons

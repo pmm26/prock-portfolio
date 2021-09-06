@@ -10,11 +10,13 @@ import TechIcons from "../molecules/TechIcons";
 import SkillBars from "../molecules/SkillBars";
 import { H1, H2, H3, H4 } from "../atoms/Heading";
 import { P } from "../atoms/P";
+import ukcImage from '../../public/images/ukc.png'
+import candiImage from '../../public/images/candi.jpg'
 
 const Education = (_props: any) => {
   return (
     <SectionBox.WhiteSection>
-      <SectionBox.Container headingRight education customFr={[0.5, 1]}>
+      <SectionBox.EducationContainer headingRight education customFr={[0.5, 1]}>
         <SectionBox.InfoBox noArea></SectionBox.InfoBox>
 
         <SectionBox.HeadingBox noArea>
@@ -23,11 +25,14 @@ const Education = (_props: any) => {
 
         {/* Other Charity */}
         <SectionBox.ImageBox noArea>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/images/1606404178_uok_logo_rgb294-removebg.png" loading="lazy" sizes="(max-width: 479px) 260px, (max-width: 767px) 32vw, (max-width: 991px) 33vw, 260px" srcSet="images/1606404178_uok_logo_rgb294-removebg-p-500.png 500w, images/1606404178_uok_logo_rgb294-removebg-p-800.png 800w, images/1606404178_uok_logo_rgb294-removebg-p-1080.png 1080w, images/1606404178_uok_logo_rgb294-removebg-p-1600.png 1600w, images/1606404178_uok_logo_rgb294-removebg.png 1654w" alt="University of Kent Logo" />
+          <Image 
+            src={ukcImage} 
+            alt="University of Kent" 
+            // layout="responsive"s 
+            />
         </SectionBox.ImageBox>
 
-        <SectionBox.InfoBox noArea>
+        <SectionBox.InfoBox noArea center>
           <H2 fontSize="m">University of Kent</H2>
           <P>
             Computer Science (Artificial Intelligence) with Year in Industry{" "}
@@ -40,17 +45,18 @@ const Education = (_props: any) => {
 
         {/* Cancer Research PT */}
         <SectionBox.ImageBox noArea>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/images/candi.jpg"
-            loading="lazy"
-            alt="City and Islington College Logo"
+        <Image 
+          src={candiImage} 
+          alt="City and Islington College" 
+          // layout="responsive" 
           />
+
         </SectionBox.ImageBox>
 
-        <SectionBox.InfoBox noArea>
+        <SectionBox.InfoBox noArea center>
           <H2 fontSize="m">
-            City and Islington College <br />
+            City and Islington College 
+            <br />
             Centre for Business, Arts and Technology
           </H2>
           <P>
@@ -58,7 +64,7 @@ const Education = (_props: any) => {
             D* D* D* (Triple Distinction Star)
           </P>
         </SectionBox.InfoBox>
-      </SectionBox.Container>
+      </SectionBox.EducationContainer>
     </SectionBox.WhiteSection>
   );
 };

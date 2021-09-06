@@ -13,7 +13,7 @@ import { P } from "../../atoms/P";
 const Portfolio = (_props: any) => {
   return (
     <SectionBox.WhiteSection>
-      <SectionBox.Container headingRight project>
+      <SectionBox.ProjectContainer headingRight>
         <SectionBox.HeadingBox>
           <H1>Portfolio Website</H1>
         </SectionBox.HeadingBox>
@@ -26,9 +26,9 @@ const Portfolio = (_props: any) => {
             sizes="(max-width: 479px) 100vw, (max-width: 767px) 56vw, 57vw"
             srcSet="images/sard-erostering-mock-p-500.png 500w, images/sard-erostering-mock-p-800.png 800w, images/sard-erostering-mock-p-1080.png 1080w, images/sard-erostering-mock-p-2600.png 2600w, images/sard-erostering-mock-p-3200.png 3200w, images/sard-erostering-mock.png 3411w"
             alt="Sard eRostering"
-          />
+          />  
         </SectionBox.ImageBox>
-        <SectionBox.InfoBox>
+        <SectionBox.InfoBox center>
           <P>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Suspendisse varius enim in eros elementum tristique. Duis cursus,
@@ -56,7 +56,7 @@ const Portfolio = (_props: any) => {
           <Button black>Visit Website</Button>
           <Button black>Source Code</Button>
         </SectionBox.ButtonsBox>
-      </SectionBox.Container>
+      </SectionBox.ProjectContainer>
     </SectionBox.WhiteSection>
   )
 }

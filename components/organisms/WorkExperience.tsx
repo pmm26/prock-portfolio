@@ -10,21 +10,20 @@ import TechIcons from "../molecules/TechIcons";
 import SkillBars from "../molecules/SkillBars";
 import { H1, H2, H3, H4 } from "../atoms/Heading";
 import { P } from "../atoms/P";
-
+import image from '../../public/images/SARD-logo-stacked-col-blk-md.png'
 
 const WorkExperience = (_props: any) => {
   return (
     <SectionBox.WhiteSection>
       <SectionBox.Container headingRight>
         <SectionBox.ImageBox>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/images/SARD-logo-stacked-col-blk-md.png"
-            loading="lazy"
-            alt="Sard Logo"
-          />
+          <Image 
+            src={image} 
+            alt="Sard" 
+            // layout="responsive" 
+            />
         </SectionBox.ImageBox>
-        <SectionBox.InfoBox>
+        <SectionBox.InfoBox center>
           <H1>Work Experience</H1>
 
           <div>

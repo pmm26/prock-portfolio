@@ -11,11 +11,11 @@ export const H1 = styled.h1<HeadingType>`
   background-color: transparent;
   font-family: 'Futura-Bold', sans-serif;
   color: ${props => props.theme.colors.purpleish};
-  line-height: 50px;
   font-weight: 700;
 
   font-size: ${props => props.theme.fontSizes.xl}px;
 
+  line-height: 60px
 
   ${({ fontSize, theme}) => fontSize &&`
     font-size: ${theme.fontSizes[fontSize]}px;
@@ -50,7 +50,6 @@ export const H3 = styled.h3<HeadingType>`
     font-size: ${theme.fontSizes[fontSize]}px;
   `}
 `
-// @ts-ignore
 export const H4 = styled.h4<HeadingType>`
   margin-top: 10px;
   margin-bottom: 10px;

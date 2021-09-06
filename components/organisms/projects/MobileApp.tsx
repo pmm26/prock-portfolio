@@ -13,7 +13,7 @@ import { P } from "../../atoms/P";
 const MobileApp = (_props: any) => {
   return (
     <SectionBox.ColoredSection>
-      <SectionBox.Container headingLeft project>
+      <SectionBox.ProjectContainer>
         <SectionBox.HeadingBox>
           <H1>SARD Mobile App</H1>
         </SectionBox.HeadingBox>
@@ -27,7 +27,7 @@ const MobileApp = (_props: any) => {
             alt="Sard mobile app mock"
           />
         </SectionBox.ImageBox>
-        <SectionBox.InfoBox>
+        <SectionBox.InfoBox center>
           <P white>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Suspendisse varius enim in eros elementum tristique. Duis cursus,
@@ -55,7 +55,7 @@ const MobileApp = (_props: any) => {
         <SectionBox.ButtonsBox>
           <Button>Visit Website</Button>
         </SectionBox.ButtonsBox>
-      </SectionBox.Container>
+      </SectionBox.ProjectContainer>
     </SectionBox.ColoredSection>
   )
 }

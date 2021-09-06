@@ -10,24 +10,24 @@ import TechIcons from "../molecules/TechIcons";
 import SkillBars from "../molecules/SkillBars";
 import { H1, H2, H3, H4 } from "../atoms/Heading";
 import { P } from "../atoms/P";
+import ageUk from '../../public/images/Age-UK-LLL-Logo-CMYK-5-Spot-Colour.png'
+import cancerResearch from '../../public/images/1200px-Cancer_Research_UK.svg.png'
 
 const Voluntering = (_props: any) => {
   return (
     <SectionBox.ColoredSection>
-      <SectionBox.Container headingLeft education customFr={[1, 0.5]}>
+      <SectionBox.EducationContainer headingLeft education customFr={[1, 0.5]}>
         <SectionBox.HeadingBox span={2} noArea>
-          <H2>Community Projects &amp; Voluntering</H2>
+          <H1>Community Projects &amp; Voluntering</H1>
           <P>
             “The best way to find yourself is to lose yourself in the service of
             others.” – Gandhi
           </P>
         </SectionBox.HeadingBox>
 
-        <SectionBox.InfoBox noArea>
+        <SectionBox.InfoBox noArea center>
           {/* Elite PT */}
-          <H2>
-            Elite Portuguesa Community - Non Profit
-          </H2>
+          <H2>Elite Portuguesa Community - Non Profit</H2>
           <H3 fontSize="s">August 2012 – Present</H3>
           <P>
             In 2012 me and my friend and I started a gaming community and It has
@@ -42,10 +42,8 @@ const Voluntering = (_props: any) => {
         <SectionBox.Divider />
 
         {/* Other Charity */}
-        <SectionBox.InfoBox noArea>
-          <H2>
-            Elite Portuguesa Community - Non Profit
-          </H2>
+        <SectionBox.InfoBox noArea center>
+          <H2>Elite Portuguesa Community - Non Profit</H2>
           <H4 fontSize="s">August 2012 – Present</H4>
           <P>
             In 2012 me and my friend and I started a gaming community and It has
@@ -54,22 +52,17 @@ const Voluntering = (_props: any) => {
         </SectionBox.InfoBox>
 
         <SectionBox.ImageBox noArea>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="images/Age-UK-LLL-Logo-CMYK-5-Spot-Colour.png"
-            loading="lazy"
-            sizes="(max-width: 479px) 100vw, (max-width: 767px) 35vw, 32vw"
-            srcSet="images/Age-UK-LLL-Logo-CMYK-5-Spot-Colour-p-500.png 500w, images/Age-UK-LLL-Logo-CMYK-5-Spot-Colour-p-800.png 800w, images/Age-UK-LLL-Logo-CMYK-5-Spot-Colour.png 1024w"
-            alt="AgeUK Logo"
+          <Image
+            src={ageUk}
+            alt="AgeUK"
+            // layout="responsive"
           />
         </SectionBox.ImageBox>
 
         <SectionBox.Divider />
         {/* Cancer Research PT */}
-        <SectionBox.InfoBox noArea>
-          <H2>
-            Elite Portuguesa Community - Non Profit
-          </H2>
+        <SectionBox.InfoBox noArea center>
+          <H2>Elite Portuguesa Community - Non Profit</H2>
           <H3 fontSize="s">August 2012 – Present</H3>
           <P>
             In 2012 me and my friend and I started a gaming community and It has
@@ -78,16 +71,13 @@ const Voluntering = (_props: any) => {
         </SectionBox.InfoBox>
 
         <SectionBox.ImageBox noArea>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="images/1200px-Cancer_Research_UK.svg.png"
-            loading="lazy"
-            sizes="(max-width: 479px) 100vw, 64vw"
-            srcSet="images/1200px-Cancer_Research_UK.svg-p-800.png 800w, images/1200px-Cancer_Research_UK.svg-p-1080.png 1080w, images/1200px-Cancer_Research_UK.svg.png 1200w"
+          <Image
+            src={cancerResearch}
             alt="Cancer Research UK"
-          ></img>
+            // layout="responsive"
+          />
         </SectionBox.ImageBox>
-      </SectionBox.Container>
+      </SectionBox.EducationContainer>
     </SectionBox.ColoredSection>
   );
 };

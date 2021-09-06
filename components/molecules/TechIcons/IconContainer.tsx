@@ -2,18 +2,29 @@
 
 import styled from 'styled-components'
 
-const IconContainer = styled.div`
+interface IconContainerType {
+  center?: any;
+}
+
+const IconContainer = styled.div<IconContainerType>`
   display: flex;
   flex-wrap: wrap;
   align-content: center;
-  margin-top: 15px;
+  /* margin-top: 15px; */
   margin-bottom: 15px;
-  padding-top: 0px;
-  justify-content: center;
+  /* padding-top: 0px; */
   flex-wrap: wrap;
-  align-content: center;
   object-fit: none;
-  
+  ${({ center }) => center &&`
+    justify-content: center;
+    align-items: center; 
+  `}
+
+
+  @media screen and (max-width: 479px) {
+    justify-content: center;
+    align-items: center; 
+  }
 `
 
 export default IconContainer

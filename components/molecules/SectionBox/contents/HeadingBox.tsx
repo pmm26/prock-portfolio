@@ -10,6 +10,7 @@ const HeadingBox = styled.div<HeadingType>`
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   flex-direction: column;
 
   ${({ noArea }) => !noArea &&`
@@ -20,6 +21,12 @@ const HeadingBox = styled.div<HeadingType>`
   ${({ span }) => span &&`
     grid-column: 1 / span ${span};
   `}
+
+  @media screen and (max-width: 479px) {
+     grid-column: 1;
+     grid-area: heading;
+  }
+
 `
 
 export default HeadingBox

@@ -4,8 +4,7 @@ variables:
   GIT_SUBMODULE_STRATEGY: recursive
 stages:  
   - build
-  # - test
-  # - deploy
+  - deploy
 
 build:
   tags:
@@ -31,30 +30,5 @@ deploy:
   image: docker:latest
   stage: build
   script:
-    - whoami
-    - pwd
-
-# test-back:
-#   # Use the official docker image.
-#   image: $CI_APPLICATION_REPOSITORY:back-$CI_APPLICATION_TAG
-#   stage: test
-#   script:
-#     - cd /app
-#     - npm run test
-
-
-# deploy:
-#   # Use the official docker image.
-#   image: "registry.gitlab.com/gitlab-org/cluster-integration/auto-deploy-image:v2.6.0"
-#   stage: deploy
-#   script:
-#     - apk add --update coreutils
-#     - echo "$KUBE_CLUSTER_CERTIFICATE" | base64 --decode > cert.crt
-#   # backend
-#     - kubectl --kubeconfig="/dev/null" --server=$KUBE_SERVER_URL --token=$KUBE_TOKEN --certificate-authority=cert.crt -n birdie set image deployments/nodejs-backend backend=$CI_APPLICATION_REPOSITORY:back-$CI_APPLICATION_TAG
-#   # frontend
-#     - kubectl --kubeconfig="/dev/null" --server=$KUBE_SERVER_URL --token=$KUBE_TOKEN --certificate-authority=cert.crt -n birdie set image deployments/nodejs-frontend frontend=$CI_APPLICATION_REPOSITORY:front-$CI_APPLICATION_TAG
-#   only:
-#     refs:
-#       - main
+    - docker-compose -f ~/deploy/portfolio/docker-compose.yaml up -d --force-recreate
 

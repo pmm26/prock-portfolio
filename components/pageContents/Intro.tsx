@@ -21,7 +21,7 @@ const Intro = (_props: any) => {
           <H1>Pedro Roque</H1>
           <H2>Full-Stack Software Developer</H2>
           <P white>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            Look at this great portfolio Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
             varius enim in eros elementum tristique. Duis cursus, mi quis
             viverra ornare, eros dolor interdum nulla, ut commodo diam libero
             vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem

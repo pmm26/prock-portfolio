@@ -6,13 +6,13 @@ import { P } from "../atoms/P";
 import ageUk from '../../public/images/Age-UK-LLL-Logo-CMYK-5-Spot-Colour.png'
 import cancerResearch from '../../public/images/1200px-Cancer_Research_UK.svg.png'
 
-const Voluntering = (_props: any) => {
+const Volunteering = (_props: any) => {
   return (
     <SectionBox.ColoredSection>
       <SectionBox.EducationContainer headingLeft education customFr={[1, 0.5]}>
         <SectionBox.HeadingBox mobileOrder={1} span={2} noArea>
-          <H1>Community Projects &amp; Voluntering</H1>
-          <P>
+          <H1>Community Projects &amp; Volunteering</H1>
+          <P white>
             “The best way to find yourself is to lose yourself in the service of
             others.” – Gandhi
           </P>
@@ -22,7 +22,7 @@ const Voluntering = (_props: any) => {
           {/* Elite PT */}
           <H2>Elite Portuguesa Community - Non Profit</H2>
           <H3 fontSize="s">August 2012 – Present</H3>
-          <P>
+          <P white>
             In 2012 me and my friend and I started a gaming community and It has
             been running since. I’m responsible for all the servers.
           </P>
@@ -38,7 +38,7 @@ const Voluntering = (_props: any) => {
         <SectionBox.InfoBox mobileOrder={6}  noArea center>
           <H2>Elite Portuguesa Community - Non Profit</H2>
           <H4 fontSize="s">August 2012 – Present</H4>
-          <P>
+          <P white>
             In 2012 me and my friend and I started a gaming community and It has
             been running since. I’m responsible for all the servers.
           </P>
@@ -57,7 +57,7 @@ const Voluntering = (_props: any) => {
         <SectionBox.InfoBox mobileOrder={9} noArea center>
           <H2>Elite Portuguesa Community - Non Profit</H2>
           <H3 fontSize="s">August 2012 – Present</H3>
-          <P>
+          <P white>
             In 2012 me and my friend and I started a gaming community and It has
             been running since. I’m responsible for all the servers.
           </P>
@@ -75,4 +75,4 @@ const Voluntering = (_props: any) => {
   );
 };
 
-export default Voluntering;
+export default Volunteering;

@@ -11,7 +11,7 @@ import MobileApp from "../components/pageContents/projects/MobileApp";
 import Portfolio from "../components/pageContents/projects/Portfolio";
 
 import WorkExperience from "../components/pageContents/WorkExperience";
-import Voluntering from "../components/pageContents/Voluntering";
+import Volunteering from "../components/pageContents/Volunteering";
 import Education from "../components/pageContents/Education";
 
 const Home: NextPage = () => {
@@ -35,7 +35,7 @@ const Home: NextPage = () => {
       <WorkExperience />
 
       {/* Community Projects & Voluntering */}
-      <Voluntering />
+      <Volunteering />
 
       {/* Education */}
       <Education />

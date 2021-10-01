@@ -37,14 +37,14 @@ const Proficiency = (_props: any) => {
           <SkillBars.Container>
             <SkillBars.Title>Design</SkillBars.Title>
             <SkillBars.OutBar>
-              <SkillBars.InBar percentage={70} ></SkillBars.InBar>
+              <SkillBars.InBar percentage={40} ></SkillBars.InBar>
             </SkillBars.OutBar>
           </SkillBars.Container>
 
           <SkillBars.Container>
             <SkillBars.Title>DevOps</SkillBars.Title>
             <SkillBars.OutBar>
-              <SkillBars.InBar percentage={70} ></SkillBars.InBar>
+              <SkillBars.InBar percentage={50} ></SkillBars.InBar>
             </SkillBars.OutBar>
           </SkillBars.Container>
 

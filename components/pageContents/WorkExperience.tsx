@@ -1,7 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import styles from "../../styles/Home.module.css";
 
 import SectionBox from "../molecules/SectionBox";
 import Img from "next/image";
@@ -28,44 +27,43 @@ const WorkExperience = (_props: any) => {
 
           <div>
             <H2>Software Developer</H2>
-            <H3 fontSize="s">June 2019 – September 2020</H3>
+            <H3 fontSize="s">June 2019 – Present</H3>
             <ul role="list">
               <li>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Suspendisse varius enim in eros elementum tristique. Duis
                 cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
                 commodo diam libero vitae erat. Aenean faucibus nibh et justo
-                cursus id rutrum lorem imperdiet.{" "}
+                cursus id rutrum lorem imperdiet.
               </li>
               <li>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Suspendisse varius enim in eros elementum tristique. Duis
                 cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
                 commodo diam libero vitae erat. Aenean faucibus nibh et justo
-                cursus id rutrum lorem imperdiet.{" "}
-              </li>
-            </ul>
-            <H3 fontSize="s">September 2020 – Present</H3>
-            <ul role="list">
-              <li>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Suspendisse varius enim in eros elementum tristique. Duis
-                cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
-                commodo diam libero vitae erat. Aenean faucibus nibh et justo
-                cursus id rutrum lorem imperdiet.{" "}
+                cursus id rutrum lorem imperdiet.
               </li>
               <li>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Suspendisse varius enim in eros elementum tristique. Duis
                 cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
                 commodo diam libero vitae erat. Aenean faucibus nibh et justo
-                cursus id rutrum lorem imperdiet.{" "}
+                cursus id rutrum lorem imperdiet.
+              </li>
+              <li>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse varius enim in eros elementum tristique. Duis
+                cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
+                commodo diam libero vitae erat. Aenean faucibus nibh et justo
+                cursus id rutrum lorem imperdiet.
               </li>
             </ul>
           </div>
         </SectionBox.InfoBox>
         <SectionBox.ButtonsBox>
-          <Button>Visit Website</Button>
+          <Button black>
+            
+          </Button>
         </SectionBox.ButtonsBox>
       </SectionBox.Container>
     </SectionBox.WhiteSection>

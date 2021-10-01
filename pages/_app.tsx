@@ -1,4 +1,6 @@
 import '../styles/normalize.css'
+import "../styles/styles.css";
+
 import type { AppProps } from 'next/app'
 
 import { createGlobalStyle, ThemeProvider } from 'styled-components'

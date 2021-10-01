@@ -9,16 +9,13 @@ const TechnicalSkills = (_props: any) => {
     <SectionBox.WhiteSection>
       <SectionBox.Container headingLeft>
         <SectionBox.ImageBox>
-          <Image 
-            src={image} 
-            alt="Learning Ilustration" 
-            // layout="responsive" 
-            />
+          <Image
+            src={image}
+            alt="Learning Ilustration"
+          />
         </SectionBox.ImageBox>
         <SectionBox.InfoBox>
-          {/* <SectionBox.HeadingBox noArea> */}
-            <H1>Technical Skills</H1>
-          {/* </SectionBox.HeadingBox> */}
+          <H1>Technical Skills</H1>
           <TechIcons.Container>
             <TechIcons.Title>Programming Languages</TechIcons.Title>
             <TechIcons.IconContainer>

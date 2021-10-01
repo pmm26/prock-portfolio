@@ -19,6 +19,7 @@ const Button = styled.button<ButtonType>`
   text-align: center;
   text-decoration: none;
   font-family: inherit;
+  border: none;
   
   background-color: #fafdff;
   color: ${props => props.theme.colors.orange};

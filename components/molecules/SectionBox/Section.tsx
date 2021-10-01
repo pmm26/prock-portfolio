@@ -1,20 +1,27 @@
+/* eslint-disable @next/next/no-img-element */
 
 import styled from 'styled-components'
 
 export const ColoredSection = styled.div`
   border: 1px none #000;
-  border-radius: 0px;
   background-color: ${props => props.theme.colors.orange};
-  transition: opacity 50ms cubic-bezier(.23, 1, .32, 1);
 `
 
-export const WhiteSection = styled.div`
-  margin-top: -2px;
-  margin-bottom: 0px;
-  padding-top: 150px;
-  padding-bottom: 150px;
-  background-image: url('/images/top-wave.svg'), url('/images/bottom-wave.svg');
-  background-position: 50% 100%, 0px 0px;
-  background-size: contain, contain;
-  background-repeat: no-repeat, no-repeat;
-`
+
+export const WhiteSection = (props: {children: React.ReactNode}) => {
+  return (
+    <div>
+        <img
+          src="/images/bottom-wave.svg"
+          alt=""
+          className="section-image-bot"
+        />
+      {props.children}
+      <img
+          src="/images/top-wave.svg"
+          alt=""
+          className="section-image-top"
+        />
+    </div>
+  )
+}

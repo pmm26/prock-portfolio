@@ -44,7 +44,7 @@ const data = {
     ],
   },
   proficiency: {
-    heading: "",
+    heading: "Proficiency",
     entries: [
       {
         title: "Frontend",
@@ -215,17 +215,17 @@ const data = {
          commodo diam libero vitae erat. Aenean faucibus nibh et justo
          cursus id rutrum lorem imperdiet.`,
         ],
-        actions: [
-          {
-            title: "Visit Website",
-            href: "https://www.sardjv.co.uk/",
-          },
-        ],
+      },
+    ],
+    actions: [
+      {
+        title: "Visit Website",
+        href: "https://www.sardjv.co.uk/",
       },
     ],
   },
   volunteering: {
-    heading: "Community Projects &amp; Volunteering",
+    heading: "Community Projects & Volunteering",
     quote: `“The best way to find yourself is to lose yourself in the service of
     others.” – Gandhi`,
     jobs: [
@@ -257,7 +257,7 @@ const data = {
       },
       {
         name: `City and Islington College 
-        <br />
+        <br/>
         Centre for Business, Arts and Technology`,
         image: "",
         description: `Pearson BTEC Level 3 Extended Diploma in IT (Software Development) –
@@ -266,3 +266,5 @@ const data = {
     ],
   },
 };
+
+export default data;

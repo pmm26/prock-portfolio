@@ -2,14 +2,16 @@ variables:
   CI_APPLICATION_REPOSITORY: $CI_REGISTRY_IMAGE/$CI_COMMIT_REF_SLUG
   CI_APPLICATION_TAG: $CI_COMMIT_SHA
   GIT_SUBMODULE_STRATEGY: recursive
+
 stages:  
   - build
   - deploy
 
 build:
+  only:
+    - main
   tags:
     - shell
-
   # Use the official docker image.
   image: docker:latest
   stage: build
@@ -23,9 +25,10 @@ build:
     - docker push $CI_APPLICATION_REPOSITORY:latest
 
 deploy:
+  only:
+    - main
   tags:
     - shell
-
   # Use the official docker image.
   image: docker:latest
   stage: build

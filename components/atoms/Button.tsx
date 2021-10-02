@@ -2,7 +2,8 @@
 import styled from 'styled-components'
 
 interface ButtonType {
-  black?: any
+  black?: any;
+  href?: string;
 }
 
 const Button = styled.button<ButtonType>`

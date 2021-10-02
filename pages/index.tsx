@@ -13,36 +13,43 @@ import Portfolio from "../components/pageContents/projects/Portfolio";
 import WorkExperience from "../components/pageContents/WorkExperience";
 import Volunteering from "../components/pageContents/Volunteering";
 import Education from "../components/pageContents/Education";
+import Project from "../components/pageContents/Project";
 
-const Home: NextPage = () => {
+import data from '../data/data'
+
+const Home = (props: {data: typeof data}) => { 
   return (
     <AppContainer>
       {/* Intro */}
-      <Intro />
+      <Intro {...props.data.intro}/>
 
       {/* Technical Skills */}
-      <TechnicalSkills />
+      <TechnicalSkills {...props.data.technicalSkills}/>
       {/* Proficiency */}
-      <Proficiency />
+      <Proficiency {...props.data.proficiency}/>
 
-      {/* Projects */}
-      <ERostering/>
-      <MobileApp />
-      <Portfolio />
-      <ElitePortuguesa />
+      {props.data.projects.map((project, index) => (
+        <Project key={project.heading} {...project} index={index} />
+      ))}
 
       {/* Work Experience */}
-      <WorkExperience />
+      <WorkExperience {...props.data.workExperience}/>
 
       {/* Community Projects & Voluntering */}
-      <Volunteering />
+      <Volunteering {...props.data.volunteering}/>
 
       {/* Education */}
-      <Education />
+      <Education {...props.data.education}/>
 
 
     </AppContainer>
   );
 };
+
+export async function getStaticProps() {
+  return {
+    props: {data: data},
+  }
+}
 
 export default Home;

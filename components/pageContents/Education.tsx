@@ -3,6 +3,7 @@ import SectionBox from "../molecules/SectionBox";
 import { H1, H2 } from "../atoms/Heading";
 import { P } from "../atoms/P";
 import { Fragment } from "react";
+import NewLineText from '../../components/atoms/NewLineText'
 
 type EducationEntry = {
   name: string;
@@ -35,8 +36,8 @@ const Education = (props: EducationProps) => {
             </SectionBox.ImageBox>
 
             <SectionBox.InfoBox noArea center>
-              <H2 fontSize="m">{entry.name}</H2>
-              <P>{entry.description}</P>
+              <H2 fontSize="m"><NewLineText>{entry.name}</NewLineText></H2>
+              <P><NewLineText>{entry.description}</NewLineText></P>
             </SectionBox.InfoBox>
 
             {array.length - 1 !== index && (

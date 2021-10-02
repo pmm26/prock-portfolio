@@ -29,6 +29,7 @@ const Home = (props: {data: typeof data}) => {
       {/* Proficiency */}
       <Proficiency {...props.data.proficiency}/>
 
+      {/* Projects */}
       {props.data.projects.map((project, index) => (
         <Project key={project.heading} {...project} index={index} />
       ))}

@@ -265,17 +265,13 @@ const data = {
       {
         name: "University of Kent",
         image: ukcImage,
-        description: `Computer Science (Artificial Intelligence) with Year in Industry
-        <br />
+        description: `Computer Science (Artificial Intelligence) with Year in Industry \nn
         Upper Second-Class Honours 2:1`,
       },
       {
-        name: `City and Islington College 
-        <br/>
-        Centre for Business, Arts and Technology`,
+        name: `City and Islington College \nn Centre for Business, Arts and Technology`,
         image: candiImage,
-        description: `Pearson BTEC Level 3 Extended Diploma in IT (Software Development) –
-        D* D* D* (Triple Distinction Star)`,
+        description: `Pearson BTEC Level 3 Extended Diploma in IT (Software Development) – D* D* D* (Triple Distinction Star)`,
       },
     ],
   },

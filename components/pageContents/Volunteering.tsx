@@ -7,7 +7,7 @@ import { P } from "../atoms/P";
 type jobEntry = {
   name: string;
   time: string;
-  image: string;
+  image: StaticImageData;
   description: string;
 };
 

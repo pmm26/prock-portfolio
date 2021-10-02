@@ -37,7 +37,7 @@ const theme = {
     redish: '#C6247B'
   },
   fontSizes: {
-    xl: 60,
+    xl: 59,
     l: 35,
     m: 30,
     s: 25,

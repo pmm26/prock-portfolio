@@ -46,7 +46,7 @@ const Project = (props: ProjectProps) => {
 
         <SectionBox.ButtonsBox>
           {props.actions.map((action) => (
-            <Button black key={action.href} href={action.href}>
+            <Button {...(isEven ? {black: true} : {})} key={action.href} href={action.href}>
               {action.title}
             </Button>
           ))}

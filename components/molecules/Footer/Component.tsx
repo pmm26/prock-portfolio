@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <Container>
       <FooterBox>
-        <P>
+        <P white>
           Designed and Created <br />
           by Pedro Roque
         </P>

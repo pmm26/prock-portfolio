@@ -34,6 +34,7 @@ export const Button = styled.button<ButtonType>`
 const ButtonLink = (props: {  
   href?: string;
   children?: React.ReactNode
+  black?: any;
 }) => {
   return (
     <a href={props.href}>

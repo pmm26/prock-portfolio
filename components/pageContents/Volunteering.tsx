@@ -36,7 +36,7 @@ const Volunteering = (props: VolunteeringProps) => {
             </SectionBox.InfoBox>
 
             <SectionBox.ImageBox mobileOrder={index * 3 + 1 + 1} noArea>
-              <Image src={job.image} alt="Sard" />
+              <Image src={job.image} alt={job.name} />
             </SectionBox.ImageBox>
             {array.length - 1 !== index && (
               <SectionBox.Divider white mobileOrder={index * 3 + 3 + 1} />

@@ -14,6 +14,7 @@ import WorkExperience from "../components/pageContents/WorkExperience";
 import Volunteering from "../components/pageContents/Volunteering";
 import Education from "../components/pageContents/Education";
 import Project from "../components/pageContents/Project";
+import Footer from '../components/molecules/Footer'
 
 import data from '../data/data'
 
@@ -41,7 +42,7 @@ const Home = (props: {data: typeof data}) => {
       {/* Education */}
       <Education {...props.data.education}/>
 
-
+      <Footer />
     </AppContainer>
   );
 };

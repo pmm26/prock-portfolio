@@ -3,8 +3,6 @@ import { Fragment } from "react";
 import SectionBox from "../molecules/SectionBox";
 import { H1, H2, H3, H4 } from "../atoms/Heading";
 import { P } from "../atoms/P";
-import ageUk from "../../public/images/Age-UK-LLL-Logo-CMYK-5-Spot-Colour.png";
-import cancerResearch from "../../public/images/1200px-Cancer_Research_UK.svg.png";
 
 type jobEntry = {
   name: string;
@@ -38,7 +36,7 @@ const Volunteering = (props: VolunteeringProps) => {
             </SectionBox.InfoBox>
 
             <SectionBox.ImageBox mobileOrder={index * 3 + 1 + 1} noArea>
-              Image
+              <Image src={job.image} alt="Sard" />
             </SectionBox.ImageBox>
             {array.length - 1 !== index && (
               <SectionBox.Divider mobileOrder={index * 3 + 3 + 1} />

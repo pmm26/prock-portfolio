@@ -1,3 +1,11 @@
+import rosteringMockImage from "../public/images/sard-erostering-mock.png"
+import appMockImage from "../public/images/sard-mobile-app.png"
+
+import ukcImage from "../public/images/ukc.png";
+import candiImage from "../public/images/candi.jpg";
+
+import cancerResearchImage from "../public/images/1200px-Cancer_Research_UK.svg.png";
+
 const data = {
   intro: {
     heading: "Pedro Roque",
@@ -67,7 +75,7 @@ const data = {
   projects: [
     {
       heading: "SARD eRostering",
-      image: "",
+      image: rosteringMockImage,
       description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
       varius enim in eros elementum tristique. Duis cursus, mi quis
       viverra ornare, eros dolor interdum nulla, ut commodo diam libero
@@ -83,13 +91,17 @@ const data = {
       actions: [
         {
           title: "Visit Website",
-          href: "https://www.sardjv.co.uk/",
+          href: "https://erostering.sardjv.co.uk/",
         },
+        {
+          title: "More Info",
+          href: "https://sardjv.co.uk/products/erostering/"
+        }
       ],
     },
     {
       heading: "SARD Mobile App",
-      image: "",
+      image: appMockImage,
       description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
       varius enim in eros elementum tristique. Duis cursus, mi quis
       viverra ornare, eros dolor interdum nulla, ut commodo diam libero
@@ -103,15 +115,15 @@ const data = {
       imperdiet.`,
       tech: ["Figma", "JavaScript", "Expo", "React Native", "Redux", "Jest"],
       actions: [
-        {
-          title: "Visit Website",
-          href: "https://www.sardjv.co.uk/",
-        },
+        // {
+        //   title: "Visit Website",
+        //   href: "https://www.sardjv.co.uk/",
+        // },
       ],
     },
     {
       heading: "Elite Portuguesa",
-      image: "",
+      image: rosteringMockImage,
       description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
       varius enim in eros elementum tristique. Duis cursus, mi quis
       viverra ornare, eros dolor interdum nulla, ut commodo diam libero
@@ -127,6 +139,7 @@ const data = {
         "Figma",
         "Gitlab",
         "Docker",
+        "TypeScript",
         "NextJS",
         "React",
         "Styled Components",
@@ -134,21 +147,21 @@ const data = {
       actions: [
         {
           title: "Figma Design",
-          href: "https://www.sardjv.co.uk/",
+          href: "https://www.figma.com/proto/iP3iNZYAxQTI05EZH9b0af/ElitePT?node-id=176%3A1007&starting-point-node-id=176%3A1007",
         },
         {
           title: "Visit Website",
-          href: "https://www.sardjv.co.uk/",
+          href: "https://www.eliteportuguesa.pt/",
         },
         {
           title: "Source Code",
-          href: "https://www.sardjv.co.uk/",
+          href: "https://gitlab.com/xdpedrox/nextjs-ts3-channel",
         },
       ],
     },
     {
       heading: "Portfolio",
-      image: "",
+      image: rosteringMockImage,
       description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
       varius enim in eros elementum tristique. Duis cursus, mi quis
       viverra ornare, eros dolor interdum nulla, ut commodo diam libero
@@ -164,6 +177,7 @@ const data = {
         "Figma",
         "Gitlab",
         "Docker",
+        "TypeScript",
         "NextJS",
         "React",
         "Styled Components",
@@ -171,15 +185,15 @@ const data = {
       actions: [
         {
           title: "Figma Design",
-          href: "https://www.sardjv.co.uk/",
+          href: "https://www.figma.com/proto/3l7aeqzU01f5FscfjM2cAH/Portfolio?node-id=182%3A13&starting-point-node-id=182%3A13",
         },
         {
           title: "Visit Website",
-          href: "https://www.sardjv.co.uk/",
+          href: "https://www.prock.dev",
         },
         {
           title: "Source Code",
-          href: "https://www.sardjv.co.uk/",
+          href: "https://gitlab.com/xdpedrox/pedro-portfolio",
         },
       ],
     },
@@ -232,14 +246,14 @@ const data = {
       {
         name: "Elite Portuguesa Community - Non Profit",
         time: "August 2012 – Present",
-        image: "",
+        image: cancerResearchImage,
         description: `In 2012 me and my friend and I started a gaming community and It has
         been running since. I’m responsible for all the servers.`,
       },
       {
         name: "Cancer Research UK",
         time: "August 2012 – Present",
-        image: "",
+        image: cancerResearchImage,
         description: `In 2012 me and my friend and I started a gaming community and It has
         been running since. I’m responsible for all the servers.`,
       },
@@ -250,7 +264,7 @@ const data = {
     entries: [
       {
         name: "University of Kent",
-        image: "",
+        image: ukcImage,
         description: `Computer Science (Artificial Intelligence) with Year in Industry
         <br />
         Upper Second-Class Honours 2:1`,
@@ -259,7 +273,7 @@ const data = {
         name: `City and Islington College 
         <br/>
         Centre for Business, Arts and Technology`,
-        image: "",
+        image: candiImage,
         description: `Pearson BTEC Level 3 Extended Diploma in IT (Software Development) –
         D* D* D* (Triple Distinction Star)`,
       },

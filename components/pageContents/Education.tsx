@@ -2,13 +2,11 @@ import Image from "next/image";
 import SectionBox from "../molecules/SectionBox";
 import { H1, H2 } from "../atoms/Heading";
 import { P } from "../atoms/P";
-import ukcImage from "../../public/images/ukc.png";
-import candiImage from "../../public/images/candi.jpg";
 import { Fragment } from "react";
 
 type EducationEntry = {
   name: string;
-  image: string;
+  image: StaticImageData;
   description: string;
 };
 
@@ -31,8 +29,8 @@ const Education = (props: EducationProps) => {
           <Fragment key={entry.name}>
             <SectionBox.ImageBox noArea>
               <Image
-                src={ukcImage}
-                alt="University of Kent"
+                src={entry.image}
+                alt={entry.name}
               />
             </SectionBox.ImageBox>
 

@@ -4,14 +4,13 @@ import Button from "../atoms/Button";
 import TechIcons from "../molecules/TechIcons";
 import { H1, H2 } from "../atoms/Heading";
 import { P } from "../atoms/P";
-import image from "../../public/images/sard-erostering-mock.png";
 
 import { buttonAction } from "../../types/actions";
 
 interface ProjectProps {
   index: number;
   heading: string;
-  image: string;
+  image: StaticImageData;
   description: string;
   subTitle: string;
   subDescription: string;
@@ -19,9 +18,10 @@ interface ProjectProps {
   actions: buttonAction[];
 }
 
+const imageUrl = "../../public/images/"
+
 const Project = (props: ProjectProps) => {
   const isEven = props.index%2 == 0
-
   const Section = isEven ? SectionBox.WhiteSection : SectionBox.ColoredSection
 
   return (
@@ -31,7 +31,7 @@ const Project = (props: ProjectProps) => {
           <H1>{props.heading}</H1>
         </SectionBox.HeadingBox>
         <SectionBox.ImageBox>
-          <Image src={image} alt="Sard eRostering" />
+          <Image src={props.image} alt={props.heading} />
         </SectionBox.ImageBox>
         <SectionBox.InfoBox center>
           <P {...(!isEven ? {white: true} : {})}>{props.description}</P>

@@ -5,11 +5,6 @@ import Intro from "../components/pageContents/Intro";
 import TechnicalSkills from "../components/pageContents/TechnicalSkills";
 import Proficiency from "../components/pageContents/Proficiency";
 
-import ElitePortuguesa from "../components/pageContents/projects/ElitePortuguesa";
-import ERostering from "../components/pageContents/projects/ERostering";
-import MobileApp from "../components/pageContents/projects/MobileApp";
-import Portfolio from "../components/pageContents/projects/Portfolio";
-
 import WorkExperience from "../components/pageContents/WorkExperience";
 import Volunteering from "../components/pageContents/Volunteering";
 import Education from "../components/pageContents/Education";

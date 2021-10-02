@@ -6,6 +6,7 @@ const Title = styled.div`
   color: #fff;
   margin-top: 20px;
   margin-bottom: 10px;
+  font-size: 25px;
 `
 
 export default Title

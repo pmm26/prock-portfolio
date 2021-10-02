@@ -2,15 +2,18 @@
 import styled from 'styled-components'
 
 interface DividerType {
-  noArea?: any
+  noArea?: any;
   mobileOrder?: number;
-
+  white?: any;
 }
 
 const Divider = styled.div<DividerType>`
-  border-style: none none dashed;
-  border-width: 2px;
-  border-color: #fff #fff #000;
+  border-bottom: 2px dashed ${props => props.theme.colors.black};
+
+  ${({ white, theme }) => white && `
+    border-bottom: 2px dashed ${theme.colors.white};
+
+  `}
 
   grid-column: 1 / span 2;
 

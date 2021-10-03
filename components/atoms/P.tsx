@@ -12,6 +12,8 @@ export const P = styled.p<pType>`
   font-family: 'Futura-Medium', sans-serif;
   font-size: ${props => props.theme.fontSizes.text}px;
   
+  margin-left: 5px;
+  margin-right: 5px;
   ${({ white, theme }) => white && `
     color:  ${theme.colors.white};
   `}

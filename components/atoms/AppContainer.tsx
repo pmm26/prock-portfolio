@@ -14,6 +14,7 @@ const AppContainer = styled.div`
   grid-auto-columns: 1fr;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: auto auto;
+  overflow: hidden;
 `
 
 export default AppContainer

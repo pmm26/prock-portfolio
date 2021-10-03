@@ -10,7 +10,8 @@ interface InfoType {
 const InfoBox = styled.div<InfoType>`
   display: flex;
   flex-direction: column;
-  
+  padding-left: 5px;
+  padding-right: 5px;
   ${({ center }) => center && `
     justify-content: center;
     align-items: center; 

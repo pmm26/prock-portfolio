@@ -107,8 +107,8 @@ const data = {
       heading: "SARD Mobile App",
       image: {
         src: '/images/sard-mobile-app.png',
-        width: '193px',
-        height: '390px'
+        width: '247px',
+        height: '500px'
       },
       description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
       varius enim in eros elementum tristique. Duis cursus, mi quis

@@ -8,11 +8,11 @@ const Intro = (props: {heading: string, title: string, description: string}) => 
   return (
     <SectionBox.ColoredSection>
       <SectionBox.Container headingRight customFr={[0.8, 1]}>
-        <SectionBox.ImageBox>
+        <SectionBox.ImageBox >
           <Image 
             // layout={'responsive'}
-            width={"100%"}
-            height={"100%"}
+            width={"443px"}
+            height={"346px"}
             src={image} 
             alt="Desktop Ilustration" 
             />

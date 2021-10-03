@@ -5,9 +5,13 @@ import { P } from "../atoms/P";
 import { Fragment } from "react";
 import NewLineText from '../../components/atoms/NewLineText'
 
-type EducationEntry = {
+interface EducationEntry {
   name: string;
-  image: StaticImageData;
+  image: {
+    src: string;
+    width: string;
+    height: string;
+  };
   description: string;
 };
 
@@ -30,7 +34,7 @@ const Education = (props: EducationProps) => {
           <Fragment key={entry.name}>
             <SectionBox.ImageBox noArea>
               <Image
-                src={entry.image}
+                {...entry.image}
                 alt={entry.name}
               />
             </SectionBox.ImageBox>

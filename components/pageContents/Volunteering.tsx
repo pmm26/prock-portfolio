@@ -3,11 +3,15 @@ import { Fragment } from "react";
 import SectionBox from "../molecules/SectionBox";
 import { H1, H2, H3, H4 } from "../atoms/Heading";
 import { P } from "../atoms/P";
-
-type jobEntry = {
+import image from '../../public/images/candi.jpg'
+interface jobEntry {
   name: string;
   time: string;
-  image: StaticImageData;
+  image: {
+    src: string;
+    width: string;
+    height: string;
+  };
   description: string;
 };
 
@@ -36,7 +40,7 @@ const Volunteering = (props: VolunteeringProps) => {
             </SectionBox.InfoBox>
 
             <SectionBox.ImageBox mobileOrder={index * 3 + 1 + 1} noArea>
-              <Image src={job.image} alt={job.name} />
+              <Image {...job.image} alt={job.name} />
             </SectionBox.ImageBox>
             {array.length - 1 !== index && (
               <SectionBox.Divider white mobileOrder={index * 3 + 3 + 1} />

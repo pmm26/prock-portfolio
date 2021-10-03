@@ -10,15 +10,17 @@ import { buttonAction } from "../../types/actions";
 interface ProjectProps {
   index: number;
   heading: string;
-  image: StaticImageData;
+  image: {
+    src: string;
+    width: string;
+    height: string;
+  };
   description: string;
   subTitle: string;
   subDescription: string;
   tech: string[];
   actions: buttonAction[];
 }
-
-const imageUrl = "../../public/images/"
 
 const Project = (props: ProjectProps) => {
   const isEven = props.index%2 == 0
@@ -31,7 +33,7 @@ const Project = (props: ProjectProps) => {
           <H1>{props.heading}</H1>
         </SectionBox.HeadingBox>
         <SectionBox.ImageBox>
-          <Image src={props.image} alt={props.heading} />
+          <Image {...props.image} alt={props.heading} />
         </SectionBox.ImageBox>
         <SectionBox.InfoBox center>
           <P {...(!isEven ? {white: true} : {})}>{props.description}</P>

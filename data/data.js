@@ -1,10 +1,10 @@
-import rosteringMockImage from "../public/images/sard-erostering-mock.png"
-import appMockImage from "../public/images/sard-mobile-app.png"
+// import rosteringMockImage from "../public/images/sard-erostering-mock.png"
+// import appMockImage from "../public/images/sard-mobile-app.png"
 
-import ukcImage from "../public/images/ukc.png";
-import candiImage from "../public/images/candi.jpg";
+// import ukcImage from "../public/images/ukc.png";
+// import candiImage from "../public/images/candi.jpg";
 
-import cancerResearchImage from "../public/images/1200px-Cancer_Research_UK.svg.png";
+// import cancerResearchImage from "../public/images/1200px-Cancer_Research_UK.svg.png";
 
 const data = {
   intro: {
@@ -75,7 +75,11 @@ const data = {
   projects: [
     {
       heading: "SARD eRostering",
-      image: rosteringMockImage,
+      image: {
+        src: '/images/sard-erostering-mock.png',
+        width: '438px',
+        height: '292px'
+      },
       description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
       varius enim in eros elementum tristique. Duis cursus, mi quis
       viverra ornare, eros dolor interdum nulla, ut commodo diam libero
@@ -101,7 +105,11 @@ const data = {
     },
     {
       heading: "SARD Mobile App",
-      image: appMockImage,
+      image: {
+        src: '/images/sard-mobile-app.png',
+        width: '193px',
+        height: '390px'
+      },
       description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
       varius enim in eros elementum tristique. Duis cursus, mi quis
       viverra ornare, eros dolor interdum nulla, ut commodo diam libero
@@ -123,7 +131,11 @@ const data = {
     },
     {
       heading: "Elite Portuguesa",
-      image: rosteringMockImage,
+      image: {
+        src: '/images/sard-erostering-mock.png',
+        width: '438px',
+        height: '292px'
+      },
       description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
       varius enim in eros elementum tristique. Duis cursus, mi quis
       viverra ornare, eros dolor interdum nulla, ut commodo diam libero
@@ -161,7 +173,11 @@ const data = {
     },
     {
       heading: "Portfolio",
-      image: rosteringMockImage,
+      image: {
+        src: '/images/sard-erostering-mock.png',
+        width: '438px',
+        height: '292px'
+      },
       description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
       varius enim in eros elementum tristique. Duis cursus, mi quis
       viverra ornare, eros dolor interdum nulla, ut commodo diam libero
@@ -246,14 +262,22 @@ const data = {
       {
         name: "Elite Portuguesa Community - Non Profit",
         time: "August 2012 – Present",
-        image: cancerResearchImage,
+        image: {
+          src: '/images/1200px-Cancer_Research_UK.svg.png',
+          width: '354px',
+          height: '136px'
+        },
         description: `In 2012 me and my friend and I started a gaming community and It has
         been running since. I’m responsible for all the servers.`,
       },
       {
         name: "Cancer Research UK",
         time: "August 2012 – Present",
-        image: cancerResearchImage,
+        image: {
+          src: '/images/1200px-Cancer_Research_UK.svg.png',
+          width: '354px',
+          height: '136px'
+        },
         description: `In 2012 me and my friend and I started a gaming community and It has
         been running since. I’m responsible for all the servers.`,
       },
@@ -264,13 +288,21 @@ const data = {
     entries: [
       {
         name: "University of Kent",
-        image: ukcImage,
+        image: {
+          src: '/images/ukc.png',
+          width: '260px',
+          height: '175px'
+        },
         description: `Computer Science (Artificial Intelligence) with Year in Industry \nn
         Upper Second-Class Honours 2:1`,
       },
       {
         name: `City and Islington College \nn Centre for Business, Arts and Technology`,
-        image: candiImage,
+        image: {
+          src: '/images/candi.jpg',
+          width: '360px',
+          height: '160px'
+        },
         description: `Pearson BTEC Level 3 Extended Diploma in IT (Software Development) – D* D* D* (Triple Distinction Star)`,
       },
     ],

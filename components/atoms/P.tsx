@@ -11,7 +11,7 @@ export const P = styled.p<pType>`
   /* margin-bottom: 0px; */
   font-family: 'Futura-Medium', sans-serif;
   font-size: ${props => props.theme.fontSizes.text}px;
-  
+  line-height: 40px;
   margin-left: 5px;
   margin-right: 5px;
   ${({ white, theme }) => white && `

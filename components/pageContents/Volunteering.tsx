@@ -3,7 +3,8 @@ import { Fragment } from "react";
 import SectionBox from "../molecules/SectionBox";
 import { H1, H2, H3, H4 } from "../atoms/Heading";
 import { P } from "../atoms/P";
-import image from '../../public/images/candi.jpg'
+import NewLineText from '../../components/atoms/NewLineText'
+
 interface jobEntry {
   name: string;
   time: string;
@@ -36,7 +37,7 @@ const Volunteering = (props: VolunteeringProps) => {
               {/* Elite PT */}
               <H2>{job.name}</H2>
               <H3 fontSize="s">{job.time}</H3>
-              <P white>{job.description}</P>
+              <P white><NewLineText>{job.description}</NewLineText></P>
             </SectionBox.InfoBox>
 
             <SectionBox.ImageBox mobileOrder={index * 3 + 1 + 1} noArea>

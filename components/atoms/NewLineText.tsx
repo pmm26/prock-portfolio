@@ -1,5 +1,6 @@
 function NewlineText(props: any) {
-  const newText = props.children.split('\nn').map((str: any, index: number, array: []) => {
+  const newText = props.children.split('\nn')
+  .map((str: any, index: number, array: []) => {
     return (
       <>
       {str}
@@ -9,7 +10,6 @@ function NewlineText(props: any) {
       </>
     )
   })
-  // .map((str: string) => (<props.component key={str}>{str}</props.component>));
   
   return newText;
 }

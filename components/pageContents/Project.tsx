@@ -4,6 +4,7 @@ import Button from "../atoms/Button";
 import TechIcons from "../molecules/TechIcons";
 import { H1, H2 } from "../atoms/Heading";
 import { P } from "../atoms/P";
+import NewLineText from '../../components/atoms/NewLineText'
 
 import { buttonAction } from "../../types/actions";
 
@@ -36,9 +37,9 @@ const Project = (props: ProjectProps) => {
           <Image {...props.image} alt={props.heading} />
         </SectionBox.ImageBox>
         <SectionBox.InfoBox center>
-          <P {...(!isEven ? {white: true} : {})}>{props.description}</P>
+          <P {...(!isEven ? {white: true} : {})}><NewLineText>{props.description}</NewLineText></P>
           <H2>{props.subTitle}</H2>
-          <P {...(!isEven ? {white: true} : {})}>{props.subDescription}</P>
+          <P {...(!isEven ? {white: true} : {})}><NewLineText>{props.subDescription}</NewLineText></P>
           <TechIcons.IconContainer>
             {props.tech.map(icon => (
               <TechIcons.Icon key={icon} icon={icon} />

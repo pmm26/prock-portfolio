@@ -3,6 +3,7 @@ import SectionBox from "../molecules/SectionBox";
 import { H1, H2 } from "../atoms/Heading";
 import { P } from "../atoms/P";
 import image from '../../public/images/desktopIlustration.svg'
+import NewLineText from '../../components/atoms/NewLineText'
 
 const Intro = (props: {heading: string, title: string, description: string}) => {
   return (
@@ -20,7 +21,7 @@ const Intro = (props: {heading: string, title: string, description: string}) => 
         <SectionBox.InfoBox center>
           <H1>{props.heading}</H1>
           <H2>{props.title}</H2>
-          <P white>{props.description}</P>
+          <P white><NewLineText>{props.description}</NewLineText></P>
         </SectionBox.InfoBox>
       </SectionBox.Container>
     </SectionBox.ColoredSection>

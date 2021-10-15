@@ -17,6 +17,7 @@ const glyphMap = [
   { src: "figma.png", alt: "Figma" },
   { src: "github.png", alt: "GitHub" },
   { src: "gitlab.png", alt: "Gitlab" },
+  { src: "cv.png", alt: "CV" },
   { src: "haml.svg", alt: "Haml" },
   { src: "java.png", alt: "Java" },
   { src: "javascript.png", alt: "JavaScript" },

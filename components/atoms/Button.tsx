@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 interface ButtonType {
   black?: any;
+  height?: number;
+  width?: number;
 }
 
 export const Button = styled.button<ButtonType>`
@@ -19,6 +21,7 @@ export const Button = styled.button<ButtonType>`
   text-decoration: none;
   font-family: inherit;
   border: none;
+  margin: 10px;
 
   background-color: #fafdff;
   color: ${(props) => props.theme.colors.orange};
@@ -29,12 +32,22 @@ export const Button = styled.button<ButtonType>`
     background-color:  ${theme.colors.black};
     color: #fff;
   `}
+
+  ${({ height }) => height && `
+    height: ${height}px;
+  `}
+
+  ${({ width }) => width && `
+    width: ${width}px;
+  `}
 `;
 
 const ButtonLink = (props: {  
   href?: string;
   children?: React.ReactNode
   black?: any;
+  height?: number;
+  width?: number;
 }) => {
   return (
     <a href={props.href}>

@@ -21,3 +21,8 @@ a {
 li {
   margin-bottom: 15px;
 }
+
+.button-text {
+  margin-right: 10px;
+  margin-left: 10px;
+}

@@ -99,9 +99,9 @@ const data = {
     {
       heading: 'Elite Portuguesa',
       image: {
-        src: '/images/sard-erostering-mock.png',
-        width: '438px',
-        height: '292px'
+        src: '/images/Elitept-mock.png',
+        width: '1006px',
+        height: '822px'
       },
       description: `
       This has been a long running project I've used to learn React, NodeJS and Typescript. It has seen multiple iterations and it's finally getting closer completion.
@@ -160,9 +160,9 @@ const data = {
     {
       heading: 'Portfolio',
       image: {
-        src: '/images/sard-erostering-mock.png',
-        width: '438px',
-        height: '292px'
+        src: '/images/prock-mock.png',
+        width: '884px',
+        height: '716px'
       },
       description: `Portfolio developed to show my skills and improve my front-end capabilities.`,
       subTitle: 'Technology',
@@ -232,9 +232,9 @@ const data = {
         name: 'Elite Portuguesa Community - Non Profit',
         time: '2012 – Present',
         image: {
-          src: '/images/1200px-Cancer_Research_UK.svg.png',
-          width: '354px',
-          height: '136px'
+          src: '/images/elitept.png',
+          width: '374px',
+          height: '382px'
         },
         description: `
         In 2012 me and my friend and I started a gaming community. Since then I've been responsible for configuring and managing multiple Linux Servers that host our services.\nn 

@@ -1,11 +1,3 @@
-// import rosteringMockImage from "../public/images/sard-erostering-mock.png"
-// import appMockImage from "../public/images/sard-mobile-app.png"
-
-// import ukcImage from "../public/images/ukc.png";
-// import candiImage from "../public/images/candi.jpg";
-
-// import cancerResearchImage from "../public/images/1200px-Cancer_Research_UK.svg.png";
-
 const data = {
   intro: {
     heading: 'Pedro Roque',

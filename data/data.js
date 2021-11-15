@@ -70,7 +70,7 @@ const data = {
       },
       description: `
       This product is the most interesting project I've worked on. The goal was to help improve NHS' resources management and the lives of the people tha work there. \nn
-      Rostering at our partner trust was a tedious tasks that was almost done randomly and then progressively improved as people complain about their shifts.
+      Rostering at our partner trust was a tedious tasks that was almost done randomly and then progressively improved as people complained about their shifts.
       `,
       subTitle: 'Technology',
       subDescription: `Project built on Ruby on Rails with React in the places that we needed the UI to be responsive.\nn
@@ -101,7 +101,7 @@ const data = {
       group icon that can be recognized in the whole server and to provide them with a private MusicBot so that they can all listen to song's together. All without the need of a contacting an Staff Member.`,
       subTitle: 'Technology',
       subDescription: `
-      Built with NextJS React Framework I've developed a library that abstract the TeamSpeak DSL and provides the easy to use building blocks to build TeamSpeak any feature.
+      Built with NextJS React Framework I've developed a library that abstracts the TeamSpeak DSL and provides easy to use building blocks to build any TeamSpeak feature.
       The interaction with the TeamSpeak Server is made throw a SSH api while our MusicBot is made through a Rest API.
       Gilab CI/CD is used for continuous deployment to production.
       `,
@@ -138,9 +138,9 @@ const data = {
         height: '500px'
       },
       description: `
-      Mobile app used to upload evidence files to a user's portfolio. Portfolio is a key part of the main sard system that has to be done every year.`,
+      Mobile app used to upload evidence files to a user's portfolio. Portfolio is a key part of the main sard system that has to be done every year by doctors.`,
       subTitle: 'Technology',
-      subDescription: `Mobile app developed on Expo's React Native with Redux Sagas connected to the backend with RestAPIs.`,
+      subDescription: `Mobile app developed on Expo's React Native with Redux Sagas connected to the backend with RestAPI.`,
       tech: ['Figma', 'JavaScript', 'Expo', 'React Native', 'Redux', 'Jest'],
       actions: [
         // {

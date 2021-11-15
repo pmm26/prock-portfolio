@@ -7,7 +7,6 @@ export const ColoredSection = styled.div`
   background-color: ${props => props.theme.colors.orange};
 `
 
-
 export const WhiteSection = (props: {children: React.ReactNode}) => {
   return (
     <div>

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import SectionBox from "../molecules/SectionBox";
+import { HeadingBox, ImageBox, InfoBox, BaseContainer, Divider, WhiteSection } from "../molecules/SectionBox";
 import { H1, H2 } from "../atoms/Heading";
 import { P } from "../atoms/P";
 import { Fragment } from "react";
@@ -22,35 +22,35 @@ interface EducationProps {
 
 const Education = (props: EducationProps) => {
   return (
-    <SectionBox.WhiteSection>
-      <SectionBox.Container headingRight education customFr={[0.5, 1]}>
-        <SectionBox.InfoBox noArea></SectionBox.InfoBox>
+    <WhiteSection>
+      <BaseContainer headingRight education customFr={[0.5, 1]}>
+        <InfoBox noArea></InfoBox>
 
-        <SectionBox.HeadingBox noArea>
+        <HeadingBox noArea>
           <H1>{props.heading}</H1>
-        </SectionBox.HeadingBox>
+        </HeadingBox>
 
         {props.entries.map((entry: EducationEntry, index, array) => (
           <Fragment key={entry.name}>
-            <SectionBox.ImageBox noArea>
+            <ImageBox noArea>
               <Image
                 {...entry.image}
                 alt={entry.name}
               />
-            </SectionBox.ImageBox>
+            </ImageBox>
 
-            <SectionBox.InfoBox noArea center>
+            <InfoBox noArea center>
               <H2 fontSize="m"><NewLineText>{entry.name}</NewLineText></H2>
               <P><NewLineText>{entry.description}</NewLineText></P>
-            </SectionBox.InfoBox>
+            </InfoBox>
 
             {array.length - 1 !== index && (
-              <SectionBox.Divider />
+              <Divider />
             )}
           </Fragment>
         ))}
-      </SectionBox.Container>
-    </SectionBox.WhiteSection>
+      </BaseContainer>
+    </WhiteSection>
   );
 };
 

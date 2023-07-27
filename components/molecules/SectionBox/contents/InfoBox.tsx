@@ -7,7 +7,7 @@ interface InfoType {
   mobileOrder?: number;
 }
 
-const InfoBox = styled.div<InfoType>`
+export const InfoBox = styled.div<InfoType>`
   display: flex;
   flex-direction: column;
   padding-left: 5px;
@@ -30,5 +30,3 @@ const InfoBox = styled.div<InfoType>`
      text-align: center;
   }
 `
-
-export default InfoBox

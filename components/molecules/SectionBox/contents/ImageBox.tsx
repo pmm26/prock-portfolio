@@ -7,7 +7,7 @@ interface ImageType {
 
 }
 
-const ImageBox = styled.div<ImageType>`
+export const ImageBox = styled.div<ImageType>`
   display: flex;
   height: 100%;
   justify-content: center;
@@ -24,5 +24,3 @@ const ImageBox = styled.div<ImageType>`
   }
 
 `
-
-export default ImageBox

@@ -8,6 +8,10 @@ const StyledIcons = styled.img`
 `;
 
 const glyphMap = [
+  
+  { src: "bullMq.png", alt: "BullMQ" },
+  { src: "graphql.svg", alt: "GraphQL" },
+  { src: "apollo.svg", alt: "Apollo" },
   { src: "appium.png", alt: "Appium" },
   { src: "css3.png", alt: "CSS" },
   { src: "html5.png", alt: "HTML5" },

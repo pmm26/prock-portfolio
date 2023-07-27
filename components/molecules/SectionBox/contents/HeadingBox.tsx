@@ -8,7 +8,7 @@ interface HeadingType {
 
 }
 
-const HeadingBox = styled.div<HeadingType>`
+export const HeadingBox = styled.div<HeadingType>`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,5 +32,3 @@ const HeadingBox = styled.div<HeadingType>`
   }
 
 `
-
-export default HeadingBox

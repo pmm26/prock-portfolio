@@ -9,8 +9,8 @@ interface ContainerType {
 }
 
 // @ts-ignore
-export const BaseContainer = styled.div<ContainerType>`
-  display: grid;
+export const BasicContainer = styled.div<ContainerType>`
+  /* display: grid; */
   max-width: 1100px;
   min-height: 100%;
   min-width: 100px;
@@ -20,24 +20,24 @@ export const BaseContainer = styled.div<ContainerType>`
   padding-left: 10px;
   justify-content: center;
   align-items: center;
-  grid-auto-flow: row dense;
+  /* grid-auto-flow: row dense;
   grid-auto-columns: 1fr;
   grid-column-gap: 40px;
-  grid-row-gap: 16px;
+  grid-row-gap: 16px; */
   background-color: transparent;
   text-align: left;
   object-fit: fill;
-  grid-auto-flow: row;
+  /* grid-auto-flow: row; */
   margin-top: -2px;
 
   padding-top: 50px;
 
   /* Default Heading Left */
-  grid-template-columns: 1fr 0.7fr;
-  grid-template-areas: "info image";
+  /* grid-template-columns: 1fr 0.7fr;
+  grid-template-areas: "info image"; */
 
   /* text right, image left */
-  ${({ headingRight }) =>
+  /* ${({ headingRight }) =>
     headingRight && `
     grid-template-columns: 0.7fr 1fr;
     grid-template-areas: 
@@ -47,13 +47,12 @@ export const BaseContainer = styled.div<ContainerType>`
   ${({ customFr }) =>
       customFr && `
       grid-template-columns: ${customFr[0]}fr ${customFr[1]}fr;
-    `}
+    `} */
 
   @media screen and (max-width: 479px) {
     padding-top: 0px;
-    grid-template-columns: 1fr;
-    grid-auto-flow: row;
-    grid-template-areas: "heading" "image" "info" "buttons";
+    /* grid-template-columns: 1fr; */
+    /* grid-auto-flow: row; */
+    /* grid-template-areas: "heading" "image" "info" "buttons"; */
   }
 `;
-

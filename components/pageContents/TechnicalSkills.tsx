@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import SectionBox from '../molecules/SectionBox'
+import { ImageBox, InfoBox, BaseContainer, WhiteSection } from "../molecules/SectionBox";
 import TechIcons from '../molecules/TechIcons'
 import { H1 } from '../atoms/Heading'
 import image from '../../public/images/4354885.svg'
@@ -16,12 +16,12 @@ interface TechnicalSkillsProps {
 
 const TechnicalSkills = (props: TechnicalSkillsProps) => {
   return (
-    <SectionBox.WhiteSection>
-      <SectionBox.Container headingLeft>
-        <SectionBox.ImageBox>
+    <WhiteSection>
+      <BaseContainer headingLeft>
+        <ImageBox>
           <Image src={image} alt='Learning Ilustration' />
-        </SectionBox.ImageBox>
-        <SectionBox.InfoBox>
+        </ImageBox>
+        <InfoBox>
           <H1>{props.heading}</H1>
           {props.skills.map((tech: Tech) => (
             <TechIcons.Container key={tech.name}>
@@ -33,9 +33,9 @@ const TechnicalSkills = (props: TechnicalSkillsProps) => {
               </TechIcons.IconContainer>
             </TechIcons.Container>
           ))}
-        </SectionBox.InfoBox>
-      </SectionBox.Container>
-    </SectionBox.WhiteSection>
+        </InfoBox>
+      </BaseContainer>
+    </WhiteSection>
   )
 }
 

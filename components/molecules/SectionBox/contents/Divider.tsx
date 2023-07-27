@@ -7,7 +7,7 @@ interface DividerType {
   white?: any;
 }
 
-const Divider = styled.div<DividerType>`
+export const Divider = styled.div<DividerType>`
   border-bottom: 2px dashed ${props => props.theme.colors.black};
 
   ${({ white, theme }) => white && `
@@ -27,4 +27,3 @@ const Divider = styled.div<DividerType>`
 
 `
 
-export default Divider

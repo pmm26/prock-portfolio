@@ -22,12 +22,13 @@ const data = {
           'React',
           'React Native',
           'jQuery',
-          'Redux'
+          'Redux',
+          "Apollo"
         ]
       },
       {
         name: 'Backend',
-        icons: ['Ruby On Rails', 'NodeJS', 'NextJS', 'Nginx']
+        icons: ['Ruby On Rails', 'NodeJS', 'NextJS', 'Nginx', "GraphQL", "BullMQ"]
       },
       {
         name: 'Testing',
@@ -62,6 +63,29 @@ const data = {
   },
   projects: [
     {
+      heading: 'Leavers Hoodies',
+      image: {
+        src: '/images/sard-erostering-mock.png',
+        width: '438px',
+        height: '292px'
+      },
+      description: `
+      This product is the most interesting project I've worked on. The goal was to help improve NHS' resources management and the lives of the people tha work there. \nn
+      Rostering at our partner trust was a tedious tasks that was almost done randomly and then progressively improved as people complained about their shifts.
+      `,
+      subTitle: 'Technology',
+      subDescription: `Project built on Ruby on Rails with React in the places that we needed the UI to be responsive.\nn
+      Our solution included the use of Google OR-Tools an open source software suite for problem optimization.\nn
+      I played a key part on the development of this system. Which allowed us to model the problem, rank the solution and optimize the result (Constraint Solving).`,
+      tech: ['Ruby On Rails', 'Haml', 'React', 'MySQL', 'RSpec', 'Cypress.io'],
+      actions: [
+        {
+          title: 'Visit Website',
+          href: 'https://www.leavershoodies.com'
+        }
+      ]
+    },
+    {
       heading: 'SARD eRostering',
       image: {
         src: '/images/sard-erostering-mock.png',
@@ -86,6 +110,25 @@ const data = {
           title: 'More Info',
           href: 'https://sardjv.co.uk/products/erostering/'
         }
+      ]
+    },
+    {
+      heading: 'SARD Mobile App',
+      image: {
+        src: '/images/sard-mobile-app.png',
+        width: '247px',
+        height: '500px'
+      },
+      description: `
+      Mobile app used to upload evidence files to a user's portfolio. Portfolio is a key part of the main sard system that has to be done every year by doctors.`,
+      subTitle: 'Technology',
+      subDescription: `Mobile app developed on Expo's React Native with Redux Sagas connected to the backend with RestAPI.`,
+      tech: ['Figma', 'JavaScript', 'Expo', 'React Native', 'Redux', 'Jest'],
+      actions: [
+        // {
+        //   title: "Visit Website",
+        //   href: "https://www.sardjv.co.uk/",
+        // },
       ]
     },
     {
@@ -131,25 +174,6 @@ const data = {
       ]
     },
     {
-      heading: 'SARD Mobile App',
-      image: {
-        src: '/images/sard-mobile-app.png',
-        width: '247px',
-        height: '500px'
-      },
-      description: `
-      Mobile app used to upload evidence files to a user's portfolio. Portfolio is a key part of the main sard system that has to be done every year by doctors.`,
-      subTitle: 'Technology',
-      subDescription: `Mobile app developed on Expo's React Native with Redux Sagas connected to the backend with RestAPI.`,
-      tech: ['Figma', 'JavaScript', 'Expo', 'React Native', 'Redux', 'Jest'],
-      actions: [
-        // {
-        //   title: "Visit Website",
-        //   href: "https://www.sardjv.co.uk/",
-        // },
-      ]
-    },
-    {
       heading: 'Portfolio',
       image: {
         src: '/images/prock-mock.png',
@@ -188,12 +212,20 @@ const data = {
       ]
     }
   ],
+  
   workExperience: {
     heading: 'Work Experience',
     jobs: [
       {
+        company: "Stitch Group",
         jobTitle: 'Full-Stack Software Developer',
-        time: 'June 2019 – Present',
+        time: 'June 2019 – 2020',
+        image: {
+          name: "Stitch Group",
+          src: "/images/stitch-logo.svg",
+          width: '884px',
+          height: '716px'
+        },
         keyPoits: [
           'Had daily and weekly scrum meetings with our small team where we prioritized our work using Pivotal Tracker.',
           'Worked on Sards first mobile application built in React Native and redux.',
@@ -205,15 +237,44 @@ const data = {
           'Developed an automated developer workflow using GitLab Ci/CD, GCloud and Kubernetes. This involved Dockerising the application and the creation of custom scripts and Kubernetes Charts.',
           'Successfully migrated costumer data from competitor system to ours using by analyzing data structure and creating a custom crawler script.',
           'Provided Technical Support for the products as second-line Support person.'
+        ],
+        actions: [
+          {
+            title: 'Visit Website',
+            href: 'https://stitch.group'
+          }
+        ]
+      },
+      {
+        company: "SARD",
+        jobTitle: 'Full-Stack Software Developer',
+        time: 'June 2019 – 2020',
+        image: {
+          alt: "SARD",
+          src: "/images/SARD-logo-stacked-col-blk-md.png",
+          width: '884px',
+          height: '716px'
+        },
+        keyPoits: [
+          'Had daily and weekly scrum meetings with our small team where we prioritized our work using Pivotal Tracker.',
+          'Worked on Sards first mobile application built in React Native and redux.',
+          'Played a key part in the design process and collaborated with the designer to ensure the app used familiar Mobile UI/UX patterns.',
+          'Was part of the initial team that started SARD’s new eRostering project with the aim of improving NHS resources today is used by hundreds of doctors in the NHS.',
+          'Worked closely with our partners at the NHS to gather the system requirements and ensure the product met their specification and legal requirements.',
+          'Planned and implemented frontend and backend for multiple features like Shift Swap and email preferences. All with testing using Rspec and/or Cypress.',
+          'Played a key part in the development of our constraint solver. That is responsible to automatically assigning doctors to their shifts based on doctor time off preferences.',
+          'Developed an automated developer workflow using GitLab Ci/CD, GCloud and Kubernetes. This involved Dockerising the application and the creation of custom scripts and Kubernetes Charts.',
+          'Successfully migrated costumer data from competitor system to ours using by analyzing data structure and creating a custom crawler script.',
+          'Provided Technical Support for the products as second-line Support person.'
+        ],
+        actions: [
+          {
+            title: 'Visit Website',
+            href: 'https://www.sardjv.co.uk/'
+          }
         ]
       }
     ],
-    actions: [
-      {
-        title: 'Visit Website',
-        href: 'https://www.sardjv.co.uk/'
-      }
-    ]
   },
   volunteering: {
     heading: 'Community Projects & Volunteering',

@@ -6,7 +6,7 @@ interface ButtonType {
   mobileOrder?: number;
 }
 
-const Buttons = styled.div<ButtonType>`
+export const ButtonsBox = styled.div<ButtonType>`
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -26,5 +26,3 @@ const Buttons = styled.div<ButtonType>`
   }
 
 `
-
-export default Buttons

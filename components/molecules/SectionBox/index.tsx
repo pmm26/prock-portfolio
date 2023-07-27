@@ -1,24 +1,12 @@
-import {ColoredSection, WhiteSection} from "./Section";
-import ImageBox from "./contents/ImageBox";
-import ButtonsBox from "./contents/ButtonsBox";
-import InfoBox from "./contents/InfoBox";
-import HeadingBox from "./contents/HeadingBox";
-import Divider from "./contents/Divider";
-// Container
-import Container from "./containers/BaseContainer";
-import EducationContainer from "./containers/EducationContainer";
-import ProjectContainer from "./containers/ProjectContainer";
+export { ColoredSection, WhiteSection } from "./Section";
+export { ImageBox } from "./contents/ImageBox";
+export { ButtonsBox } from "./contents/ButtonsBox";
+export { InfoBox } from "./contents/InfoBox";
+export { HeadingBox } from "./contents/HeadingBox";
+export { Divider } from "./contents/Divider";
 
-// eslint-disable-next-line import/no-anonymous-default-export
-export default {
-  Container,
-  EducationContainer,
-  ProjectContainer,
-  ColoredSection,
-  WhiteSection,
-  HeadingBox,
-  ImageBox,
-  ButtonsBox,
-  InfoBox,
-  Divider
-}
+// Container
+export { BaseContainer } from "./containers/BaseContainer";
+export { EducationContainer } from "./containers/EducationContainer";
+export { ProjectContainer } from "./containers/ProjectContainer";
+export { BasicContainer } from "./containers/BasicContainer";

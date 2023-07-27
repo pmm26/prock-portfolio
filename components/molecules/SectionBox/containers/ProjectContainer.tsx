@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import BaseContainer from "./BaseContainer";
+import {BaseContainer} from "./BaseContainer";
 
 interface ContainerType {
   headingLeft?: any;
@@ -9,7 +9,7 @@ interface ContainerType {
   customFr?: [number, number];
 }
 
-const ProjectContainer = styled(BaseContainer)`
+export const ProjectContainer = styled(BaseContainer)`
   grid-template-areas:
     "heading image"
     "info image"

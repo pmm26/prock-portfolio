@@ -1,4 +1,4 @@
-import SectionBox from "../molecules/SectionBox";
+import { ColoredSection, ImageBox, InfoBox, BaseContainer, ButtonsBox } from "../molecules/SectionBox";
 import { H1, H2 } from "../atoms/Heading";
 import { P } from "../atoms/P";
 import image from "../../public/images/desktopIlustration.svg";
@@ -15,9 +15,9 @@ const Intro = (props: {
   description: string;
 }) => {
   return (
-    <SectionBox.ColoredSection>
-      <SectionBox.Container headingRight customFr={[0.8, 1]}>
-        <SectionBox.ImageBox>
+    <ColoredSection>
+      <BaseContainer headingRight customFr={[0.8, 1]}>
+        <ImageBox>
           <Image
             // layout={'responsive'}
             width={"443px"}
@@ -25,14 +25,14 @@ const Intro = (props: {
             src={image}
             alt="Desktop Ilustration"
           />
-        </SectionBox.ImageBox>
-        <SectionBox.InfoBox center>
+        </ImageBox>
+        <InfoBox center>
           <H1>{props.heading}</H1>
           <H2>{props.title}</H2>
           <P white>
             <NewLineText>{props.description}</NewLineText>
           </P>
-          <SectionBox.ButtonsBox>
+          <ButtonsBox>
             <ButtonLink height={60} href="https://gitlab.com/xdpedrox">
               <Image width="45px" height="45px" src={gilabImage} alt="Gitlab" />
               <span className="button-text">Gitlab</span>
@@ -46,10 +46,10 @@ const Intro = (props: {
               />
               <span className="button-text">CV</span>
             </ButtonLink>
-          </SectionBox.ButtonsBox>
-        </SectionBox.InfoBox>
-      </SectionBox.Container>
-    </SectionBox.ColoredSection>
+          </ButtonsBox>
+        </InfoBox>
+      </BaseContainer>
+    </ColoredSection>
   );
 };
 

@@ -3,7 +3,7 @@ import { FooterBox } from "./FooterBox";
 import {P} from "../../atoms/P";
 import * as Heading from "../../atoms/Heading";
 
-export default function Footer() {
+export function Footer() {
   return (
     <Container>
       <FooterBox>

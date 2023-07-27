@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Fragment } from "react";
-import SectionBox from "../molecules/SectionBox";
+import { HeadingBox, ColoredSection, BasicContainer, EducationContainer, ImageBox, InfoBox } from "../molecules/SectionBox";
 import { H1, H2, H3, H4 } from "../atoms/Heading";
 import { P } from "../atoms/P";
 import NewLineText from '../../components/atoms/NewLineText'
@@ -24,32 +24,37 @@ interface VolunteeringProps {
 
 const Volunteering = (props: VolunteeringProps) => {
   return (
-    <SectionBox.ColoredSection>
-      <SectionBox.EducationContainer headingLeft education customFr={[1, 0.5]}>
-        <SectionBox.HeadingBox mobileOrder={1} span={2} noArea>
+    <ColoredSection>
+      <BasicContainer>
+        <HeadingBox noArea mobileOrder={1} span={2}>
           <H1>{props.heading}</H1>
           <P white>{props.quote}</P>
-        </SectionBox.HeadingBox>
+        </HeadingBox>
 
         {props.jobs.map((job: jobEntry, index, array) => (
           <Fragment key={job.name}>
-            <SectionBox.InfoBox mobileOrder={index * 3 + 2 + 1} noArea center>
-              {/* Elite PT */}
-              <H2>{job.name}</H2>
-              <H3 fontSize="s">{job.time}</H3>
-              <P white><NewLineText>{job.description}</NewLineText></P>
-            </SectionBox.InfoBox>
+            <EducationContainer headingRight education>
 
-            <SectionBox.ImageBox mobileOrder={index * 3 + 1 + 1} noArea>
-              <Image {...job.image} alt={job.name} />
-            </SectionBox.ImageBox>
-            {array.length - 1 !== index && (
-              <SectionBox.Divider white mobileOrder={index * 3 + 3 + 1} />
-            )}
+              <InfoBox mobileOrder={index * 3 + 2 + 1} center>
+                {/* Elite PT */}
+                {/* <H2>{job.name}</H2> */}
+                <ImageBox mobileOrder={index * 3 + 1 + 1} noArea>
+                  <Image {...job.image} alt={job.name} />
+                </ImageBox>
+                <H3 fontSize="s">{job.time}</H3>
+                <P white><NewLineText>{job.description}</NewLineText></P>
+              </InfoBox>
+
+
+
+              {/* {array.length - 1 !== index && (
+                <Divider white mobileOrder={index * 3 + 3 + 1} />
+              )} */}
+            </EducationContainer>
           </Fragment>
         ))}
-      </SectionBox.EducationContainer>
-    </SectionBox.ColoredSection>
+      </BasicContainer>
+    </ColoredSection>
   );
 };
 

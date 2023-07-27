@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Image from "next/image";
 
-import SectionBox from "../molecules/SectionBox";
+import { ColoredSection, ImageBox, InfoBox, BaseContainer } from "../molecules/SectionBox";
 import SkillBars from "../molecules/SkillBars";
 import { H1 } from "../atoms/Heading";
 import image from "../../public/images/proficiency3x.png";
@@ -18,15 +18,15 @@ interface ProficiencyProps {
 
 const Proficiency = (props: ProficiencyProps) => {
   return (
-    <SectionBox.ColoredSection>
-      <SectionBox.Container headingRight customFr={[0.8, 1]}>
-        <SectionBox.ImageBox>
+    <ColoredSection>
+      <BaseContainer headingRight customFr={[0.8, 1]}>
+        <ImageBox>
           <Image
             src={image}
             alt="Proficiency Ilustration"
           />
-        </SectionBox.ImageBox>
-        <SectionBox.InfoBox center>
+        </ImageBox>
+        <InfoBox center>
           <H1>{props.heading}</H1>
           {props.entries.map((entry: Skill) => (
             <SkillBars.Container key={entry.title}>
@@ -38,9 +38,9 @@ const Proficiency = (props: ProficiencyProps) => {
               </SkillBars.OutBar>
             </SkillBars.Container>
           ))}
-        </SectionBox.InfoBox>
-      </SectionBox.Container>
-    </SectionBox.ColoredSection>
+        </InfoBox>
+      </BaseContainer>
+    </ColoredSection>
   );
 };
 

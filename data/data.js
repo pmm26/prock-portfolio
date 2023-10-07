@@ -70,14 +70,17 @@ const data = {
         height: '292px'
       },
       description: `
-      This product is the most interesting project I've worked on. The goal was to help improve NHS' resources management and the lives of the people tha work there. \nn
-      Rostering at our partner trust was a tedious tasks that was almost done randomly and then progressively improved as people complained about their shifts.
+      This is the company's website, it facilitates account managers in setting up and managing stores tailored for specific clients, especially schools and event organizers. 
+      Aimed at those desiring custom t-shirts and hoodies for events, our platform simplifies the order procedure, allowing for direct purchases. 
+      This not only eradicates the hassle of manually recording apparel sizes and choices but also aids the internal operations by efficiently organizing production batches.
       `,
       subTitle: 'Technology',
       subDescription: `Project built on Ruby on Rails with React in the places that we needed the UI to be responsive.\nn
       Our solution included the use of Google OR-Tools an open source software suite for problem optimization.\nn
       I played a key part on the development of this system. Which allowed us to model the problem, rank the solution and optimize the result (Constraint Solving).`,
-      tech: ['Ruby On Rails', 'Haml', 'React', 'MySQL', 'RSpec', 'Cypress.io'],
+      tech: ['NextJS', 'NodeJS', 'React', 'GraphQL', 'Apollo', "PostgreSQL"],
+      tech2: ["Prisma",  'BullMQ'],
+
       actions: [
         {
           title: 'Visit Website',
@@ -93,14 +96,15 @@ const data = {
         height: '292px'
       },
       description: `
-      This product is the most interesting project I've worked on. The goal was to help improve NHS' resources management and the lives of the people tha work there. \nn
-      Rostering at our partner trust was a tedious tasks that was almost done randomly and then progressively improved as people complained about their shifts.
+        On this pivotal project, our primary focus was to enhance the NHS's resource management and better the working conditions for its staff. Historically, \nn
+        rostering within our partner trust was a challenging task, often approached haphazardly, with adjustments made reactively based on staff feedback about their shifts. \nn
+        Our objective was to evolve this system into a proactive, efficient model that incorporated staff preferences from the outset of roster creation.
       `,
       subTitle: 'Technology',
-      subDescription: `Project built on Ruby on Rails with React in the places that we needed the UI to be responsive.\nn
-      Our solution included the use of Google OR-Tools an open source software suite for problem optimization.\nn
-      I played a key part on the development of this system. Which allowed us to model the problem, rank the solution and optimize the result (Constraint Solving).`,
-      tech: ['Ruby On Rails', 'Haml', 'React', 'MySQL', 'RSpec', 'Cypress.io'],
+      subDescription: `The project was crafted using Ruby on Rails, integrating React for areas requiring responsive UI. \nn
+      We incorporated Google OR-Tools, an open-source optimization suite, into our solution. \nn
+      I was instrumental in the system's development, enabling problem modeling, solution ranking, and result optimization through Constraint Solving.`,
+      tech: ["Ruby", 'Ruby On Rails', 'Haml', 'React', 'MySQL', 'RSpec', 'Cypress.io'],
       actions: [
         {
           title: 'Visit Website',
@@ -139,14 +143,13 @@ const data = {
         height: '822px'
       },
       description: `
-      This has been a long running project I've used to learn React, NodeJS and Typescript. It has seen multiple iterations and it's finally getting closer completion.
-      The goal is to extend what we currently offer in our TeamSpeak server. Currently users have channel where they can speak, we want to expand this to allow them upload a 
-      group icon that can be recognized in the whole server and to provide them with a private MusicBot so that they can all listen to song's together. All without the need of a contacting an Staff Member.`,
+      I initiated this project to hone my skills in React, NodeJS, and Typescript. 
+      Stemming from our TeamSpeak server, where users presently have a voice channel, we aim to enhance this by enabling group icon uploads for server-wide visibility and introducing a private MusicBot. 
+      This allows collective song listening without requiring staff assistance.`,
       subTitle: 'Technology',
       subDescription: `
-      Built with NextJS React Framework I've developed a library that abstracts the TeamSpeak DSL and provides easy to use building blocks to build any TeamSpeak feature.
-      The interaction with the TeamSpeak Server is made throw a SSH api while our MusicBot is made through a Rest API.
-      Gilab CI/CD is used for continuous deployment to production.
+      Utilizing the NextJS React Framework, I crafted a library that simplifies the TeamSpeak DSL, offering intuitive building blocks for any TeamSpeak functionality. 
+      Communication with the TeamSpeak Server occurs via an SSH API, while the MusicBot leverages a Rest API. Continuous deployment to production is done through GitLab CI/CD.
       `,
       tech: [
         'Figma',
@@ -212,7 +215,7 @@ const data = {
       ]
     }
   ],
-  
+
   workExperience: {
     heading: 'Work Experience',
     jobs: [
@@ -227,16 +230,13 @@ const data = {
           height: '716px'
         },
         keyPoits: [
-          'Had daily and weekly scrum meetings with our small team where we prioritized our work using Pivotal Tracker.',
-          'Worked on Sards first mobile application built in React Native and redux.',
-          'Played a key part in the design process and collaborated with the designer to ensure the app used familiar Mobile UI/UX patterns.',
-          'Was part of the initial team that started SARD’s new eRostering project with the aim of improving NHS resources today is used by hundreds of doctors in the NHS.',
-          'Worked closely with our partners at the NHS to gather the system requirements and ensure the product met their specification and legal requirements.',
-          'Planned and implemented frontend and backend for multiple features like Shift Swap and email preferences. All with testing using Rspec and/or Cypress.',
-          'Played a key part in the development of our constraint solver. That is responsible to automatically assigning doctors to their shifts based on doctor time off preferences.',
-          'Developed an automated developer workflow using GitLab Ci/CD, GCloud and Kubernetes. This involved Dockerising the application and the creation of custom scripts and Kubernetes Charts.',
-          'Successfully migrated costumer data from competitor system to ours using by analyzing data structure and creating a custom crawler script.',
-          'Provided Technical Support for the products as second-line Support person.'
+          "Led refactoring initiatives, on key features and GraphQL queries, using DRY principles and modern design patterns; this not only elevated system performance but also simplified the codebase through git submodules to share code across projects.",
+          "Key contributor to our Internal System and eCommerce platform using React, Node.js, and GraphQL; boosted user experience, streamlined company operations and product production.",
+          "Integrated supplier APIs to automate real-time stock ordering in sync with customer purchases, enhancing operational efficiency.",
+          "Used third-party apis to create all inclusive pricing for our products for international shipping.",
+          "Set up development databases in Docker to optimize the software development process",
+          "Implemented BullMQ to manage scheduled tasks and delayed jobs, improving application efficiency and performance.",
+          "Orchestrated the migration of company services from Heroku to DigitalOcean App Platform, optimizing infrastructure costs and scalability."
         ],
         actions: [
           {
@@ -256,16 +256,11 @@ const data = {
           height: '716px'
         },
         keyPoits: [
-          'Had daily and weekly scrum meetings with our small team where we prioritized our work using Pivotal Tracker.',
-          'Worked on Sards first mobile application built in React Native and redux.',
-          'Played a key part in the design process and collaborated with the designer to ensure the app used familiar Mobile UI/UX patterns.',
-          'Was part of the initial team that started SARD’s new eRostering project with the aim of improving NHS resources today is used by hundreds of doctors in the NHS.',
-          'Worked closely with our partners at the NHS to gather the system requirements and ensure the product met their specification and legal requirements.',
-          'Planned and implemented frontend and backend for multiple features like Shift Swap and email preferences. All with testing using Rspec and/or Cypress.',
-          'Played a key part in the development of our constraint solver. That is responsible to automatically assigning doctors to their shifts based on doctor time off preferences.',
-          'Developed an automated developer workflow using GitLab Ci/CD, GCloud and Kubernetes. This involved Dockerising the application and the creation of custom scripts and Kubernetes Charts.',
-          'Successfully migrated costumer data from competitor system to ours using by analyzing data structure and creating a custom crawler script.',
-          'Provided Technical Support for the products as second-line Support person.'
+          "Initiated and developed a Ruby on Rails and React eRostering project for the NHS, gathered client requirements, and implemented key features, now vital to hundreds of professionals.",
+          "Spearheaded the development of SARD's inaugural React Native mobile application, incorporating Jest and Appium for comprehensive testing.",
+          "Collaborated with NHS partners to establish system requirements, ensuring the product adhered to stringent specifications and legal frameworks.",
+          "Utilized a constraint solver for automated doctor shift assignments, optimizing schedules according to individual preferences.",
+          "Automated the development workflow via GitLab CI/CD, leveraging Docker and Kubernetes for streamlined deployments."
         ],
         actions: [
           {
@@ -327,7 +322,7 @@ const data = {
           width: '360px',
           height: '160px'
         },
-        description: `Pearson BTEC Level 3 Extended Diploma in IT (Software Development) – D* D* D* (Triple Distinction Star)`
+        description: `Pearson BTEC Level 3 Extended Diploma in IT (Software Development)  \nn D* D* D* (Triple Distinction Star)`
       }
     ]
   }

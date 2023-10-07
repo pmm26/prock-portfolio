@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 
-import { HeadingBox, ColoredSection, ImageBox, InfoBox, ButtonsBox,ProjectContainer,WhiteSection } from "../molecules/SectionBox";
+import { HeadingBox, ColoredSection, ImageBox, InfoBox, ButtonsBox,ProjectContainer,WhiteSection, BaseContainer } from "../molecules/SectionBox";
 import Img from "next/image";
 import Button from "../atoms/Button";
 import TechIcons from "../molecules/TechIcons";

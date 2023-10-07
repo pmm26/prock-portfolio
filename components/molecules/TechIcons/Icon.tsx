@@ -8,7 +8,9 @@ const StyledIcons = styled.img`
 `;
 
 const glyphMap = [
-  
+  { src: "postgresql.svg", alt: "PostgreSQL" },
+  { src: "prisma-2.svg", alt: "Prisma" },
+
   { src: "bullMq.png", alt: "BullMQ" },
   { src: "graphql.svg", alt: "GraphQL" },
   { src: "apollo.svg", alt: "Apollo" },

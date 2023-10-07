@@ -4,6 +4,10 @@ import { HeadingBox, ColoredSection, BasicContainer, EducationContainer, ImageBo
 import { H1, H2, H3, H4 } from "../atoms/Heading";
 import { P } from "../atoms/P";
 import NewLineText from '../../components/atoms/NewLineText'
+import styled from 'styled-components'
+import { FlexItem } from "../molecules/FlexContainers/FlexItem";
+import { FlexContainer } from "../molecules/FlexContainers/FlexContainer";
+
 
 interface jobEntry {
   name: string;
@@ -22,6 +26,8 @@ interface VolunteeringProps {
   jobs: jobEntry[];
 }
 
+
+
 const Volunteering = (props: VolunteeringProps) => {
   return (
     <ColoredSection>
@@ -31,9 +37,9 @@ const Volunteering = (props: VolunteeringProps) => {
           <P white>{props.quote}</P>
         </HeadingBox>
 
-        {props.jobs.map((job: jobEntry, index, array) => (
-          <Fragment key={job.name}>
-            <EducationContainer headingRight education>
+        <FlexContainer>
+          {props.jobs.map((job: jobEntry, index, array) => (
+            <FlexItem key={job.name}>
 
               <InfoBox mobileOrder={index * 3 + 2 + 1} center>
                 {/* Elite PT */}
@@ -50,9 +56,11 @@ const Volunteering = (props: VolunteeringProps) => {
               {/* {array.length - 1 !== index && (
                 <Divider white mobileOrder={index * 3 + 3 + 1} />
               )} */}
-            </EducationContainer>
-          </Fragment>
-        ))}
+            </FlexItem>
+          ))}
+
+        </FlexContainer>
+
       </BasicContainer>
     </ColoredSection>
   );

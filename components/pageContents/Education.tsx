@@ -1,9 +1,12 @@
 import Image from "next/image";
-import { HeadingBox, ImageBox, InfoBox, BaseContainer, Divider, WhiteSection } from "../molecules/SectionBox";
+import { HeadingBox, ImageBox, InfoBox, BaseContainer, Divider, WhiteSection, BasicContainer } from "../molecules/SectionBox";
 import { H1, H2 } from "../atoms/Heading";
 import { P } from "../atoms/P";
 import { Fragment } from "react";
 import NewLineText from '../../components/atoms/NewLineText'
+import styled from 'styled-components'
+import { FlexItem } from "../molecules/FlexContainers/FlexItem";
+import { FlexContainer } from "../molecules/FlexContainers/FlexContainer";
 
 interface EducationEntry {
   name: string;
@@ -20,17 +23,40 @@ interface EducationProps {
   entries: EducationEntry[];
 }
 
+
 const Education = (props: EducationProps) => {
   return (
     <WhiteSection>
-      <BaseContainer headingRight education customFr={[0.5, 1]}>
+      <BasicContainer headingRight education customFr={[0.5, 1]}>
         <InfoBox noArea></InfoBox>
 
         <HeadingBox noArea>
           <H1>{props.heading}</H1>
         </HeadingBox>
 
-        {props.entries.map((entry: EducationEntry, index, array) => (
+
+
+        <FlexContainer>
+          {props.entries.map((entry: EducationEntry, index, array) => (
+            <FlexItem key={entry.name}>
+              <ImageBox noArea>
+                <Image
+                  {...entry.image}
+                  alt={entry.name}
+                />
+              </ImageBox>
+
+              <InfoBox noArea center>
+                <H2 fontSize="m"><NewLineText>{entry.name}</NewLineText></H2>
+                <P><NewLineText>{entry.description}</NewLineText></P>
+              </InfoBox>
+            </FlexItem>
+          ))}
+
+        </FlexContainer>
+
+
+        {/* {props.entries.map((entry: EducationEntry, index, array) => (
           <Fragment key={entry.name}>
             <ImageBox noArea>
               <Image
@@ -48,8 +74,8 @@ const Education = (props: EducationProps) => {
               <Divider />
             )}
           </Fragment>
-        ))}
-      </BaseContainer>
+        ))} */}
+      </BasicContainer>
     </WhiteSection>
   );
 };

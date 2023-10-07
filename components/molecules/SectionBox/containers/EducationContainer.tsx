@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {BasicContainer} from './BasicContainer'
+import {BaseContainer } from './BaseContainer'
 
 interface ContainerType {
   headingLeft?: any;
@@ -11,46 +11,46 @@ interface ContainerType {
 
 // @ts-ignore
 export const EducationContainer = styled(BaseContainer)`
-  display: grid;
+  display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   background-color: transparent;
-  text-align: left;
+  /* text-align: left;
   object-fit: fill;
-  /* Default Heading Left */
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas: "info image";
+  Default Heading Left */
+  /* grid-template-columns: 1fr 1fr;
+  grid-template-areas: "info image";  */
 
   /* text right, image left */
-  ${({ headingRight }) =>
+  /* ${({ headingRight }) =>
     headingRight && `
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 
       "image info";
-  `}
+  `} */
 
-  ${({ customFr }) =>
+  /* ${({ customFr }) =>
     customFr && `
       grid-template-columns: ${customFr[0]}fr ${customFr[1]}fr;
-    `}
+    `} */
 
-  @media screen and (max-width: 479px) {
-    /* padding-top: 0px; */
+  /* @media screen and (max-width: 479px) {
     grid-template-columns: 1fr; 
     grid-auto-flow: row;
      grid-template-areas: "heading" "image" "info" "buttons";
-  }
-  grid-template-areas:
-    "info image"
+  } */
+  /* grid-template-areas:
+    "info image"; */
 
 
   /* Project Sections */
-  ${({ headingRight }) =>
+  /* ${({ headingRight }) =>
     headingRight &&
     `
     grid-template-areas: 
-      "image info"
-  `}
+      "image info";
+  `} */
 
     /* @media screen and (max-width: 479px) { 
       grid-template-columns: 1fr;

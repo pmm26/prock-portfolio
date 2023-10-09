@@ -18,7 +18,8 @@ interface WorkExperienceProps {
     jobTitle: string;
     time: string;
     image: {
-      name: string;
+      name?: string;
+      alt: string;
       src: string;
     };
     keyPoits: string[];

@@ -225,6 +225,7 @@ const data = {
         time: 'June 2019 – 2020',
         image: {
           name: "Stitch Group",
+          alt: "Stitch Group Logo",
           src: "/images/stitch-logo.svg",
           width: '884px',
           height: '716px'
@@ -250,7 +251,7 @@ const data = {
         jobTitle: 'Full-Stack Software Developer',
         time: 'June 2019 – 2020',
         image: {
-          alt: "SARD",
+          alt: "SARD Logo",
           src: "/images/SARD-logo-stacked-col-blk-md.png",
           width: '559px',
           height: '800px'

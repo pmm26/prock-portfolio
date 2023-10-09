@@ -24,14 +24,14 @@ build:
     - docker push $CI_APPLICATION_REPOSITORY:$CI_APPLICATION_TAG
     - docker push $CI_APPLICATION_REPOSITORY:latest
 
-deploy:
-  only:
-    - main
-  tags:
-    - shell
-  # Use the official docker image.
-  image: docker:latest
-  stage: build
-  script:
-    - docker-compose -f ~/deploy/portfolio/docker-compose.yaml up -d --force-recreate
+# deploy:
+#   only:
+#     - main
+#   tags:
+#     - shell
+#   # Use the official docker image.
+#   image: docker:latest
+#   stage: build
+#   script:
+#     - docker-compose -f ~/deploy/portfolio/docker-compose.yaml up -d --force-recreate
 

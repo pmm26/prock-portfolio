@@ -10,8 +10,6 @@ stages:
 build:
   only:
     - main
-  tags:
-    - shell
   # Use the official docker image.
   image: docker:latest
   stage: build

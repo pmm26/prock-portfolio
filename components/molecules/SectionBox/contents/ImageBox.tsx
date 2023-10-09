@@ -12,7 +12,7 @@ export const ImageBox = styled.div<ImageType>`
   height: 100%;
   justify-content: center;
   align-items: center;
-
+  flex-direction: column;
   ${({ noArea }) => !noArea &&`
     grid-area: image;
   `}

@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 interface HeadingType {
   fontSize?: "text" | "s" | "m" | "l" | "xl"
+  textColour?: string;
 }
 
 export const H1 = styled.h1<HeadingType>`
@@ -10,7 +11,7 @@ export const H1 = styled.h1<HeadingType>`
   margin-bottom: 0px;
   background-color: transparent;
   font-family: 'Futura-Bold', sans-serif;
-  color: ${props => props.theme.colors.purpleish};
+  color: ${props =>  props?.textColour || props.theme.colors.purpleish};
   font-weight: 700;
 
   font-size: ${props => props.theme.fontSizes.xl}px;
@@ -19,7 +20,7 @@ export const H1 = styled.h1<HeadingType>`
 
   ${({ fontSize, theme}) => fontSize &&`
     font-size: ${theme.fontSizes[fontSize]}px;
-  `}
+  `};
 `
 
 export const H2 = styled.h2<HeadingType>`
@@ -48,7 +49,7 @@ export const H3 = styled.h3<HeadingType>`
 
   ${({ fontSize, theme}) => fontSize &&`
     font-size: ${theme.fontSizes[fontSize]}px;
-  `}
+  `};
 `
 export const H4 = styled.h4<HeadingType>`
   margin-top: 10px;
@@ -60,6 +61,6 @@ export const H4 = styled.h4<HeadingType>`
   font-size: ${props => props.theme.fontSizes.s}px;
   ${({ fontSize, theme}) => fontSize &&`
     font-size: ${theme.fontSizes[fontSize]}px;
-  `}
+  `};
 `
 

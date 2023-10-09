@@ -9,13 +9,12 @@ import TechIcons from "../molecules/TechIcons";
 import SkillBars from "../molecules/SkillBars";
 import { H1, H2, H3, H4 } from "../atoms/Heading";
 import { P } from "../atoms/P";
-
 import { buttonAction } from '../../types/actions'
-
+import styled from 'styled-components'
 interface WorkExperienceProps {
   heading: string;
   jobs: {
-    company: string;
+    company?: string;
     jobTitle: string;
     time: string;
     image: {
@@ -30,8 +29,12 @@ interface WorkExperienceProps {
   }[];
 }
 
-const WorkExperience = (props: WorkExperienceProps) => {
+const CompanyNameContainer = styled.div`
+  margin-top: 50px;
+`
 
+
+const WorkExperience = (props: WorkExperienceProps) => {
   return (
     <>
       {props.jobs.map((job, index) => {
@@ -42,6 +45,7 @@ const WorkExperience = (props: WorkExperienceProps) => {
             <ProjectContainer {...(isEven ? { headingRight: true } : {})}>
               <ImageBox>
                 <Image {...job.image} />
+                {job.company ? (<CompanyNameContainer><H1 textColour="black">{job.company}</H1></CompanyNameContainer>) : (<></>)}
               </ImageBox>
               <HeadingBox>
                 <H1>{props.heading}</H1>

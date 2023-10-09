@@ -246,14 +246,14 @@ const data = {
         ]
       },
       {
-        company: "SARD",
+        // company: "SARD",
         jobTitle: 'Full-Stack Software Developer',
         time: 'June 2019 – 2020',
         image: {
           alt: "SARD",
           src: "/images/SARD-logo-stacked-col-blk-md.png",
-          width: '884px',
-          height: '716px'
+          width: '559px',
+          height: '800px'
         },
         keyPoits: [
           "Initiated and developed a Ruby on Rails and React eRostering project for the NHS, gathered client requirements, and implemented key features, now vital to hundreds of professionals.",

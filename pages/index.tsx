@@ -10,11 +10,18 @@ import Volunteering from "../components/pageContents/Volunteering";
 import Education from "../components/pageContents/Education";
 import Project from "../components/pageContents/Project";
 import Footer from '../components/molecules/Footer'
+import Head from 'next/head'
 
 import data from '../data/data'
 
 const Home = (props: {data: typeof data}) => { 
   return (
+    <>
+    <Head>
+      <title>Pedro Roque - Portfolio</title>
+      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    </Head>
+   
     <AppContainer>
       {/* Intro */}
       <Intro {...props.data.intro}/>
@@ -40,6 +47,7 @@ const Home = (props: {data: typeof data}) => {
 
       <Footer />
     </AppContainer>
+    </>
   );
 };
 

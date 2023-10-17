@@ -43,7 +43,7 @@ const WorkExperience = (props: WorkExperienceProps) => {
         const Section = isEven ? ColoredSection : WhiteSection
         return (
           <Section key={job.company}>
-            <ProjectContainer {...(isEven ? { headingRight: true } : {})}>
+          <ProjectContainer {...(isEven ? { headingRight: true } : {})}>
               <ImageBox>
                 <Image {...job.image} />
                 {job.company ? (<CompanyNameContainer><H1 textColour="black">{job.company}</H1></CompanyNameContainer>) : (<></>)}

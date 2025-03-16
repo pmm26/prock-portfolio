@@ -1,4 +1,4 @@
-import StyledComponentsWrapper from './components/StyledComponentsWrapper'
+import './globals.css'
 
 export const metadata = {
   title: 'Pedro Portfolio',
@@ -13,9 +13,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <StyledComponentsWrapper>
-          {children}
-        </StyledComponentsWrapper>
+        {children}
       </body>
     </html>
   )

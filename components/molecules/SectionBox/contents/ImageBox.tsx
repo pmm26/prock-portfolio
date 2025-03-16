@@ -1,25 +1,25 @@
-import styled from 'styled-components'
-import { HTMLAttributes } from "react";
+'use client';
 
-interface ImageType extends HTMLAttributes<HTMLDivElement> {
-  noArea?: any;
+import React from 'react';
+import { twMerge } from 'tailwind-merge';
+
+interface ImageBoxProps extends React.HTMLAttributes<HTMLDivElement> {
+  noArea?: boolean;
   mobileOrder?: number;
 }
 
-export const ImageBox = styled.div<ImageType>`
-  display: flex;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  ${({ noArea }) => !noArea &&`
-    grid-area: image;
-  `}
-
-  @media screen and (max-width: 479px) {
-    ${({ mobileOrder: order }) => order && `
-      order: ${order};
-    `}
-  }
-
-`
+export function ImageBox({ children, className, noArea, mobileOrder, ...props }: ImageBoxProps) {
+  return (
+    <div 
+      className={twMerge(
+        "flex h-full justify-center items-center flex-col",
+        !noArea && "grid-area-[image]",
+        mobileOrder && `sm:order-${mobileOrder}`,
+        className
+      )}
+      {...props}
+    >
+      {children}
+    </div>
+  );
+}

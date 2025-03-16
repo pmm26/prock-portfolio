@@ -1,22 +1,26 @@
-import styled from "styled-components";
-import {BaseContainer } from './BaseContainer'
+'use client';
 
-interface ContainerType {
-  headingLeft?: any;
-  headingRight?: any;
-  education?: any;
-  project?: any;
-  customFr?: [number, number];
+import React from 'react';
+import { twMerge } from 'tailwind-merge';
+import { BaseContainer } from './BaseContainer';
+
+interface EducationContainerProps extends React.ComponentProps<typeof BaseContainer> {}
+
+export function EducationContainer({ children, className, ...props }: EducationContainerProps) {
+  return (
+    <BaseContainer 
+      className={twMerge(
+        "max-sm:grid-cols-1 max-sm:grid-flow-row",
+        className
+      )}
+      // style={{
+      //   ['--mobile-grid-areas' as any]: '"heading" "image" "info" "divider" "image" "info" "divider" "image" "info" "divider"'
+      // }}
+      {...props}
+    >
+      {children}
+    </BaseContainer>
+  );
 }
-
-// @ts-ignore
-export const EducationContainer = styled(BaseContainer)`
-
-    @media screen and (max-width: 479px) { 
-    grid-template-columns: 1fr;
-    grid-auto-flow: row;
-    /* grid-template-areas: "heading" "image" "info" "divider" "image" "info" "divider" "image" "info" "divider"; */
-  } 
-`;
 
 

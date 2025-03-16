@@ -1,57 +1,44 @@
-import styled from "styled-components";
+'use client';
 
-interface ButtonType {
-  black?: any;
+import { twMerge } from "tailwind-merge";
+
+interface ButtonProps {
+  black?: boolean;
   height?: number;
   width?: number;
+  className?: string;
+  children?: React.ReactNode;
+  onClick?: () => void;
 }
 
-export const Button = styled.button<ButtonType>`
-  display: flex;
-  width: 200px;
-  height: 50px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  justify-content: center;
-  align-items: center;
-  border-radius: 12px;
-  font-family: "Futura book font", sans-serif;
-  font-size: 25px;
-  text-align: center;
-  text-decoration: none;
-  font-family: inherit;
-  border: none;
-  margin: 10px;
-
-  background-color: #fafdff;
-  color: ${(props) => props.theme.colors.orange};
-
-  ${({ black, theme }) =>
-    black &&
-    `
-    background-color:  ${theme.colors.black};
-    color: #fff;
-  `}
-
-  ${({ height }) => height && `
-    height: ${height}px;
-  `}
-
-  ${({ width }) => width && `
-    width: ${width}px;
-  `}
-`;
-
-const ButtonLink = (props: {  
-  href?: string;
-  children?: React.ReactNode
-  black?: any;
-  height?: number;
-  width?: number;
-}) => {
+export function Button({ black, height, width, className, children, ...props }: ButtonProps) {
   return (
-    <a href={props.href}>
-      <Button {...props} />
+    <button
+      className={twMerge(
+        "flex justify-center items-center rounded-xl font-futura-book text-2xl text-center border-none m-2.5",
+        "bg-[#fafdff] text-orange",
+        black && "bg-black text-white",
+        className
+      )}
+      style={{
+        height: height ? `${height}px` : '50px',
+        width: width ? `${width}px` : '200px',
+      }}
+      {...props}
+    >
+      {children}
+    </button>
+  );
+}
+
+interface ButtonLinkProps extends ButtonProps {
+  href?: string;
+}
+
+const ButtonLink = ({ href, children, ...props }: ButtonLinkProps) => {
+  return (
+    <a href={href}>
+      <Button {...props}>{children}</Button>
     </a>
   );
 };

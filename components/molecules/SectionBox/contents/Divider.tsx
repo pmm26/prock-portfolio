@@ -1,29 +1,26 @@
+'use client';
 
-import styled from 'styled-components'
+import React from 'react';
+import { twMerge } from 'tailwind-merge';
 
-interface DividerType {
-  noArea?: any;
+interface DividerProps extends React.HTMLAttributes<HTMLDivElement> {
+  noArea?: boolean;
   mobileOrder?: number;
-  white?: any;
+  white?: boolean;
 }
 
-export const Divider = styled.div<DividerType>`
-  border-bottom: 2px dashed ${props => props.theme.colors.black};
+export function Divider({ className, white, mobileOrder, ...props }: DividerProps) {
+  return (
+    <div 
+      className={twMerge(
+        white ? "border-b-2 border-dashed border-white" : "border-b-2 border-dashed border-black",
+        "col-span-2 max-sm:col-span-1",
+        mobileOrder && `sm:order-${mobileOrder}`,
+        className
+      )}
+      {...props}
+    />
+  );
+}
 
-  ${({ white, theme }) => white && `
-    border-bottom: 2px dashed ${theme.colors.white};
-
-  `}
-
-  grid-column: 1 / span 2;
-
-  @media screen and (max-width: 479px) {
-    ${({ mobileOrder: order }) => order && `
-      order: ${order};
-    `}
-     grid-column: 1;
-  }
-
-
-`
 

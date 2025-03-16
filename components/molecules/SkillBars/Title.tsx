@@ -1,12 +1,22 @@
+'use client';
 
-import styled from 'styled-components'
+import React from 'react';
+import { twMerge } from 'tailwind-merge';
 
-const Title = styled.div`
-  margin-left: 0px;
-  color: #fff;
-  margin-top: 20px;
-  margin-bottom: 10px;
-  font-size: 25px;
-`
+interface TitleProps extends React.HTMLAttributes<HTMLDivElement> {}
 
-export default Title
+function Title({ children, className, ...props }: TitleProps) {
+  return (
+    <div 
+      className={twMerge(
+        "ml-0 text-white mt-5 mb-2.5 text-[25px]",
+        className
+      )}
+      {...props}
+    >
+      {children}
+    </div>
+  );
+}
+
+export default Title;

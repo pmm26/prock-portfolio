@@ -1,50 +1,51 @@
-import styled from "styled-components";
+'use client';
 
-interface ContainerType {
-  headingLeft?: any;
-  headingRight?: any;
-  education?: any;
-  project?: any;
+import React from 'react';
+import { twMerge } from 'tailwind-merge';
+
+interface ContainerProps extends React.HTMLAttributes<HTMLDivElement> {
+  headingLeft?: boolean;
+  headingRight?: boolean;
+  education?: boolean;
+  project?: boolean;
   customFr?: [number, number];
 }
 
-// @ts-ignore
-export const Container = styled.div<ContainerType>`
-  justify-content: center;
-  align-items: center;
-  /* grid-auto-flow: row dense;
-  grid-auto-columns: 1fr;
-  grid-column-gap: 40px;
-  grid-row-gap: 16px; */
-  background-color: transparent;
-  text-align: left;
-  object-fit: fill;
-  /* grid-auto-flow: row; */
-
-
-  /* Default Heading Left */
-  grid-template-columns: 1fr 0.7fr;
-  grid-template-areas: "info image";
-
-  /* text right, image left */
-  ${({ headingRight }) =>
-    headingRight && `
-    grid-template-columns: 0.7fr 1fr;
-    grid-template-areas: 
-      "image info";
-  `}
-
-  ${({ customFr }) =>
-      customFr && `
-      grid-template-columns: ${customFr[0]}fr ${customFr[1]}fr;
-    `}
-
-  @media screen and (max-width: 479px) {
-    /* padding-top: 0px; */
-    grid-template-columns: 1fr; 
-    grid-auto-flow: row;
-     grid-template-areas: "heading" "image" "info" "buttons";
+export function Container({ 
+  children, 
+  className, 
+  headingLeft, 
+  headingRight, 
+  customFr,
+  ...props 
+}: ContainerProps) {
+  // For custom fractions, we'll use inline style
+  let gridTemplateColumns = '';
+  if (customFr) {
+    gridTemplateColumns = `${customFr[0]}fr ${customFr[1]}fr`;
+  } else if (headingRight) {
+    gridTemplateColumns = '0.7fr 1fr';
+  } else {
+    // Default (heading left)
+    gridTemplateColumns = '1fr 0.7fr';
   }
-`;
+
+  return (
+    <div 
+      className={twMerge(
+        "justify-center items-center bg-transparent text-left object-fill",
+        "max-sm:grid-cols-1",
+        className
+      )}
+      style={{ 
+        gridTemplateColumns,
+        gridTemplateAreas: headingRight ? '"image info"' : '"info image"',
+      }}
+      {...props}
+    >
+      {children}
+    </div>
+  );
+}
 
 export default Container;

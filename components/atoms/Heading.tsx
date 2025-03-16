@@ -1,66 +1,90 @@
-import styled from "styled-components";
+'use client';
+
 import { HTMLAttributes } from "react";
+import { twMerge } from "tailwind-merge";
 
 interface HeadingType extends HTMLAttributes<HTMLHeadingElement> {
-  fontSize?: "text" | "s" | "m" | "l" | "xl"
+  fontSize?: "text" | "s" | "m" | "l" | "xl";
   textColour?: string;
 }
 
-export const H1 = styled.h1<HeadingType>`
-  margin-top: 0px;
-  margin-bottom: 0px;
-  background-color: transparent;
-  font-family: 'Futura-Bold', sans-serif;
-  color: ${props =>  props?.textColour || props.theme.colors.purpleish};
-  font-weight: 700;
+export function H1({ children, className, fontSize, textColour, ...props }: HeadingType) {
+  return (
+    <h1 
+      className={twMerge(
+        "mt-0 mb-0 font-bold font-futura-bold text-purpleish text-4xl leading-[60px]",
+        fontSize === "text" && "text-base",
+        fontSize === "s" && "text-sm",
+        fontSize === "m" && "text-base",
+        fontSize === "l" && "text-xl",
+        fontSize === "xl" && "text-4xl",
+        textColour && `text-[${textColour}]`,
+        className
+      )}
+      {...props}
+    >
+      {children}
+    </h1>
+  );
+}
 
-  font-size: ${props => props.theme.fontSizes.xl}px;
+export function H2({ children, className, fontSize, textColour, ...props }: HeadingType) {
+  return (
+    <h2 
+      className={twMerge(
+        "mt-5 mb-2.5 font-normal font-futura-medium text-purpleish text-xl leading-9",
+        fontSize === "text" && "text-base",
+        fontSize === "s" && "text-sm",
+        fontSize === "m" && "text-base",
+        fontSize === "l" && "text-xl",
+        fontSize === "xl" && "text-4xl",
+        textColour && `text-[${textColour}]`,
+        className
+      )}
+      {...props}
+    >
+      {children}
+    </h2>
+  );
+}
 
-  line-height: 60px
+export function H3({ children, className, fontSize, textColour, ...props }: HeadingType) {
+  return (
+    <h3 
+      className={twMerge(
+        "mt-5 mb-2.5 font-medium font-futura-medium text-purpleish text-base leading-[30px]",
+        fontSize === "text" && "text-base",
+        fontSize === "s" && "text-sm",
+        fontSize === "m" && "text-base",
+        fontSize === "l" && "text-xl",
+        fontSize === "xl" && "text-4xl",
+        textColour && `text-[${textColour}]`,
+        className
+      )}
+      {...props}
+    >
+      {children}
+    </h3>
+  );
+}
 
-  ${({ fontSize, theme}) => fontSize &&`
-    font-size: ${theme.fontSizes[fontSize]}px;
-  `};
-`
-
-export const H2 = styled.h2<HeadingType>`
-  margin-top: 20px;
-  margin-bottom: 10px;
-  font-family: 'Futura-Medium', sans-serif;
-  color: ${props => props.theme.colors.purpleish};
-  line-height: 36px;
-  font-weight: 400;
-
-  font-size: ${props => props.theme.fontSizes.l}px;
-
-  ${({ fontSize, theme}) => fontSize &&`
-    font-size: ${theme.fontSizes[fontSize]}px;
-  `}
-`
-export const H3 = styled.h3<HeadingType>`
-  margin-top: 20px;
-  margin-bottom: 10px;
-  font-family: 'Futura-Medium', sans-serif;
-  color: ${props => props.theme.colors.purpleish};
-  line-height: 30px;
-  font-weight: 500;
-
-  font-size: ${props => props.theme.fontSizes.m}px;
-
-  ${({ fontSize, theme}) => fontSize &&`
-    font-size: ${theme.fontSizes[fontSize]}px;
-  `};
-`
-export const H4 = styled.h4<HeadingType>`
-  margin-top: 10px;
-  margin-bottom: 10px;
-  font-family: 'Futura-Medium', sans-serif;
-  color: ${props => props.theme.colors.purpleish};
-  line-height: 24px;
-
-  font-size: ${props => props.theme.fontSizes.s}px;
-  ${({ fontSize, theme}) => fontSize &&`
-    font-size: ${theme.fontSizes[fontSize]}px;
-  `};
-`
+export function H4({ children, className, fontSize, textColour, ...props }: HeadingType) {
+  return (
+    <h4 
+      className={twMerge(
+        "mt-2.5 mb-2.5 font-normal font-futura-medium text-purpleish text-sm leading-6",
+        fontSize === "text" && "text-base",
+        fontSize === "s" && "text-sm",
+        fontSize === "m" && "text-base",
+        fontSize === "l" && "text-xl",
+        fontSize === "xl" && "text-4xl",
+        textColour && `text-[${textColour}]`,
+        className
+      )}
+      {...props}
+    >
+      {children}
+    </h4>
+  );
+}
 

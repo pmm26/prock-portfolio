@@ -25,7 +25,16 @@ export default function Home() {
 
       {/* Projects */}
       {data.projects.map((project, index) => (
-        <Project key={project.heading} {...project} index={index} />
+        <Project 
+          key={project.heading} 
+          {...project} 
+          image={{
+            ...project.image,
+            width: Number(project.image.width),
+            height: Number(project.image.height),
+          }}
+          index={index} 
+        />
       ))}
 
       {/* Work Experience */}

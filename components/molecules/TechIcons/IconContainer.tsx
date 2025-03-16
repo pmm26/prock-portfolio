@@ -1,29 +1,26 @@
-import styled from 'styled-components'
-import { HTMLAttributes } from "react";
+'use client';
 
-interface IconContainerType extends HTMLAttributes<HTMLDivElement> {
-  center?: any;
+import React from 'react';
+import { twMerge } from 'tailwind-merge';
+
+interface IconContainerProps extends React.HTMLAttributes<HTMLDivElement> {
+  center?: boolean;
 }
 
-const IconContainer = styled.div<IconContainerType>`
-  display: flex;
-  flex-wrap: wrap;
-  align-content: center;
-  /* margin-top: 15px; */
-  margin-bottom: 15px;
-  /* padding-top: 0px; */
-  flex-wrap: wrap;
-  object-fit: none;
-  ${({ center }) => center &&`
-    justify-content: center;
-    align-items: center; 
-  `}
+function IconContainer({ children, className, center, ...props }: IconContainerProps) {
+  return (
+    <div 
+      className={twMerge(
+        "flex flex-wrap content-center mb-4 flex-wrap object-none",
+        center && "justify-center items-center",
+        "max-sm:justify-center max-sm:items-center",
+        className
+      )}
+      {...props}
+    >
+      {children}
+    </div>
+  );
+}
 
-
-  @media screen and (max-width: 479px) {
-    justify-content: center;
-    align-items: center; 
-  }
-`
-
-export default IconContainer
+export default IconContainer;

@@ -1,26 +1,36 @@
+'use client';
+
 /* eslint-disable @next/next/no-img-element */
 
-import styled from 'styled-components'
+import React from 'react';
 
-export const ColoredSection = styled.div`
-  border: 1px none #000;
-  background-color: ${props => props.theme.colors.orange};
-`
+interface ColoredSectionProps {
+  children: React.ReactNode;
+  className?: string;
+}
 
-export const WhiteSection = (props: {children: React.ReactNode}) => {
+export function ColoredSection({ children, className }: ColoredSectionProps) {
+  return (
+    <div className={`border border-transparent bg-orange ${className || ''}`}>
+      {children}
+    </div>
+  );
+}
+
+export function WhiteSection({ children }: { children: React.ReactNode }) {
   return (
     <div>
-        <img
-          src="/images/bottom-wave.svg"
-          alt=""
-          className="section-image-bot"
-        />
-      {props.children}
       <img
-          src="/images/top-wave.svg"
-          alt=""
-          className="section-image-top"
-        />
+        src="/images/bottom-wave.svg"
+        alt=""
+        className="section-image-bot"
+      />
+      {children}
+      <img
+        src="/images/top-wave.svg"
+        alt=""
+        className="section-image-top"
+      />
     </div>
-  )
+  );
 }

@@ -1,17 +1,10 @@
-import styled from "styled-components";
-import { ImgHTMLAttributes } from "react";
+'use client';
 
-const StyledIcons = styled.img<ImgHTMLAttributes<HTMLImageElement>>`
-  height: 50px;
-  margin-top: 0px;
-  margin-right: 12px;
-  padding-bottom: 10px;
-`;
+import React from 'react';
 
 const glyphMap = [
   { src: "postgresql.svg", alt: "PostgreSQL" },
   { src: "prisma-2.svg", alt: "Prisma" },
-
   { src: "bullMq.png", alt: "BullMQ" },
   { src: "graphql.svg", alt: "GraphQL" },
   { src: "apollo.svg", alt: "Apollo" },
@@ -54,15 +47,14 @@ const TechIcons = (props: { icon: string }) => {
   const iconEntry = glyphMap.find((entry) => entry.alt == props.icon);
   if (iconEntry)
     return (
-      <StyledIcons
+      <img
         src={`/images/icons/${iconEntry.src}`}
         loading="lazy"
         alt={iconEntry.alt}
+        className="h-[50px] mr-3 pb-2.5"
       />
     );
-  else return (<div>
-    Not Found
-    </div>);
+  else return (<div>Not Found</div>);
 };
 
 export default TechIcons;

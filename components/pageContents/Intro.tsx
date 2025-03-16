@@ -1,4 +1,3 @@
-import { ColoredSection, ImageBox, InfoBox, BaseContainer, ButtonsBox } from "../molecules/SectionBox";
 import { H1, H2 } from "../atoms/Heading";
 import { P } from "../atoms/P";
 import image from "../../public/images/desktopIlustration.svg";
@@ -15,41 +14,41 @@ const Intro = (props: {
   description: string;
 }) => {
   return (
-    <ColoredSection>
-      <BaseContainer headingRight customFr={[0.8, 1]}>
-        <ImageBox>
+    <section className="bg-orange border border-transparent">
+      <div className="flex flex-col md:flex-row md:items-center py-8 px-5 max-w-7xl mx-auto gap-8">
+        <div className="w-full md:w-[45%]">
           <Image
-            // layout={'responsive'}
-            width={"443px"}
-            height={"346px"}
+            width={443}
+            height={346}
             src={image}
             alt="Desktop Ilustration"
+            className="w-full h-auto"
           />
-        </ImageBox>
-        <InfoBox center>
+        </div>
+        <div className="w-full md:w-[55%] flex flex-col justify-center items-center text-center">
           <H1>{props.heading}</H1>
           <H2>{props.title}</H2>
           <P white>
             <NewLineText>{props.description}</NewLineText>
           </P>
-          <ButtonsBox>
+          <div className="flex flex-wrap justify-center gap-4 mt-6">
             <ButtonLink height={60} href="https://gitlab.com/xdpedrox">
-              <Image width="45px" height="45px" src={gilabImage} alt="Gitlab" />
+              <Image width={45} height={45} src={gilabImage} alt="Gitlab" />
               <span className="button-text">Gitlab</span>
             </ButtonLink>
             <ButtonLink height={60} href="/Pedro%20Roque%20CV.pdf">
               <Image
-                width="45px"
-                height="45px"
+                width={45}
+                height={45}
                 src={cvImage}
                 alt="Download CV"
               />
               <span className="button-text">CV</span>
             </ButtonLink>
-          </ButtonsBox>
-        </InfoBox>
-      </BaseContainer>
-    </ColoredSection>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 

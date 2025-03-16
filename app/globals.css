@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  a {
+    text-decoration: none;
+  }
+  
+  li {
+    margin-bottom: 15px;
+  }
+}
+
+@layer components {
+  .images {
+    max-width: 100%;
+    object-fit: cover;
+  }
+  
+  .section-image-bot {
+    width: 102%;
+    margin-top: -2px;
+  }
+  
+  .section-image-top {
+    width: 102%;
+    margin-bottom: -5px;
+  }
+  
+  .button-text {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+} 

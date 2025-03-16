@@ -5,11 +5,11 @@ import { twMerge } from 'tailwind-merge';
 
 interface ContainerProps extends React.HTMLAttributes<HTMLDivElement> {}
 
-function Container({ children, className, ...props }: ContainerProps) {
+export function Container({ children, className, ...props }: ContainerProps) {
   return (
     <div 
       className={twMerge(
-        "flex flex-col",
+        "flex flex-shrink-0 -mt-0.5 h-[70px] flex-col justify-center items-center bg-orange",
         className
       )}
       {...props}
@@ -18,5 +18,3 @@ function Container({ children, className, ...props }: ContainerProps) {
     </div>
   );
 }
-
-export default Container;

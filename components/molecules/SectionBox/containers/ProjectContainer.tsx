@@ -1,35 +1,31 @@
-import styled from "styled-components";
-import {BaseContainer} from "./BaseContainer";
+'use client';
 
-interface ContainerType {
-  headingLeft?: any;
-  headingRight?: any;
-  education?: any;
-  project?: any;
-  customFr?: [number, number];
+import React from 'react';
+import { twMerge } from 'tailwind-merge';
+import { BaseContainer } from './BaseContainer';
+
+interface ProjectContainerProps extends React.ComponentProps<typeof BaseContainer> {}
+
+export function ProjectContainer({ children, className, headingRight, ...props }: ProjectContainerProps) {
+  return (
+    <BaseContainer 
+      className={twMerge(
+        // Default grid areas
+        "grid-areas-[heading_image,info_image,buttons_buttons]",
+        
+        // Heading right variation
+        headingRight && "grid-areas-[image_heading,image_info,buttons_buttons]",
+        
+        // Mobile layout
+        "max-sm:grid-cols-1 max-sm:grid-areas-[image,heading,info,buttons]",
+        
+        className
+      )}
+      {...props}
+    >
+      {children}
+    </BaseContainer>
+  );
 }
-
-export const ProjectContainer = styled(BaseContainer)`
-  grid-template-areas:
-    "heading image"
-    "info image"
-    "buttons buttons";
-
-  /* Project Sections */
-  ${({ headingRight }) =>
-    headingRight &&
-    `
-    grid-template-areas: 
-      "image heading" 
-      "image info" 
-      "buttons buttons";
-  `}
-
-  @media screen and (max-width: 479px) {
-    grid-template-columns: 1fr;
-    grid-auto-flow: column;
-    grid-template-areas: "image" "heading"  "info" "buttons";
-  }
-`;
 
 export default ProjectContainer;

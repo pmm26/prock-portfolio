@@ -1,20 +1,23 @@
+'use client';
 
-import styled from 'styled-components'
+import React from 'react';
+import { twMerge } from 'tailwind-merge';
 
-const AppContainer = styled.div`
-  display: block;
-  width: 100%;
-  margin-right: auto;
-  margin-left: auto;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  align-self: stretch;
-  flex: 0 auto;
-  grid-auto-columns: 1fr;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto auto;
-  overflow: hidden;
-`
+interface AppContainerProps extends React.HTMLAttributes<HTMLDivElement> {}
 
-export default AppContainer
+function AppContainer({ children, className, ...props }: AppContainerProps) {
+  return (
+    <div 
+      className={twMerge(
+        "block w-full mx-auto flex-row justify-center items-center self-stretch flex-none",
+        "grid-cols-4 auto-rows-auto overflow-hidden",
+        className
+      )}
+      {...props}
+    >
+      {children}
+    </div>
+  );
+}
+
+export default AppContainer;

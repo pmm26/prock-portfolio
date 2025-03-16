@@ -1,59 +1,52 @@
-import styled from "styled-components";
-import { HTMLAttributes } from "react";
+'use client';
 
-interface ContainerType extends HTMLAttributes<HTMLDivElement> {
-  headingLeft?: any;
-  headingRight?: any;
-  education?: any;
-  project?: any;
+import React from 'react';
+import { twMerge } from 'tailwind-merge';
+
+interface BasicContainerProps extends React.HTMLAttributes<HTMLDivElement> {
+  headingLeft?: boolean;
+  headingRight?: boolean;
+  education?: boolean;
+  project?: boolean;
   customFr?: [number, number];
 }
 
-// @ts-ignore
-export const BasicContainer = styled.div<ContainerType>`
-  /* display: grid; */
-  max-width: 1100px;
-  min-height: 100%;
-  min-width: 100px;
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 10px;
-  padding-left: 10px;
-  justify-content: center;
-  align-items: center;
-  /* grid-auto-flow: row dense;
-  grid-auto-columns: 1fr;
-  grid-column-gap: 40px;
-  grid-row-gap: 16px; */
-  background-color: transparent;
-  text-align: left;
-  object-fit: fill;
-  /* grid-auto-flow: row; */
-  margin-top: -2px;
-
-  padding-top: 50px;
-
-  /* Default Heading Left */
-  /* grid-template-columns: 1fr 0.7fr;
-  grid-template-areas: "info image"; */
-
-  /* text right, image left */
-  /* ${({ headingRight }) =>
-    headingRight && `
-    grid-template-columns: 0.7fr 1fr;
-    grid-template-areas: 
-      "image info";
-  `}
-
-  ${({ customFr }) =>
-      customFr && `
-      grid-template-columns: ${customFr[0]}fr ${customFr[1]}fr;
-    `} */
-
-  @media screen and (max-width: 479px) {
-    padding-top: 0px;
-    /* grid-template-columns: 1fr; */
-    /* grid-auto-flow: row; */
-    /* grid-template-areas: "heading" "image" "info" "buttons"; */
+export function BasicContainer({ 
+  children, 
+  className,
+  headingLeft,
+  headingRight,
+  education,
+  project,
+  customFr,
+  ...props 
+}: BasicContainerProps) {
+  // For custom fractions, we'll use inline style
+  let gridTemplateColumns = '';
+  if (customFr) {
+    gridTemplateColumns = `${customFr[0]}fr ${customFr[1]}fr`;
+  } else if (headingRight) {
+    gridTemplateColumns = '0.7fr 1fr';
+  } else {
+    // Default (heading left)
+    gridTemplateColumns = '1fr 0.7fr';
   }
-`;
+
+  return (
+    <div 
+      className={twMerge(
+        "grid max-w-[1100px] min-h-full min-w-[100px] mx-auto px-2.5 justify-center items-center",
+        "gap-x-10 gap-y-4 bg-transparent text-left object-fill pt-[50px] -mt-0.5",
+        "max-sm:pt-0 max-sm:grid-cols-1",
+        className
+      )}
+      style={{ 
+        gridTemplateColumns,
+        gridTemplateAreas: headingRight ? '"image info"' : '"info image"',
+      }}
+      {...props}
+    >
+      {children}
+    </div>
+  );
+}

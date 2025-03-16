@@ -1,32 +1,28 @@
-import styled from 'styled-components'
-import { HTMLAttributes } from "react";
+'use client';
 
-interface InfoType extends HTMLAttributes<HTMLDivElement> {
-  noArea?: any;
-  center?: any;
+import React from 'react';
+import { twMerge } from 'tailwind-merge';
+
+interface InfoBoxProps extends React.HTMLAttributes<HTMLDivElement> {
+  noArea?: boolean;
+  center?: boolean;
   mobileOrder?: number;
 }
 
-export const InfoBox = styled.div<InfoType>`
-  display: flex;
-  flex-direction: column;
-  padding-left: 5px;
-  padding-right: 5px;
-  ${({ center }) => center && `
-    justify-content: center;
-    align-items: center; 
-    text-align: center;
-  `}
-
-  ${({ noArea }) => !noArea && `
-    grid-area: info;
-  `}
-
-  @media screen and (max-width: 479px) {
-    ${({ mobileOrder: order }) => order && `
-      order: ${order};
-    `}
-     justify-content: center;
-     text-align: center;
-  }
-`
+export function InfoBox({ children, className, noArea, center, mobileOrder, ...props }: InfoBoxProps) {
+  return (
+    <div 
+      className={twMerge(
+        "flex flex-col px-1.5",
+        center && "justify-center items-center text-center",
+        !noArea && "grid-area-[info]",
+        "max-sm:justify-center max-sm:text-center",
+        mobileOrder && `sm:order-${mobileOrder}`,
+        className
+      )}
+      {...props}
+    >
+      {children}
+    </div>
+  );
+}

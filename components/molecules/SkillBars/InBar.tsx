@@ -1,19 +1,23 @@
+'use client';
 
-import styled from 'styled-components'
+import React from 'react';
+import { twMerge } from 'tailwind-merge';
 
-interface InBarType {
-  percentage: number
+interface InBarProps extends React.HTMLAttributes<HTMLDivElement> {
+  percentage: number;
 }
 
-const InBar = styled.div<InBarType>`
-  height: 20px;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  padding-top: 0px;
-  border-radius: 4px;
-  background-color: #dd5e98;
+function InBar({ percentage, className, ...props }: InBarProps) {
+  return (
+    <div 
+      className={twMerge(
+        "h-5 my-0 pt-0 rounded bg-[#dd5e98]",
+        className
+      )}
+      style={{ width: `${percentage}%` }}
+      {...props}
+    />
+  );
+}
 
-  width: ${({percentage}) => `${percentage}%`};
-`
-
-export default InBar
+export default InBar;

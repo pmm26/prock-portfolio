@@ -5,7 +5,6 @@ import TechIcons from "../molecules/TechIcons";
 import { H1, H2 } from "../atoms/Heading";
 import { P } from "../atoms/P";
 import NewLineText from '../../components/atoms/NewLineText'
-import styled from 'styled-components'
 
 import { buttonAction } from "../../types/actions";
 
@@ -14,8 +13,8 @@ interface ProjectProps {
   heading: string;
   image: {
     src: string;
-    width: string;
-    height: string;
+    width: number;
+    height: number;
   };
   description: string;
   subTitle: string;
@@ -36,7 +35,12 @@ const Project = (props: ProjectProps) => {
           <H1>{props.heading}</H1>
         </HeadingBox>
         <ImageBox>
-          <Image {...props.image} alt={props.heading} />
+          <Image 
+            src={props.image.src}
+            width={Number(props.image.width)}
+            height={Number(props.image.height)}
+            alt={props.heading}
+          />
         </ImageBox>
         <InfoBox center>
           <P {...(!isEven ? { white: true } : {})}><NewLineText>{props.description}</NewLineText></P>
@@ -71,9 +75,3 @@ const Project = (props: ProjectProps) => {
 
 export default Project;
 
-const BreakFlex = styled.div`
-   content: "";
-  width: 100%;
-  order: 1; /* This ensures that the pseudo-element comes directly after the item */
-
-`

@@ -1,33 +1,29 @@
-import styled from 'styled-components'
-import { HTMLAttributes } from "react";
+'use client';
 
-interface HeadingType extends HTMLAttributes<HTMLDivElement> {
+import React from 'react';
+import { twMerge } from 'tailwind-merge';
+
+interface HeadingBoxProps extends React.HTMLAttributes<HTMLDivElement> {
   span?: number;
-  noArea?: any
+  noArea?: boolean;
   mobileOrder?: number;
 }
 
-export const HeadingBox = styled.div<HeadingType>`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  flex-direction: column;
+export function HeadingBox({ children, className, span, noArea, mobileOrder, ...props }: HeadingBoxProps) {
+  return (
+    <div 
+      className={twMerge(
+        "flex justify-center items-center text-center flex-col",
+        !noArea && "grid-area-[heading]",
+        span && `col-span-${span}`,
+        "max-sm:col-span-1",
+        mobileOrder && `sm:order-${mobileOrder}`,
+        className
+      )}
+      {...props}
+    >
+      {children}
+    </div>
+  );
+}
 
-  ${({ noArea }) => !noArea &&`
-    grid-area: heading;
-  `}
-
-  /* 1 Collum Grid*/
-  ${({ span }) => span &&`
-    grid-column: 1 / span ${span};
-  `}
-
-  @media screen and (max-width: 479px) {
-    ${({ mobileOrder: order }) => order && `
-      order: ${order};
-    `}
-     grid-column: 1;
-  }
-
-`

@@ -1,17 +1,22 @@
+'use client';
 
-import styled from 'styled-components'
+import React from 'react';
+import { twMerge } from 'tailwind-merge';
 
-const Title = styled.h2`
-  font-family: 'Futura', sans-serif;
-  font-size: 22px;
-  margin-bottom: 15px;
-  font-weight: 400;
-  text-align: left;
+interface TitleProps extends React.HTMLAttributes<HTMLHeadingElement> {}
 
-  @media screen and (max-width: 479px) {
-    text-align: center;
-  }
-`
+function Title({ children, className, ...props }: TitleProps) {
+  return (
+    <h2 
+      className={twMerge(
+        "font-futura-medium text-[22px] mb-4 font-normal text-left max-sm:text-center",
+        className
+      )}
+      {...props}
+    >
+      {children}
+    </h2>
+  );
+}
 
-
-export default Title
+export default Title;

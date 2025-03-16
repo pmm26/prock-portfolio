@@ -1,13 +1,20 @@
-import styled from 'styled-components'
-import { HTMLAttributes } from "react";
+'use client';
 
-export const FlexContainer = styled.div<HTMLAttributes<HTMLDivElement>>`
-  margin-top: 20px;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  background-color: transparent;
-  flex-wrap: wrap;
-  justify-content: space-between;
-`
+import React from 'react';
+import { twMerge } from 'tailwind-merge';
+
+interface FlexContainerProps extends React.HTMLAttributes<HTMLDivElement> {}
+
+export function FlexContainer({ children, className, ...props }: FlexContainerProps) {
+  return (
+    <div 
+      className={twMerge(
+        "mt-5 w-full flex flex-row items-center bg-transparent flex-wrap justify-between",
+        className
+      )}
+      {...props}
+    >
+      {children}
+    </div>
+  );
+}

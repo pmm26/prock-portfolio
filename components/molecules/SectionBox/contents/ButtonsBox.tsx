@@ -1,28 +1,27 @@
-import styled from 'styled-components'
-import { HTMLAttributes } from "react";
+'use client';
 
-interface ButtonType extends HTMLAttributes<HTMLDivElement> {
-  noArea?: any;
+import React from 'react';
+import { twMerge } from 'tailwind-merge';
+
+interface ButtonsBoxProps extends React.HTMLAttributes<HTMLDivElement> {
+  noArea?: boolean;
   mobileOrder?: number;
 }
 
-export const ButtonsBox = styled.div<ButtonType>`
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  align-items: center;
-
-  ${({ noArea }) => !noArea &&`
-    grid-area: buttons;
-  `}
-
-  grid-column: 1 / span 2;
-
-  @media screen and (max-width: 479px) {
-    ${({ mobileOrder: order }) => order && `
-      order: ${order};
-    `}
-     grid-column: 1;
-  }
-
-`
+export function ButtonsBox({ children, className, noArea, mobileOrder, ...props }: ButtonsBoxProps) {
+  return (
+    <div 
+      className={twMerge(
+        "flex justify-around flex-wrap items-center",
+        !noArea && "grid-area-[buttons]",
+        "col-span-2",
+        "max-sm:col-span-1",
+        mobileOrder && `sm:order-${mobileOrder}`,
+        className
+      )}
+      {...props}
+    >
+      {children}
+    </div>
+  );
+}

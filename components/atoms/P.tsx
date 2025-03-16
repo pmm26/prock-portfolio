@@ -1,22 +1,23 @@
-import styled from "styled-components";
-import { HTMLAttributes } from "react";
+'use client';
 
-interface pType extends HTMLAttributes<HTMLParagraphElement> {
-  white?: any
+import { HTMLAttributes } from "react";
+import { twMerge } from "tailwind-merge";
+
+interface PType extends HTMLAttributes<HTMLParagraphElement> {
+  white?: boolean;
 }
 
-export const P = styled.p<pType>`
-  letter-spacing: 0;
-  text-align: center;
-  /* margin-top: 0px; */
-  /* margin-bottom: 0px; */
-  font-family: 'Futura-Medium', sans-serif;
-  font-size: ${props => props.theme.fontSizes.text}px;
-  line-height: 40px;
-  margin-left: 5px;
-  margin-right: 5px;
-  ${({ white, theme }) => white && `
-    color:  ${theme.colors.white};
-  `}
-
-`
+export function P({ children, className, white, ...props }: PType) {
+  return (
+    <p
+      className={twMerge(
+        "text-center font-futura-medium text-base leading-10 mx-1.5",
+        white && "text-white",
+        className
+      )}
+      {...props}
+    >
+      {children}
+    </p>
+  );
+}

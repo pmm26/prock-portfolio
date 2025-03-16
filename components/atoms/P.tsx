@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { HTMLAttributes } from "react";
 
-interface pType {
+interface pType extends HTMLAttributes<HTMLParagraphElement> {
   white?: any
 }
 

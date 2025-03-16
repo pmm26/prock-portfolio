@@ -1,10 +1,9 @@
-
 import styled from 'styled-components'
+import { HTMLAttributes } from "react";
 
-interface ImageType {
-  noArea?: any
+interface ImageType extends HTMLAttributes<HTMLDivElement> {
+  noArea?: any;
   mobileOrder?: number;
-
 }
 
 export const ImageBox = styled.div<ImageType>`

@@ -1,7 +1,7 @@
 import styled from "styled-components";
+import { HTMLAttributes } from "react";
 
-
-interface HeadingType {
+interface HeadingType extends HTMLAttributes<HTMLHeadingElement> {
   fontSize?: "text" | "s" | "m" | "l" | "xl"
   textColour?: string;
 }

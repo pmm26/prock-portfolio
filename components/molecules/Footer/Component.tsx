@@ -1,6 +1,6 @@
 import { Container } from "./Container";
 import { FooterBox } from "./FooterBox";
-import {P} from "../../atoms/P";
+import { P } from "../../atoms/P";
 import * as Heading from "../../atoms/Heading";
 
 export function Footer() {

@@ -1,11 +1,10 @@
-
 import styled from 'styled-components'
+import { HTMLAttributes } from "react";
 
-interface HeadingType {
+interface HeadingType extends HTMLAttributes<HTMLDivElement> {
   span?: number;
   noArea?: any
   mobileOrder?: number;
-
 }
 
 export const HeadingBox = styled.div<HeadingType>`

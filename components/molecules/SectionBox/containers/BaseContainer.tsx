@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { HTMLAttributes } from "react";
 
-interface ContainerType {
+interface ContainerType extends HTMLAttributes<HTMLDivElement> {
   headingLeft?: any;
   headingRight?: any;
   education?: any;

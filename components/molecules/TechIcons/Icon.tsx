@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { ImgHTMLAttributes } from "react";
 
-const StyledIcons = styled.img`
+const StyledIcons = styled.img<ImgHTMLAttributes<HTMLImageElement>>`
   height: 50px;
   margin-top: 0px;
   margin-right: 12px;

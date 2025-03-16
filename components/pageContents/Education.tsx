@@ -12,8 +12,8 @@ interface EducationEntry {
   name: string;
   image: {
     src: string;
-    width: string;
-    height: string;
+    width: number;
+    height: number;
   };
   description: string;
 };

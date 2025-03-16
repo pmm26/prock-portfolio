@@ -1,8 +1,8 @@
-
 import styled from 'styled-components'
+import { HTMLAttributes } from "react";
 
-interface ButtonType {
-  noArea?: any
+interface ButtonType extends HTMLAttributes<HTMLDivElement> {
+  noArea?: any;
   mobileOrder?: number;
 }
 

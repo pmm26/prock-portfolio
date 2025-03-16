@@ -1,8 +1,7 @@
-
-
 import styled from 'styled-components'
+import { HTMLAttributes } from "react";
 
-interface IconContainerType {
+interface IconContainerType extends HTMLAttributes<HTMLDivElement> {
   center?: any;
 }
 

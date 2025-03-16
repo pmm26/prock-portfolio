@@ -1,6 +1,7 @@
 import styled from 'styled-components'
+import { HTMLAttributes } from "react";
 
-export const FlexContainer = styled.div`
+export const FlexContainer = styled.div<HTMLAttributes<HTMLDivElement>>`
   margin-top: 20px;
   width: 100%;
   display: flex;
@@ -9,4 +10,4 @@ export const FlexContainer = styled.div`
   background-color: transparent;
   flex-wrap: wrap;
   justify-content: space-between;
-  `
+`

@@ -1,16 +1,10 @@
-import type { NextPage } from "next";
-import Head from "next/head";
 import Image from "next/image";
 
-import { HeadingBox, ColoredSection, ImageBox, InfoBox, ButtonsBox,ProjectContainer,WhiteSection, BaseContainer } from "../molecules/SectionBox";
-import Img from "next/image";
+import { HeadingBox, ColoredSection, ImageBox, InfoBox, ButtonsBox,ProjectContainer,WhiteSection } from "../molecules/SectionBox";
 import Button from "../atoms/Button";
-import TechIcons from "../molecules/TechIcons";
-import SkillBars from "../molecules/SkillBars";
-import { H1, H2, H3, H4 } from "../atoms/Heading";
-import { P } from "../atoms/P";
-import { buttonAction } from '../../types/actions'
+import { H1, H2, H3 } from "../atoms/Heading";
 import styled from 'styled-components'
+
 interface WorkExperienceProps {
   heading: string;
   jobs: {

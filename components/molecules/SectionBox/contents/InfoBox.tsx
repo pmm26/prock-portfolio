@@ -1,7 +1,7 @@
-
 import styled from 'styled-components'
+import { HTMLAttributes } from "react";
 
-interface InfoType {
+interface InfoType extends HTMLAttributes<HTMLDivElement> {
   noArea?: any;
   center?: any;
   mobileOrder?: number;

@@ -9,7 +9,7 @@ export function FlexContainer({ children, className, ...props }: FlexContainerPr
   return (
     <div 
       className={twMerge(
-        "mt-5 w-full flex flex-row items-center bg-transparent flex-wrap justify-between",
+        "mt-5 w-full flex flex-row items-center bg-transparent flex-wrap justify-center",
         className
       )}
       {...props}

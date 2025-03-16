@@ -32,4 +32,16 @@
     margin-right: 10px;
     margin-left: 10px;
   }
+  
+  /* Mobile layout for project container */
+  @media (max-width: 640px) {
+    [style*="grid-template-areas"] {
+      grid-template-columns: 1fr !important;
+      grid-template-areas: 
+        "heading"
+        "image"
+        "info"
+        "buttons" !important;
+    }
+  }
 } 

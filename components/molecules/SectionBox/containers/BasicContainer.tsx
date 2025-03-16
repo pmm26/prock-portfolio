@@ -37,12 +37,16 @@ export function BasicContainer({
       className={twMerge(
         "grid max-w-[1100px] min-h-full min-w-[100px] mx-auto px-2.5 justify-center items-center",
         "gap-x-10 gap-y-4 bg-transparent text-left object-fill pt-[50px] -mt-0.5",
+        
+        // Mobile layout
         "max-sm:pt-0 max-sm:grid-cols-1",
+        
         className
       )}
       style={{ 
         gridTemplateColumns,
         gridTemplateAreas: headingRight ? '"image info"' : '"info image"',
+        alignItems: 'center',
       }}
       {...props}
     >

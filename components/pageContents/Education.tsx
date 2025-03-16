@@ -1,11 +1,8 @@
 import Image from "next/image";
-import { HeadingBox, ImageBox, InfoBox, BaseContainer, Divider, WhiteSection, BasicContainer } from "../molecules/SectionBox";
+import { HeadingBox, ImageBox, InfoBox, WhiteSection } from "../molecules/SectionBox";
 import { H1, H2 } from "../atoms/Heading";
 import { P } from "../atoms/P";
-import { Fragment } from "react";
-import NewLineText from '../../components/atoms/NewLineText'
-import { FlexItem } from "../molecules/FlexContainers/FlexItem";
-import { FlexContainer } from "../molecules/FlexContainers/FlexContainer";
+import NewLineText from '../../components/atoms/NewLineText';
 
 interface EducationEntry {
   name: string;
@@ -22,58 +19,54 @@ interface EducationProps {
   entries: EducationEntry[];
 }
 
-
 const Education = (props: EducationProps) => {
   return (
     <WhiteSection>
-      <BasicContainer headingRight education={true} customFr={[0.5, 1]}>
-        <HeadingBox noArea>
+      <div className="max-w-[1100px] min-h-full min-w-[100px] mx-auto px-2.5 pt-[50px] -mt-0.5 max-sm:pt-0">
+        {/* Heading */}
+        <div className="flex justify-center mb-8 text-center">
           <H1>{props.heading}</H1>
-        </HeadingBox>
-
-        <ImageBox className="flex items-center justify-center">
-          <FlexContainer>
-            {props.entries.map((entry: EducationEntry, index, array) => (
-              <FlexItem key={entry.name}>
-                <ImageBox noArea>
+        </div>
+        
+        {/* Content area */}
+        <div className="flex flex-row max-sm:flex-col gap-10">
+          {/* Left side - First education entry */}
+          <div className="flex-1 flex flex-col">
+            {props.entries.length > 0 && (
+              <div className="flex flex-col">
+                <H2 fontSize="m"><NewLineText>{props.entries[0].name}</NewLineText></H2>
+                <P><NewLineText>{props.entries[0].description}</NewLineText></P>
+                
+                <div className="mt-8 flex justify-center">
                   <Image
-                    {...entry.image}
-                    alt={entry.name}
+                    src={props.entries[0].image.src}
+                    width={props.entries[0].image.width}
+                    height={props.entries[0].image.height}
+                    alt={props.entries[0].name}
                   />
-                </ImageBox>
-
-                <InfoBox noArea center>
-                  <H2 fontSize="m"><NewLineText>{entry.name}</NewLineText></H2>
-                  <P><NewLineText>{entry.description}</NewLineText></P>
-                </InfoBox>
-              </FlexItem>
-            ))}
-          </FlexContainer>
-        </ImageBox>
-
-        <InfoBox className="self-center">
-        </InfoBox>
-
-        {/* {props.entries.map((entry: EducationEntry, index, array) => (
-          <Fragment key={entry.name}>
-            <ImageBox noArea>
-              <Image
-                {...entry.image}
-                alt={entry.name}
-              />
-            </ImageBox>
-
-            <InfoBox noArea center>
-              <H2 fontSize="m"><NewLineText>{entry.name}</NewLineText></H2>
-              <P><NewLineText>{entry.description}</NewLineText></P>
-            </InfoBox>
-
-            {array.length - 1 !== index && (
-              <Divider />
+                </div>
+              </div>
             )}
-          </Fragment>
-        ))} */}
-      </BasicContainer>
+          </div>
+          
+          {/* Right side - Second education entry */}
+          <div className="flex-1 flex flex-col">
+            {props.entries.length > 1 && (
+              <div className="flex flex-col items-center">
+                <Image
+                  src={props.entries[1].image.src}
+                  width={props.entries[1].image.width}
+                  height={props.entries[1].image.height}
+                  alt={props.entries[1].name}
+                  className="mb-4"
+                />
+                <H2 fontSize="m" className="text-center"><NewLineText>{props.entries[1].name}</NewLineText></H2>
+                <P className="text-center"><NewLineText>{props.entries[1].description}</NewLineText></P>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
     </WhiteSection>
   );
 };

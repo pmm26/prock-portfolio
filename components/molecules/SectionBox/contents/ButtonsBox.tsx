@@ -13,12 +13,12 @@ export function ButtonsBox({ children, className, noArea, mobileOrder, ...props 
     <div 
       className={twMerge(
         "flex justify-around flex-wrap items-center",
-        !noArea && "grid-area-[buttons]",
         "col-span-2",
         "max-sm:col-span-1",
         mobileOrder && `sm:order-${mobileOrder}`,
         className
       )}
+      style={!noArea ? { gridArea: 'buttons' } : undefined}
       {...props}
     >
       {children}

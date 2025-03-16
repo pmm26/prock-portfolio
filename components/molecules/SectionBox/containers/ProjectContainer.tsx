@@ -1,26 +1,32 @@
-'use client';
+"use client";
 
-import React from 'react';
-import { twMerge } from 'tailwind-merge';
-import { BaseContainer } from './BaseContainer';
+import React from "react";
+import { twMerge } from "tailwind-merge";
+import { BaseContainer } from "./BaseContainer";
 
-interface ProjectContainerProps extends React.ComponentProps<typeof BaseContainer> {}
+interface ProjectContainerProps
+  extends React.ComponentProps<typeof BaseContainer> {}
 
-export function ProjectContainer({ children, className, headingRight, ...props }: ProjectContainerProps) {
+export function ProjectContainer({
+  children,
+  className,
+  headingRight,
+  ...props
+}: ProjectContainerProps) {
   return (
-    <BaseContainer 
+    <BaseContainer
       className={twMerge(
-        // Default grid areas
-        "grid-areas-[heading_image,info_image,buttons_buttons]",
-        
-        // Heading right variation
-        headingRight && "grid-areas-[image_heading,image_info,buttons_buttons]",
-        
-        // Mobile layout
-        "max-sm:grid-cols-1 max-sm:grid-areas-[image,heading,info,buttons]",
-        
+        "gap-4",
         className
       )}
+      style={{
+        display: "grid",
+        gridTemplateColumns: "1fr 1fr",
+        gridTemplateRows: "auto auto auto",
+        gridTemplateAreas: headingRight 
+          ? "'image heading' 'image info' 'buttons buttons'"
+          : "'heading image' 'info image' 'buttons buttons'"
+      }}
       {...props}
     >
       {children}

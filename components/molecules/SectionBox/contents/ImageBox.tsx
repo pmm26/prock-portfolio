@@ -13,10 +13,11 @@ export function ImageBox({ children, className, noArea, mobileOrder, ...props }:
     <div 
       className={twMerge(
         "flex h-full justify-center items-center flex-col",
-        !noArea && "grid-area-[image]",
+        !noArea && "col-start-[image] col-end-[image] row-start-[image] row-end-[image]",
         mobileOrder && `sm:order-${mobileOrder}`,
         className
       )}
+      style={!noArea ? { gridArea: 'image' } : undefined}
       {...props}
     >
       {children}

@@ -14,12 +14,12 @@ export function HeadingBox({ children, className, span, noArea, mobileOrder, ...
     <div 
       className={twMerge(
         "flex justify-center items-center text-center flex-col",
-        !noArea && "grid-area-[heading]",
         span && `col-span-${span}`,
         "max-sm:col-span-1",
         mobileOrder && `sm:order-${mobileOrder}`,
         className
       )}
+      style={!noArea ? { gridArea: 'heading' } : undefined}
       {...props}
     >
       {children}

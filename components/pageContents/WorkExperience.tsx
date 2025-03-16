@@ -1,5 +1,13 @@
 import Image from "next/image";
-import { HeadingBox, ImageBox, InfoBox, ButtonsBox, ProjectContainer, WhiteSection, ColoredSection } from "../molecules/SectionBox";
+import {
+  HeadingBox,
+  ImageBox,
+  InfoBox,
+  ButtonsBox,
+  ProjectContainer,
+  WhiteSection,
+  ColoredSection,
+} from "../molecules/SectionBox";
 import { H1, H2, H3 } from "../atoms/Heading";
 import Button from "../atoms/Button";
 
@@ -26,19 +34,23 @@ const WorkExperience = (props: WorkExperienceProps) => {
   return (
     <>
       {props.jobs.map((job, index) => {
-        const isEven = index % 2 == 0
-        const Section = isEven ? ColoredSection : WhiteSection
-        
+        const isEven = index % 2 == 0;
+        const Section = isEven ? ColoredSection : WhiteSection;
+
         // Generate a stable, unique identifier for each job - include index as fallback
         // Hash the source URL to get a more unique identifier that won't change the data
-        const imageHash = job.image.src.split('/').pop()?.replace(/\.[^/.]+$/, '') || '';
+        const imageHash =
+          job.image.src
+            .split("/")
+            .pop()
+            ?.replace(/\.[^/.]+$/, "") || "";
         const uniqueKey = `job-${imageHash}-${index}`;
-        
+
         return (
           <Section key={uniqueKey}>
-          <ProjectContainer {...(isEven ? { headingRight: true } : {})}>
+            <ProjectContainer headingRight={isEven}>
               <ImageBox>
-                <Image 
+                <Image
                   src={job.image.src}
                   width={500}
                   height={500}
@@ -48,7 +60,9 @@ const WorkExperience = (props: WorkExperienceProps) => {
                   <div className="mt-[50px]">
                     <H1 textColour="black">{job.company}</H1>
                   </div>
-                ) : (<></>)}
+                ) : (
+                  <></>
+                )}
               </ImageBox>
               <HeadingBox>
                 <H1>{props.heading}</H1>
@@ -73,7 +87,7 @@ const WorkExperience = (props: WorkExperienceProps) => {
               </ButtonsBox>
             </ProjectContainer>
           </Section>
-        )
+        );
       })}
     </>
   );

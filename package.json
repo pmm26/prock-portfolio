@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "packageManager": "pnpm@9.13.0",
   "dependencies": {
     "babel-plugin-styled-components": "^1.13.2",
     "next": "11.1.0",

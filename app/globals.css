@@ -33,6 +33,21 @@
     margin-left: 10px;
   }
   
+  /* BasicContainer mobile styles */
+  @media screen and (max-width: 479px) {
+    .grid.max-sm\:pt-0 {
+      padding-top: 0;
+    }
+  }
+  
+  /* Mobile layout for Volunteering component */
+  @media screen and (max-width: 479px) {
+    [class*="max-sm:grid-flow-row"] {
+      grid-template-columns: 1fr !important;
+      grid-auto-flow: row !important;
+    }
+  }
+  
   /* Mobile layout for project container */
   @media (max-width: 640px) {
     [style*="grid-template-areas"] {

@@ -35,8 +35,13 @@ export function BasicContainer({
   return (
     <div 
       className={twMerge(
-        "grid max-w-[1100px] min-h-full min-w-[100px] mx-auto px-2.5 justify-center items-center",
-        "gap-x-10 gap-y-4 bg-transparent text-left object-fill pt-[50px] -mt-0.5",
+        // Core styles from original BasicContainer
+        "max-w-[1100px] min-h-full min-w-[100px] mx-auto px-2.5",
+        "justify-center items-center",
+        "bg-transparent text-left pt-[50px] -mt-0.5",
+        
+        // Optional grid styles
+        "grid gap-x-10 gap-y-4",
         
         // Mobile layout
         "max-sm:pt-0 max-sm:grid-cols-1",
@@ -45,8 +50,14 @@ export function BasicContainer({
       )}
       style={{ 
         gridTemplateColumns,
-        gridTemplateAreas: headingRight ? '"image info"' : '"info image"',
+        gridColumnGap: '40px', 
+        gridRowGap: '16px',
+        gridAutoColumns: '1fr',
+        ...(headingRight || headingLeft) && {
+          gridTemplateAreas: headingRight ? '"image info"' : '"info image"',
+        },
         alignItems: 'center',
+        objectFit: 'fill',
       }}
       {...props}
     >

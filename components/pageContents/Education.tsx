@@ -1,8 +1,13 @@
 import Image from "next/image";
-import { HeadingBox, ImageBox, InfoBox, WhiteSection } from "../molecules/SectionBox";
+import {
+  HeadingBox,
+  ImageBox,
+  InfoBox,
+  WhiteSection,
+} from "../molecules/SectionBox";
 import { H1, H2 } from "../atoms/Heading";
 import { P } from "../atoms/P";
-import NewLineText from '../../components/atoms/NewLineText';
+import NewLineText from "../../components/atoms/NewLineText";
 
 interface EducationEntry {
   name: string;
@@ -12,7 +17,7 @@ interface EducationEntry {
     height: number;
   };
   description: string;
-};
+}
 
 interface EducationProps {
   heading: string;
@@ -27,44 +32,31 @@ const Education = (props: EducationProps) => {
         <div className="flex justify-center mb-8 text-center">
           <H1>{props.heading}</H1>
         </div>
-        
-        {/* Content area */}
-        <div className="flex flex-row max-sm:flex-col gap-10">
-          {/* Left side - First education entry */}
-          <div className="flex-1 flex flex-col">
-            {props.entries.length > 0 && (
-              <div className="flex flex-col">
-                <H2 fontSize="m"><NewLineText>{props.entries[0].name}</NewLineText></H2>
-                <P><NewLineText>{props.entries[0].description}</NewLineText></P>
-                
-                <div className="mt-8 flex justify-center">
-                  <Image
-                    src={props.entries[0].image.src}
-                    width={props.entries[0].image.width}
-                    height={props.entries[0].image.height}
-                    alt={props.entries[0].name}
-                  />
-                </div>
-              </div>
-            )}
-          </div>
-          
-          {/* Right side - Second education entry */}
-          <div className="flex-1 flex flex-col">
-            {props.entries.length > 1 && (
-              <div className="flex flex-col items-center">
+
+        {/* Container - Column on larger screens, Row on small screens TODO FIX! */}
+        <div className="flex flex-row max-xs:flex-col flex-wrap justify-center gap-10">
+          {/* Content area */}
+          {props.entries.map((entry, index) => (
+            <div className="w-full flex flex-row">
+              <div className="mb-6 flex justify-center">
                 <Image
-                  src={props.entries[1].image.src}
-                  width={props.entries[1].image.width}
-                  height={props.entries[1].image.height}
-                  alt={props.entries[1].name}
+                  src={entry.image.src}
+                  width={entry.image.width}
+                  height={entry.image.height}
+                  alt={entry.name}
                   className="mb-4"
                 />
-                <H2 fontSize="m" className="text-center"><NewLineText>{props.entries[1].name}</NewLineText></H2>
-                <P className="text-center"><NewLineText>{props.entries[1].description}</NewLineText></P>
               </div>
-            )}
-          </div>
+              <div className="w-full mt-auto text-center">
+                <H2 fontSize="m" className="text-center">
+                  <NewLineText>{entry.name}</NewLineText>
+                </H2>
+                <P className="text-center">
+                  <NewLineText>{entry.description}</NewLineText>
+                </P>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </WhiteSection>

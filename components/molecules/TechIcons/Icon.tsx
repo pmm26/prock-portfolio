@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 
 const glyphMap = [
   { src: "postgresql.svg", alt: "PostgreSQL" },
@@ -47,11 +48,13 @@ const TechIcons = (props: { icon: string }) => {
   const iconEntry = glyphMap.find((entry) => entry.alt == props.icon);
   if (iconEntry)
     return (
-      <img
+      <Image
         src={`/images/icons/${iconEntry.src}`}
-        loading="lazy"
         alt={iconEntry.alt}
-        className="h-[50px] mr-3 pb-2.5"
+        width={0}
+        height={0}
+        sizes="100vw"
+        className="h-[50px] w-auto mr-3 pb-2.5"
       />
     );
   else return (<div>Not Found</div>);

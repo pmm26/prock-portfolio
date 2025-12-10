@@ -1,6 +1,19 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --color-orange: #f5905b;
+  --color-primary: #0070f3;
+  --color-secondary: #ff4081;
+  --color-purpleish: #6b46c1;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-background: #ffffff;
+  --color-text: #333333;
+
+  --font-futura-bold: Futura-Bold, sans-serif;
+  --font-futura-medium: Futura-Medium, sans-serif;
+  --font-futura-book: "Futura book font", sans-serif;
+}
 
 @layer base {
   a {
@@ -59,4 +72,4 @@
         "buttons" !important;
     }
   }
-} 
+}

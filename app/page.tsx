@@ -11,7 +11,6 @@ import Project from "@/components/pageContents/Project";
 import Footer from "@/components/molecules/Footer";
 import data from "@/data/data";
 
-
 export default function Home() {
   return (
     <AppContainer>

@@ -1,20 +1,35 @@
-# pull official base image
-FROM node:16-alpine
+ARG NODE_VERSION=24.22.1
 
-# set working directory
+FROM node:${NODE_VERSION}-alpine3.24 AS base
+ENV PNPM_HOME="/pnpm"
+ENV PATH="$PNPM_HOME:$PATH"
+RUN corepack enable && corepack prepare pnpm@10.25.0 --activate
 WORKDIR /app
 
-# add `/app/node_modules/.bin` to $PATH
-ENV PATH /app/node_modules/.bin:$PATH
+FROM base AS dependencies
+COPY package.json pnpm-lock.yaml ./
+RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --frozen-lockfile
 
-# add app
+FROM base AS builder
+COPY --from=dependencies /app/node_modules ./node_modules
 COPY . .
+RUN pnpm build
 
-RUN npm install --silent
+FROM node:${NODE_VERSION}-alpine3.24 AS runner
+WORKDIR /app
 
-RUN npm run build
+ENV NODE_ENV="production"
+ENV HOSTNAME="0.0.0.0"
+ENV PORT="3000"
 
-RUN chmod +x start.sh
+RUN addgroup --system --gid 1001 nodejs \
+  && adduser --system --uid 1001 nextjs
 
-# start app
-CMD ["sh", "start.sh"]
+COPY --from=builder --chown=nextjs:nodejs /app/public ./public
+COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
+COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
+
+USER nextjs
+EXPOSE 3000
+
+CMD ["node", "server.js"]

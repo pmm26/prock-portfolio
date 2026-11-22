@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
 /* eslint-disable @next/next/no-img-element */
 
-import React from 'react';
+import React from "react";
 
 interface ColoredSectionProps {
   children: React.ReactNode;
@@ -11,7 +11,7 @@ interface ColoredSectionProps {
 
 export function ColoredSection({ children, className }: ColoredSectionProps) {
   return (
-    <div className={`border border-transparent bg-orange ${className || ''}`}>
+    <div className={`border border-transparent bg-orange ${className || ""}`}>
       {children}
     </div>
   );
@@ -20,17 +20,9 @@ export function ColoredSection({ children, className }: ColoredSectionProps) {
 export function WhiteSection({ children }: { children: React.ReactNode }) {
   return (
     <div>
-      <img
-        src="/images/bottom-wave.svg"
-        alt=""
-        className="section-image-bot"
-      />
+      <img src="/images/bottom-wave.svg" alt="" className="section-image-bot" />
       {children}
-      <img
-        src="/images/top-wave.svg"
-        alt=""
-        className="section-image-top"
-      />
+      <img src="/images/top-wave.svg" alt="" className="section-image-top" />
     </div>
   );
 }

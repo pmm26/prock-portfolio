@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import React from 'react';
-import { twMerge } from 'tailwind-merge';
+import React from "react";
+import { twMerge } from "tailwind-merge";
 
 interface InfoBoxProps extends React.HTMLAttributes<HTMLDivElement> {
   noArea?: boolean;
@@ -9,17 +9,24 @@ interface InfoBoxProps extends React.HTMLAttributes<HTMLDivElement> {
   mobileOrder?: number;
 }
 
-export function InfoBox({ children, className, noArea, center, mobileOrder, ...props }: InfoBoxProps) {
+export function InfoBox({
+  children,
+  className,
+  noArea,
+  center,
+  mobileOrder,
+  ...props
+}: InfoBoxProps) {
   return (
-    <div 
+    <div
       className={twMerge(
         "flex flex-col px-1.5",
         center && "justify-center items-center text-center",
         "max-sm:justify-center max-sm:text-center",
         mobileOrder && `sm:order-${mobileOrder}`,
-        className
+        className,
       )}
-      style={!noArea ? { gridArea: 'info' } : undefined}
+      style={!noArea ? { gridArea: "info" } : undefined}
       {...props}
     >
       {children}

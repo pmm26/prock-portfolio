@@ -1,7 +1,12 @@
 import type { NextPage } from "next";
 import Image from "next/image";
 
-import { ColoredSection, ImageBox, InfoBox, BaseContainer } from "../molecules/SectionBox";
+import {
+  ColoredSection,
+  ImageBox,
+  InfoBox,
+  BaseContainer,
+} from "../molecules/SectionBox";
 import SkillBars from "../molecules/SkillBars";
 import { H1 } from "../atoms/Heading";
 import image from "../../public/images/proficiency3x.png";
@@ -21,10 +26,7 @@ const Proficiency = (props: ProficiencyProps) => {
     <ColoredSection>
       <BaseContainer headingRight customFr={[0.8, 1]}>
         <ImageBox>
-          <Image
-            src={image}
-            alt="Proficiency Ilustration"
-          />
+          <Image src={image} alt="Proficiency Ilustration" />
         </ImageBox>
         <InfoBox center>
           <H1>{props.heading}</H1>

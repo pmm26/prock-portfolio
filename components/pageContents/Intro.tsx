@@ -37,12 +37,7 @@ const Intro = (props: {
               <span className="button-text">Gitlab</span>
             </ButtonLink>
             <ButtonLink height={60} href="/Pedro%20Roque%20CV.pdf">
-              <Image
-                width={45}
-                height={45}
-                src={cvImage}
-                alt="Download CV"
-              />
+              <Image width={45} height={45} src={cvImage} alt="Download CV" />
               <span className="button-text">CV</span>
             </ButtonLink>
           </div>

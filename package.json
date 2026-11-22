@@ -6,7 +6,10 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint . --ext .ts,.tsx,.js,.jsx"
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
+    "format": "prettier --write \"{app,components,data,types,tests}/**/*.{ts,tsx,js,mjs,css}\" \"*.config.{js,mjs,ts}\" package.json \".woodpecker/*.yaml\"",
+    "format:check": "prettier --check \"{app,components,data,types,tests}/**/*.{ts,tsx,js,mjs,css}\" \"*.config.{js,mjs,ts}\" package.json \".woodpecker/*.yaml\"",
+    "test": "next build && node --test tests/*.test.mjs"
   },
   "packageManager": "pnpm@10.25.0",
   "engines": {
@@ -27,6 +30,7 @@
     "eslint": "^9.39.5",
     "eslint-config-next": "16.4.6",
     "postcss": "^8.5.31",
+    "prettier": "3.10.1",
     "tailwindcss": "^4.3.3",
     "typescript": "^5.9.3"
   },

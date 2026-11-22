@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import React from 'react';
-import Image from 'next/image';
+import React from "react";
+import Image from "next/image";
 
 const glyphMap = [
   { src: "postgresql.svg", alt: "PostgreSQL" },
@@ -57,7 +57,7 @@ const TechIcons = (props: { icon: string }) => {
         className="h-[50px] w-auto mr-3 pb-2.5"
       />
     );
-  else return (<div>Not Found</div>);
+  else return <div>Not Found</div>;
 };
 
 export default TechIcons;

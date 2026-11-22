@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import React from 'react';
-import { twMerge } from 'tailwind-merge';
+import React from "react";
+import { twMerge } from "tailwind-merge";
 
 interface HeadingBoxProps extends React.HTMLAttributes<HTMLDivElement> {
   span?: number;
@@ -9,21 +9,27 @@ interface HeadingBoxProps extends React.HTMLAttributes<HTMLDivElement> {
   mobileOrder?: number;
 }
 
-export function HeadingBox({ children, className, span, noArea, mobileOrder, ...props }: HeadingBoxProps) {
+export function HeadingBox({
+  children,
+  className,
+  span,
+  noArea,
+  mobileOrder,
+  ...props
+}: HeadingBoxProps) {
   return (
-    <div 
+    <div
       className={twMerge(
         "flex justify-center items-center text-center flex-col",
         span && `col-span-${span}`,
         "max-sm:col-span-1",
         mobileOrder && `sm:order-${mobileOrder}`,
-        className
+        className,
       )}
-      style={!noArea ? { gridArea: 'heading' } : undefined}
+      style={!noArea ? { gridArea: "heading" } : undefined}
       {...props}
     >
       {children}
     </div>
   );
 }
-

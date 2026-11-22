@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { HTMLAttributes } from "react";
 import { twMerge } from "tailwind-merge";
@@ -13,7 +13,7 @@ export function P({ children, className, white, ...props }: PType) {
       className={twMerge(
         "text-center font-futura-medium text-base leading-10 mx-1.5",
         white && "text-white",
-        className
+        className,
       )}
       {...props}
     >

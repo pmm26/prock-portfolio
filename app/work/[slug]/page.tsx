@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { projects, profile } from "@/data/portfolio";
 import { Icon } from "@/components/portfolio/Icon";
 import Contact from "@/components/portfolio/Contact";
+import HomeSectionLink from "@/components/portfolio/HomeSectionLink";
 import ProjectMeta from "@/components/portfolio/ProjectMeta";
 import ProjectPlate from "@/components/portfolio/ProjectPlate";
 
@@ -50,9 +51,9 @@ export default async function CasePage({ params }: CaseProps) {
   return (
     <>
       <main id="top" className="shell case" tabIndex={-1}>
-        <Link href="/#work" className="back-link">
+        <HomeSectionLink section="work" className="back-link">
           <Icon name="back" size={16} /> Project index
-        </Link>
+        </HomeSectionLink>
         <header className="case-head">
           <ProjectMeta project={project} index={index} />
           <h1>

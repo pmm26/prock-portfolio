@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import Header from "@/components/portfolio/Header";
-import { profile } from "@/data/portfolio";
+import { profile, projects } from "@/data/portfolio";
 import "./globals.css";
 
 const geist = localFont({
@@ -60,12 +60,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={geist.variable}>
+    <html lang="en" className={geist.variable} data-scroll-behavior="smooth">
       <body>
         <a className="skip-link" href="#top">
           Skip to content
         </a>
-        <Header />
+        <Header casePaths={projects.map(({ slug }) => `/work/${slug}`)} />
         {children}
         <script
           type="application/ld+json"

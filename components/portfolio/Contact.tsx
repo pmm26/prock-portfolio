@@ -1,18 +1,23 @@
-import Link from "next/link";
 import { profile } from "@/data/portfolio";
 import { Icon } from "./Icon";
 import BrandLogo from "./BrandLogo";
+import HomeSectionLink from "./HomeSectionLink";
 export default function Contact() {
   return (
     <>
-      <section id="contact" className="contact-section">
+      <section
+        id="contact"
+        className="contact-section"
+        tabIndex={-1}
+        aria-labelledby="contact-title"
+      >
         <div className="shell contact-body">
           <div className="eyebrow">
             <span className="rule" /> Contact
           </div>
           <div className="contact-main">
             <div>
-              <h2>
+              <h2 id="contact-title">
                 Get in touch<span>.</span>
               </h2>
               <a className="email" href={"mailto:" + profile.email}>
@@ -32,9 +37,13 @@ export default function Contact() {
       </section>
       <footer>
         <div className="shell footer-inner">
-          <Link href="/#top" className="brand" aria-label="prock.dev home">
+          <HomeSectionLink
+            section="top"
+            className="brand"
+            aria-label="prock.dev home"
+          >
             <BrandLogo />
-          </Link>
+          </HomeSectionLink>
           <span>© 2026 Pedro Roque</span>
           <a href="#top">
             Back to top <Icon name="up" size={14} />

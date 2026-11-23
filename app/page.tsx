@@ -117,6 +117,7 @@ export default function Home() {
         <CoreStack />
         <section
           id="work"
+          tabIndex={-1}
           className="shell section work-section"
           aria-labelledby="work-title"
         >
@@ -149,6 +150,7 @@ export default function Home() {
         </section>
         <section
           id="experience"
+          tabIndex={-1}
           className="paper section"
           aria-labelledby="experience-title"
         >
@@ -203,6 +205,7 @@ export default function Home() {
         </section>
         <section
           id="expertise"
+          tabIndex={-1}
           className="shell section expertise-section"
           aria-labelledby="expertise-title"
         >

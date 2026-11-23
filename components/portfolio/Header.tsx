@@ -1,19 +1,21 @@
 "use client";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Icon } from "./Icon";
 import BrandLogo from "./BrandLogo";
+import HomeSectionLink from "./HomeSectionLink";
 
 const links = [
   { id: "work", title: "Work" },
   { id: "experience", title: "Experience" },
   { id: "expertise", title: "Expertise" },
-];
+] as const;
 
-export default function Header() {
+export default function Header({ casePaths }: { casePaths: string[] }) {
   const path = usePathname();
+  const isHome = path === "/";
   const [active, setActive] = useState("");
+  const activeSection = isHome ? active : casePaths.includes(path) && "work";
   useEffect(() => {
     if (path !== "/") return;
     const sections = [
@@ -48,27 +50,33 @@ export default function Header() {
   return (
     <header className="header">
       <div className="shell header-inner">
-        <Link className="brand" href="/#top" aria-label="prock.dev home">
+        <HomeSectionLink
+          className="brand"
+          section="top"
+          onHomepage={isHome}
+          aria-label="prock.dev home"
+        >
           <BrandLogo compactOnMobile />
-        </Link>
+        </HomeSectionLink>
         <nav aria-label="Primary navigation">
           {links.map((link) => (
-            <Link
+            <HomeSectionLink
               key={link.id}
-              aria-current={
-                (path === "/" ? active === link.id : link.id === "work")
-                  ? "location"
-                  : undefined
-              }
-              href={"/#" + link.id}
+              aria-current={activeSection === link.id ? "location" : undefined}
+              section={link.id}
+              onHomepage={isHome}
             >
               {link.title}
-            </Link>
+            </HomeSectionLink>
           ))}
         </nav>
-        <Link className="contact-link" href="/#contact">
+        <HomeSectionLink
+          className="contact-link"
+          section="contact"
+          onHomepage={isHome}
+        >
           Get in touch <Icon name="upRight" size={14} />
-        </Link>
+        </HomeSectionLink>
       </div>
     </header>
   );

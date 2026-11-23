@@ -2,9 +2,9 @@
 
 Pedro Roque’s engineering portfolio. The homepage and project case studies are statically generated with the Next.js App Router and TypeScript.
 
-## Original portfolio (V1)
+## Homepage
 
-![The original prock.dev homepage with an orange background, an illustrated desktop monitor, and Pedro Roque’s introduction above a curved white divider.](docs/screenshots/v1-homepage.png)
+![Pedro Roque’s engineering portfolio with a coding desk illustration beside his introduction and the Core stack panel below.](docs/screenshots/desktop.jpg)
 
 [Browse the original source on the V1 branch](https://github.com/pmm26/prock-portfolio/tree/V1).
 

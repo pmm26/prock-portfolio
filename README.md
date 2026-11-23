@@ -1,3 +1,7 @@
+# prock.dev (V1)
+
+![The original orange prock.dev homepage with an illustrated monitor, Pedro Roque’s introduction, and links to GitLab and his CV.](docs/screenshots/v1-homepage.png)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

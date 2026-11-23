@@ -1,34 +1,34 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# prock.dev
 
-## Getting Started
+Pedro Roque’s engineering portfolio. The homepage and project case studies are statically generated with the Next.js App Router and TypeScript.
 
-First, run the development server:
+## Run locally
 
-```bash
-npm run dev
-# or
-yarn dev
+Use the Node version in `.node-version` and the pnpm version in `package.json`.
+
+```sh
+corepack pnpm install --frozen-lockfile
+corepack pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The development server prints its local address. The existing Dockerfile builds and serves the standalone production output.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Update the portfolio
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Edit the profile, projects, experience, expertise and education in [the portfolio data](data/portfolio.ts). The order of the project records sets the order of the index and the next-project links. The first two get larger previews. Give each project a stable slug so existing case-study URLs continue to work.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Project images live in [public/artwork](public/artwork). The project plate component controls their framing. Typography, spacing, surfaces, colour and responsive layouts live in [app/globals.css](app/globals.css). The application serves its own licensed Geist font. The homepage sharing image is [public/social.jpg](public/social.jpg).
 
-## Learn More
+The [logo SVG](public/brand/prock-logo.svg) includes the outlined wordmark and the PR monogram. A [rendered PNG](public/brand/prock-logo.png) is available for previews. Next.js uses [the standalone monogram](app/icon.svg) and [the Apple touch icon](app/apple-icon.png) to generate versioned icon links. The bundled ICO includes 16, 32, 48, 64 and 256 pixel sizes.
 
-To learn more about Next.js, take a look at the following resources:
+## Verify a change
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```sh
+corepack pnpm format:check
+corepack pnpm lint
+corepack pnpm test
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+The test command builds the production pages, checks the bundled CV download, and verifies the case-study routes linked from the homepage.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+The [content review](docs/content-review.md) records source decisions and the details needed for a future update. [Browser screenshots](docs/screenshots) cover the homepage, project index and individual case studies.

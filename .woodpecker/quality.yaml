@@ -1,0 +1,36 @@
+when:
+  - event: pull_request
+  - event: push
+    branch: main
+  - event: manual
+
+steps:
+  - name: install
+    image: &node node:24.22.1
+    environment: &env
+      CI: "true"
+      COREPACK_HOME: /woodpecker/corepack
+      NEXT_TELEMETRY_DISABLED: "1"
+    commands:
+      - corepack pnpm install --frozen-lockfile
+
+  - name: format
+    image: *node
+    depends_on: [install]
+    environment: *env
+    commands:
+      - corepack pnpm format:check
+
+  - name: lint
+    image: *node
+    depends_on: [format]
+    environment: *env
+    commands:
+      - corepack pnpm lint
+
+  - name: test
+    image: *node
+    depends_on: [lint]
+    environment: *env
+    commands:
+      - corepack pnpm test

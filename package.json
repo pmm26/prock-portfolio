@@ -29,6 +29,7 @@
     "autoprefixer": "^10.6.1",
     "eslint": "^9.39.5",
     "eslint-config-next": "16.4.6",
+    "linkedom": "^0.18.15",
     "postcss": "^8.5.31",
     "prettier": "3.10.1",
     "tailwindcss": "^4.3.3",

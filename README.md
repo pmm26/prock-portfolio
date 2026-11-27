@@ -35,6 +35,8 @@ corepack pnpm lint
 corepack pnpm test
 ```
 
+Woodpecker and GitLab CI run the formatting check on merge requests and pushes to `main`. Run `corepack pnpm format` to fix formatting locally.
+
 The test command builds the production pages, checks the bundled CV download, and verifies the case-study routes linked from the homepage.
 
 The [content review](docs/content-review.md) records source decisions and the details needed for a future update. [Browser screenshots](docs/screenshots) cover the homepage, project index and individual case studies.

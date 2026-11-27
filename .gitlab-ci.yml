@@ -3,9 +3,20 @@ variables:
   CI_APPLICATION_TAG: $CI_COMMIT_SHA
   GIT_SUBMODULE_STRATEGY: recursive
 
-stages:  
+stages:
+  - check
   - build
   - deploy
+
+format:
+  stage: check
+  image: node:24.22.1
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+    - if: "$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH"
+  script:
+    - corepack pnpm install --frozen-lockfile
+    - corepack pnpm format:check
 
 build:
   only:

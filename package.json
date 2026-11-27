@@ -7,8 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
-    "format": "prettier --write \"{app,components,data,types,tests}/**/*.{ts,tsx,js,mjs,css}\" \"*.config.{js,mjs,ts}\" package.json \".woodpecker/*.yaml\"",
-    "format:check": "prettier --check \"{app,components,data,types,tests}/**/*.{ts,tsx,js,mjs,css}\" \"*.config.{js,mjs,ts}\" package.json \".woodpecker/*.yaml\"",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
     "test": "next build && node --test tests/*.test.mjs"
   },
   "packageManager": "pnpm@10.25.0",
